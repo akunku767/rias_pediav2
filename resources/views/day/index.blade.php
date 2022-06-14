@@ -4,6 +4,11 @@
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
   <h1 style="text-align: center;">List Data Days</h1>
+
+  <div style="margin-bottom: 20px">
+    <a class="tambah" href="{{ url('days/create' ) }}"><i class="fa-solid fa-plus"></i> Tambah Data</a>
+  </div>
+
   <table style="width:100%; border-collapse:collapse">
     <thead>
       <tr>

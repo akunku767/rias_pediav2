@@ -250,6 +250,22 @@
 	  .pilihan:hover {
 		margin-left: 15px;
       }
+
+	  .tambah{
+		margin-right: 100px;
+		padding: 8px 10px;
+		color: #3F51B5;
+		text-decoration: none;
+		font-family: arial;
+		border-radius: 3px;
+		width: auto;
+	  }
+	  
+	  .tambah:hover{
+	    color: #FFFFFF;
+		background-color: #3F51B5;
+		border-radius: 3px;
+	  }
 	  
       @media screen and (max-height: 450px) {
         .sidebar {padding-top: 15px;}
