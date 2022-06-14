@@ -28,7 +28,7 @@
   <form method="POST" action="{{ url('days') }}">
     @csrf
     <input name="name" type="text" placeholder="Nama Hari" style="font-size: 14pt"> 
-    <button class="btn-blue" style="font-size: 14pt">Tambah Data</button>
+    <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Tambah Data</button>
   </form>
 </div>
 

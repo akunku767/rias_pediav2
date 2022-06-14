@@ -30,7 +30,7 @@
     @method('PUT')
     <input name="id" value="{{ $day->id }}" type="text" placeholder="Id" style="font-size: 14pt" disabled> 
     <input name="name" value="{{ $day->name }}" type="text" placeholder="Name" style="font-size: 14pt">
-    <button class="btn-blue" style="font-size: 14pt">Submit</button>
+    <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Submit</button>
   </form>
 </div>
 
