@@ -13,7 +13,7 @@
   
   <script src="https://kit.fontawesome.com/8e6e4ad827.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-color: #F1F1F1">
   <div class="container">
       @yield('content')
   </div>
