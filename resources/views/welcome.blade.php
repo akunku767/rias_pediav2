@@ -95,7 +95,7 @@
         <table style="border: none">
         <tr>
             <td width="40px" style="border: none"><i class="fa-solid fa-calendar-days" aria-hidden="true" style="font-size: 20pt"></i></td>
-            <td style="font-size: 20pt; border: none">Hour</td>
+            <td style="font-size: 20pt; border: none">Day</td>
         </tr>
         </table>
     </a>
