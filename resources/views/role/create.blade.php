@@ -3,10 +3,10 @@
 @section('title', 'Buat Days Baru')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
-  <h1 style="text-align: center;">Create Data Days</h1>
+  <h1 style="text-align: center;">Create Data Roles</h1>
   
   <div style="margin-bottom: 20px">
-    <a class="tambah" href="{{ url('days' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
+    <a class="tambah" href="{{ url('roles' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
   </div>
 
   @if (session('success'))
@@ -25,9 +25,9 @@
   </div>
   @endif
   
-  <form method="POST" action="{{ url('days') }}">
+  <form method="POST" action="{{ url('roles') }}">
     @csrf
-    <input name="name" type="text" placeholder="Nama Hari" style="font-size: 14pt"> 
+    <input name="name" type="text" placeholder="Nama Role" style="font-size: 14pt"> 
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Tambah Data</button>
   </form>
 </div>
@@ -36,9 +36,9 @@
 @include('layouts.sidebar')
 <script>
 //   id = role, user, vendor, service, gallery, review, day, hour
-  ["role", "user", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
-  document.getElementById("day").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
-  document.getElementById("divDay").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
+  ["day", "user", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
+  document.getElementById("role").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
+  document.getElementById("divRole").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
 </script>
 
 

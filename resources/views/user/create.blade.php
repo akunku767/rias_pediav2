@@ -28,8 +28,8 @@
   <form method="POST" action="{{ url('users') }}">
     @csrf
     <input name="name" type="text" placeholder="Nama" style="font-size: 14pt"> 
-    <input name="email" type="text" placeholder="Email" style="font-size: 14pt">
-    <input name="pass" type="text" placeholder="Password" style="font-size: 14pt">
+    <input name="email" type="email" placeholder="Email" style="font-size: 14pt">
+    <input name="password" type="password" placeholder="Password" style="font-size: 14pt">
     <input name="role_id" type="number" placeholder="Role_id" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Tambah Data</button>
   </form>
@@ -39,9 +39,9 @@
 @include('layouts.sidebar')
 <script>
 //   id = role, user, vendor, service, gallery, review, day, hour
-  ["role", "user", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
-  document.getElementById("day").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
-  document.getElementById("divDay").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
+  ["role", "day", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
+  document.getElementById("user").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
+  document.getElementById("divUser").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
 </script>
 
 
