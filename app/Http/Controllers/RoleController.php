@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
@@ -14,7 +15,8 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        $roles = Role::all(); 
+        return view('role.index', ['roles' => $roles]);
     }
 
     /**
@@ -24,7 +26,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        //
+        return view('role.create');
     }
 
     /**
@@ -35,7 +37,15 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required', 
+          ]);
+        
+          $input = $request->all();
+        
+          $role = Role::create($input);
+         
+          return back()->with('success',' Post baru berhasil dibuat.');
     }
 
     /**
@@ -57,7 +67,10 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $role = Role::findOrFail($id);
+        return view('role.edit', [
+            'role' => $role
+        ]);
     }
 
     /**
@@ -69,7 +82,13 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required', 
+         ]);
+               
+         $role = Role::find($id)->update($request->all()); 
+                
+         return back()->with('success',' Data telah diperbaharui!');
     }
 
     /**
@@ -80,6 +99,9 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $role = Role::find($id);
+        $role->delete();
+
+        return back()->with('success',' Penghapusan berhasil.');
     }
 }
