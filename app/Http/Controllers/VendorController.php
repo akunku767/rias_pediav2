@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vendor;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreVendorRequest;
-use App\Http\Requests\UpdateVendorRequest;
+use App\Models\Vendor;
+use Illuminate\Http\Request;
 
 class VendorController extends Controller
 {
@@ -16,7 +15,8 @@ class VendorController extends Controller
      */
     public function index()
     {
-        //
+        $vendors = Vendor::all(); 
+            return view('vendor.index', ['vendors' => $vendors]);
     }
 
     /**
@@ -26,27 +26,35 @@ class VendorController extends Controller
      */
     public function create()
     {
-        //
+        return view('vendor.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreVendorRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreVendorRequest $request)
+    public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required', 
+          ]);
+        
+          $input = $request->all();
+        
+          $vendor = Vendor::create($input);
+         
+          return back()->with('success',' Vendor baru berhasil dibuat.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Vendor  $vendor
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Vendor $vendor)
+    public function show($id)
     {
         //
     }
@@ -54,34 +62,46 @@ class VendorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Vendor  $vendor
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Vendor $vendor)
+    public function edit($id)
     {
-        //
+        $vendor = Vendor::findOrFail($id);
+        return view('vendor.edit', [
+            'vendor' => $vendor
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateVendorRequest  $request
-     * @param  \App\Models\Vendor  $vendor
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateVendorRequest $request, Vendor $vendor)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required', 
+         ]);
+               
+         $vendor = Vendor::find($id)->update($request->all()); 
+                
+         return back()->with('success',' Data telah diperbaharui!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Vendor  $vendor
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Vendor $vendor)
+    public function destroy($id)
     {
-        //
+        $vendor = Vendor::find($id);
+        $vendor->delete();
+
+        return back()->with('success',' Penghapusan berhasil.');
     }
 }

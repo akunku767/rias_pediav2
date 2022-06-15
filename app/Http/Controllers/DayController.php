@@ -44,7 +44,7 @@ class DayController extends Controller
         
           $day = Day::create($input);
          
-          return back()->with('success',' Post baru berhasil dibuat.');
+          return back()->with('success',' Day baru berhasil dibuat.');
     }
 
     /**
