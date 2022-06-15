@@ -3,7 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DayController;
 use App\Http\Controllers\RoleController;
+<<<<<<< HEAD
 use App\Http\Controllers\UserController;
+=======
+use App\Http\Controllers\DashboardController;
+>>>>>>> 1cddc3d9a984ebf154e1178d15b5839ab2f8db39
 
 Route::resource('days', DayController::class);
 
