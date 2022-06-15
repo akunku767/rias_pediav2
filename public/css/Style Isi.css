@@ -266,10 +266,6 @@
 	  .pilihan:hover {
 		margin-left: 15px;
       }
-
-	  .baru{
-
-	  }
 	  
       @media screen and (max-height: 450px) {
         .sidebar {padding-top: 15px;}
