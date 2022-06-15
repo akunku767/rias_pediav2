@@ -27,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -38,7 +38,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required', 
+            'pass' => 'required',
+            'role_id' => 'required',
+          ]);
+        
+          $input = $request->all();
+        
+          $user = User::create($input);
+         
+          return back()->with('success',' User baru berhasil dibuat.');
     }
 
     /**
