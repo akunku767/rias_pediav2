@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 
 Route::resource('days', DayController::class);
 
+Route::resource('roles', RoleController::class);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
