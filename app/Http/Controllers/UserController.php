@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
-class RoleController extends Controller
+
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,8 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all(); 
+        return view('user.index', ['users' => $users]);
     }
 
     /**

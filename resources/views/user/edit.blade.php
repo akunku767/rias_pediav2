@@ -1,14 +1,14 @@
-<!-- //views/post/create.blade.php -->
+{{-- //views/post/edit.blade.php --}}
 @extends('layouts.app')
-@section('title', 'Buat Days Baru')
+@section('title', 'Edit Data Days')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
-  <h1 style="text-align: center;">Create Data Days</h1>
-  
+  <h1 style="text-align: center;">Edit Data Days</h1>
+
   <div style="margin-bottom: 20px">
     <a class="tambah" href="{{ url('days' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
   </div>
-
+    
   @if (session('success'))
   <div class="alert-success">
     <p>{{ session('success') }}</p>
@@ -25,10 +25,12 @@
   </div>
   @endif
   
-  <form method="POST" action="{{ url('days') }}">
+  <form method="POST" action="{{ url('days', $day->id ) }}">
     @csrf
-    <input name="name" type="text" placeholder="Nama Hari" style="font-size: 14pt"> 
-    <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Tambah Data</button>
+    @method('PUT')
+    <input name="id" value="{{ $day->id }}" type="text" placeholder="Id" style="font-size: 14pt" disabled> 
+    <input name="name" value="{{ $day->name }}" type="text" placeholder="Name" style="font-size: 14pt">
+    <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Submit</button>
   </form>
 </div>
 
@@ -40,6 +42,5 @@
   document.getElementById("day").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
   document.getElementById("divDay").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
 </script>
-
 
 @endsection

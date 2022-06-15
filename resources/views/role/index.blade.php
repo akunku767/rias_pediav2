@@ -38,9 +38,9 @@
 @include('layouts.sidebar')
 <script>
 //   id = role, user, vendor, service, gallery, review, day, hour
-  ["role", "user", "vendor", "service", "gallery", "review", "day", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
+  ["role", "user", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
   document.getElementById("role").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
-  document.getElementById("divRole").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
+  document.getElementById("divROle").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
 </script>
 
 @endsection
