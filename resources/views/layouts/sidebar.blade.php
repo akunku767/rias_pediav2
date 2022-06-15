@@ -2,7 +2,7 @@
     <table align="center" style="border: none">
       <tr>
         <td align="center" style="border: none">
-          <p class="lms" style="font-size: 24pt">Pilih Menu</p>
+          <a href="/" class="lms" style="font-size: 24pt">Pilih Menu</a>
         </td>
       </tr>
     </table>
