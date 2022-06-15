@@ -6,7 +6,7 @@
   <h1 style="text-align: center;">List Data Users</h1>
 
   <div style="margin-bottom: 20px">
-    <a class="tambah" href="{{ url('days/create' ) }}"><i class="fa-solid fa-plus"></i> Tambah Data</a>
+    <a class="tambah" href="{{ url('users/create' ) }}"><i class="fa-solid fa-plus"></i> Tambah Data</a>
   </div>
 
   <table style="width:100%; border-collapse:collapse">
