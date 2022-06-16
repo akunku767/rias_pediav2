@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 
 class UserController extends Controller
@@ -44,10 +45,16 @@ class UserController extends Controller
             'password' => 'required',
             'role_id' => 'required',
           ]);
-        
+
           $input = $request->all();
         
-          $user = User::create($input);
+        //   $user = User::create($input);
+          $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email, 
+            'password' => Hash::make($request->password),
+            'role_id' => $request->role_id,
+          ]);
          
           return back()->with('success',' User baru berhasil dibuat.');
     }
