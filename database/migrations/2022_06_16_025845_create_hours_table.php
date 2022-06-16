@@ -21,7 +21,7 @@ class CreateHoursTable extends Migration
             ->references('id')->on('days')->onDelete('cascade');
             $table->foreign('vendor_id')
             ->references('id')->on('vendors')->onDelete('cascade');
-            $table->timestamps();
+            $table->timestamps('time');
         });
     }
 

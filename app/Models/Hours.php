@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Hours extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'time',
+        'day_id',
+        'vendor_id',
+    ];
 }
