@@ -73,7 +73,10 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         return view('user.edit', [
-            'user' => $user
+            'user' => $user,
+            'email' => $user, 
+            'password' => $user,
+            'role_id' => $user,
         ]);
     }
 

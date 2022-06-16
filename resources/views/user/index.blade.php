@@ -15,7 +15,7 @@
         <th>Id</th>
         <th>Name</th>
         <th>Email</th>
-        <th>Password</th>
+        {{-- <th>Password</th> --}}
         <th>Role_id</th>
         <th colspan="2">Aksi</th>
       </tr>
@@ -26,7 +26,7 @@
         <td style="width: 100px" >{{ $user->id}}</td>
         <td style="width: 150px" >{{ $user->name }}</td>
         <td style="width: 150px" >{{ $user->email }}</td>
-        <td style="width: 150px" >{{ $user->password }}</td>
+        {{-- <td style="width: 150px" >{{ $user->password }}</td> --}}
         <td style="width: 150px" >{{ $user->role_id }}</td>
         <td style="width: 100px"><button class="btn-green" style="width: auto"><a href="{{ route('users.edit', $user->id) }}">Edit</a></button></td>
         <form method="POST" action="{{ url('users', $user->id ) }}">

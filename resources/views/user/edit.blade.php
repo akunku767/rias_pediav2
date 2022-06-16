@@ -32,7 +32,7 @@
     <input name="name" value="{{ $user->name }}" type="text" placeholder="Name" style="font-size: 14pt">
     <input name="email" value="{{ $user->email }}" type="email" placeholder="Email" style="font-size: 14pt">
     <input name="password" value="{{ $user->password }}" type="password" placeholder="Password" style="font-size: 14pt">
-    <input name="roleId" value="{{ $user->role_id }}" type="text" placeholder="Role Id" style="font-size: 14pt">
+    <input name="role_id" value="{{ $user->role_id }}" type="text" placeholder="Role Id" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Submit</button>
   </form>
 </div>
