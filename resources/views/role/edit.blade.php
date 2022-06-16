@@ -6,7 +6,7 @@
   <h1 style="text-align: center;">Edit Role Days</h1>
 
   <div style="margin-bottom: 20px">
-    <a class="tambah" href="{{ url('days' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
+    <a class="tambah" href="{{ url('roles' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
   </div>
     
   @if (session('success'))
@@ -38,7 +38,7 @@
 @include('layouts.sidebar')
 <script>
 //   id = role, user, vendor, service, gallery, review, day, hour
-  ["role", "user", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
+  ["day", "user", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
   document.getElementById("role").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
   document.getElementById("divRole").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
 </script>
