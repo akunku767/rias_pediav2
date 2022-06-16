@@ -3,12 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Hours;
 use Illuminate\Http\Request;
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 
-
-class UserController extends Controller
+class HourController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all(); 
-        return view('user.index', ['users' => $users]);
+        $hours = Hours::all(); 
+        return view('hour.index', ['hours' => $hours]);
     }
 
     /**
@@ -28,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        return view('hour.create');
     }
 
     /**
@@ -40,23 +38,15 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required', 
-            'password' => 'required',
-            'role_id' => 'required',
+            'day_id' => 'required',
+            'vendor_id' => 'required',
           ]);
-
+        
           $input = $request->all();
         
-        //   $user = User::create($input);
-          $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email, 
-            'password' => Hash::make($request->password),
-            'role_id' => $request->role_id,
-          ]);
+          $hours = Hours::create($input);
          
-          return back()->with('success',' User baru berhasil dibuat.');
+          return back()->with('success',' Post baru berhasil dibuat.');
     }
 
     /**
@@ -78,12 +68,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-        return view('user.edit', [
-            'user' => $user,
-            'email' => $user, 
-            'password' => $user,
-            'role_id' => $user,
+        $hours = Hours::findOrFail($id);
+        return view('hour.edit', [
+            'hour' => $hours
         ]);
     }
 
@@ -97,13 +84,11 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required', 
-            'password' => 'required',
-            'role_id' => 'required',
+            'day_id' => 'required',
+            'vendor_id' => 'required',
           ]);
                
-         $user = User::find($id)->update($request->all()); 
+         $hours = Hours::find($id)->update($request->all()); 
                 
          return back()->with('success',' Data telah diperbaharui!');
     }
@@ -116,8 +101,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::find($id);
-        $user->delete();
+        $hours = Hours::find($id);
+        $hours->delete();
 
         return back()->with('success',' Penghapusan berhasil.');
     }

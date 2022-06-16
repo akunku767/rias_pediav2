@@ -3,7 +3,7 @@
 @section('title', 'Rias Pedia')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
-  <h1 style="text-align: center;">List Role Days</h1>
+  <h1 style="text-align: center;">List Data Role</h1>
 
   <div style="margin-bottom: 20px">
     <a class="tambah" href="{{ url('roles/create' ) }}"><i class="fa-solid fa-plus"></i> Tambah Data</a>
@@ -38,9 +38,9 @@
 @include('layouts.sidebar')
 <script>
 //   id = role, user, vendor, service, gallery, review, day, hour
-  ["role", "user", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
+  ["day", "user", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
   document.getElementById("role").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
-  document.getElementById("divROle").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
+  document.getElementById("divRole").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
 </script>
 
 @endsection
