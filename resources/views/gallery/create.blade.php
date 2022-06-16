@@ -1,12 +1,12 @@
 <!-- //views/post/create.blade.php -->
 @extends('layouts.app')
-@section('title', 'Buat Users Baru')
+@section('title', 'Rias Pedia')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
-  <h1 style="text-align: center;">Create Data Users</h1>
+  <h1 style="text-align: center;">Create Data Galleries</h1>
   
   <div style="margin-bottom: 20px">
-    <a class="tambah" href="{{ url('users' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
+    <a class="tambah" href="{{ url('galleries' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
   </div>
 
   @if (session('success'))
@@ -25,12 +25,10 @@
   </div>
   @endif
   
-  <form method="POST" action="{{ url('users') }}">
+  <form method="POST" action="{{ url('galleries') }}">
     @csrf
-    <input name="name" type="text" placeholder="Nama" style="font-size: 14pt"> 
-    <input name="email" type="email" placeholder="Email" style="font-size: 14pt">
-    <input name="password" type="password" placeholder="Password" style="font-size: 14pt">
-    <input name="role_id" type="number" placeholder="Role_id" style="font-size: 14pt">
+    <input name="vendor_id" type="text" placeholder="Vendor Id" style="font-size: 14pt"> 
+    <input name="image" type="text" placeholder="Image" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Tambah Data</button>
   </form>
 </div>
@@ -38,10 +36,10 @@
 {{-- Sintaks sidebar, beri kode #FFFFFF untuk menu aktif, dan beri kode #000000 untuk menu tidak aktif --}}
 @include('layouts.sidebar')
 <script>
-//   id = role, user, vendor, service, gallery, review, day, hour
-  ["role", "day", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
-  document.getElementById("user").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
-  document.getElementById("divUser").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
+//   id = role, user, vendor, service,gallery, review, day, hour
+  ["role", "day", "vendor", "service", "user", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
+  document.getElementById("gallery").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
+  document.getElementById("divGallery").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
 </script>
 
 
