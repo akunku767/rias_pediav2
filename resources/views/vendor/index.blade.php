@@ -12,10 +12,8 @@
   <table style="width:100%; border-collapse:collapse">
     <thead>
       <tr>
-<<<<<<< HEAD
         <th>Id</th>
         <th>Name</th>
-=======
         <th>Id</th>
         <th>Phone</th>
         <th>Role_id</th>
