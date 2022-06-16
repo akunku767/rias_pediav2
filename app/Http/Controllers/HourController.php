@@ -38,7 +38,6 @@ class HourController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'time' => 'required', 
             'day_id' => 'required',
             'vendor_id' => 'required',
           ]);
@@ -69,9 +68,9 @@ class HourController extends Controller
      */
     public function edit($id)
     {
-        $hour = Hour::findOrFail($id);
+        $hours = Hours::findOrFail($id);
         return view('hour.edit', [
-            'hour' => $hour
+            'hour' => $hours
         ]);
     }
 
@@ -85,10 +84,11 @@ class HourController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required', 
-         ]);
+            'day_id' => 'required',
+            'vendor_id' => 'required',
+          ]);
                
-         $hhour = Hour::find($id)->update($request->all()); 
+         $hours = Hours::find($id)->update($request->all()); 
                 
          return back()->with('success',' Data telah diperbaharui!');
     }
@@ -101,8 +101,8 @@ class HourController extends Controller
      */
     public function destroy($id)
     {
-        $hour = Hour::find($id);
-        $hour->delete();
+        $hours = Hours::find($id);
+        $hours->delete();
 
         return back()->with('success',' Penghapusan berhasil.');
     }
