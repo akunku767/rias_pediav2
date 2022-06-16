@@ -8,7 +8,7 @@
     </table>
   
     <div class="terpilih" style="padding: 10px" id="divRole">
-      <a id="role" href="../roles" style="text-decoration: none;">
+      <a id="role" href="{{ url('roles') }}" style="text-decoration: none;">
         <table class="pilihan" style="border: none">
             <tr>
               <td width="40px" style="border: none"><i class="fa-solid fa-user-gear" aria-hidden="true" style="font-size: 20pt"></i></td>
@@ -19,7 +19,7 @@
     </div>
   
     <div class="terpilih" style="padding: 10px" id="divUser">
-      <a id="user" href="../users" style="text-decoration: none;">
+      <a id="user" href="{{ url('users') }}" style="text-decoration: none;">
         <table class="pilihan" style="border: none">
             <tr>
               <td width="40px" style="border: none"><i class="fa-solid fa-users" aria-hidden="true" style="font-size: 20pt"></i></td>
@@ -30,7 +30,7 @@
     </div>
   
     <div class="terpilih" style="padding: 10px" id="divVendor">
-      <a id="vendor" href="../vendors" style="text-decoration: none;">
+      <a id="vendor" href="{{ url('vendors') }}" style="text-decoration: none;">
         <table class="pilihan" style="border: none">
             <tr>
               <td width="40px" style="border: none"><i class="fa-solid fa-shop" aria-hidden="true" style="font-size: 20pt"></i></td>
@@ -41,7 +41,7 @@
     </div>
 
     <div class="terpilih" style="padding: 10px" id="divService">
-      <a id="service" href="../services" style="text-decoration: none;">
+      <a id="service" href="{{ url('services') }}" style="text-decoration: none;">
         <table class="pilihan" style="border: none">
             <tr>
               <td width="40px" style="border: none"><i class="fa-solid fa-book-open" aria-hidden="true" style="font-size: 20pt"></i></td>
@@ -52,7 +52,7 @@
     </div>
 
     <div class="terpilih" style="padding: 10px" id="divGallery">
-      <a id="gallery" href="../galleries" style="text-decoration: none;">
+      <a id="gallery" href="{{ url('galleries') }}" style="text-decoration: none;">
         <table class="pilihan" style="border: none">
             <tr>
               <td width="40px" style="border: none"><i class="fa-solid fa-images" aria-hidden="true" style="font-size: 20pt"></i></td>
@@ -63,7 +63,7 @@
     </div>
 
     <div class="terpilih" style="padding: 10px" id="divReview">
-      <a id="review" href="../reviews" style="text-decoration: none;">
+      <a id="review" href="{{ url('reviews') }}" style="text-decoration: none;">
         <table class="pilihan" style="border: none">
           <tr>
             <td width="40px" style="border: none"><i class="fa-solid fa-star" aria-hidden="true" style="font-size: 20pt"></i></td>
@@ -74,7 +74,7 @@
     </div>
   
     <div class="terpilih" style="padding: 10px" id="divDay">
-      <a id="day" href="../days" style="text-decoration: none">
+      <a id="day" href="{{ url('days') }}" style="text-decoration: none">
         <table class="pilihan" style="border: none">
         <tr>
           <td width="40px" style="border: none"><i class="fa-solid fa-calendar-days" aria-hidden="true" style="font-size: 20pt"></i></td>
@@ -85,7 +85,7 @@
     </div>
 	
     <div class="terpilih" style="padding: 10px" id="divHour">
-      <a id="hour" href="../hours" style="text-decoration: none;">
+      <a id="hour" href="{{ url('hours') }}" style="text-decoration: none;">
         <table class="pilihan" style="border: none">
           <tr>
             <td width="40px" style="border: none"><i class="fa-solid fa-clock" aria-hidden="true" style="font-size: 20pt"></i></td>
