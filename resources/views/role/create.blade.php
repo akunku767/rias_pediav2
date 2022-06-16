@@ -1,6 +1,6 @@
 <!-- //views/post/create.blade.php -->
 @extends('layouts.app')
-@section('title', 'Buat Days Baru')
+@section('title', 'Rias Pedia')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
   <h1 style="text-align: center;">Create Data Roles</h1>

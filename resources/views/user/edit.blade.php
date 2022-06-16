@@ -1,6 +1,6 @@
 {{-- //views/post/edit.blade.php --}}
 @extends('layouts.app')
-@section('title', 'Edit Data Users')
+@section('title', 'Rias Pedia')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
   <h1 style="text-align: center;">Edit Data Users</h1>

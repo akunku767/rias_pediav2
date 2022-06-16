@@ -1,6 +1,6 @@
 {{-- //views/layouts/index.blade.php --}}
 @extends('layouts.app')
-@section('title', 'List Data Vendors')
+@section('title', 'Rias Pedia')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
   <h1 style="text-align: center;">List Data Vendors</h1>
