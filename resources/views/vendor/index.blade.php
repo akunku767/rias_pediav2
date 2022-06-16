@@ -14,9 +14,8 @@
       <tr>
         <th>Id</th>
         <th>Name</th>
-        <th>Id</th>
         <th>Phone</th>
-        <th>Role_id</th>
+        <th>User Id</th>
         <th>Geometry</th>
         <th colspan="2">Aksi</th>
       </tr>

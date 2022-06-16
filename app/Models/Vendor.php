@@ -9,6 +9,9 @@ class Vendor extends Model
 {
     use HasFactory;
 
-    use HasFactory;
-    protected $guarded = ['id'];
-}
+    protected $fillable = [
+        'name',
+        'phone',
+        'user_id',
+        'geometry',
+    ];}
