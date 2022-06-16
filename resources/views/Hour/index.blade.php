@@ -3,7 +3,7 @@
 @section('title', 'Rias Pedia')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
-  <h1 style="text-align: center;">List Data Vendors</h1>
+  <h1 style="text-align: center;">List Data Hours</h1>
 
   <div style="margin-bottom: 20px">
     <a class="tambah" href="{{ url('hours/create' ) }}"><i class="fa-solid fa-plus"></i> Tambah Data</a>
@@ -24,7 +24,7 @@
       @foreach ($hours as $hour)
       <tr style="height: 42px">
         <td style="width: 100px" >{{ $hour->id}}</td>
-        <td style="width: 150px" >{{ $hour->name }}</td>
+        <td style="width: 150px" >{{ $hour->time }}</td>
         <td style="width: 150px" >{{ $hour->day_id }}</td>
         <td style="width: 150px" >{{ $hour->vendor_id }}</td>
         {{-- <td style="width: 150px" >{{ $user->password }}</td> --}}
