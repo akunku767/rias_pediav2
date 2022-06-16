@@ -12,8 +12,13 @@
   <table style="width:100%; border-collapse:collapse">
     <thead>
       <tr>
+<<<<<<< HEAD
         <th>Idsdf</th>
         <th>Name</th>
+=======
+        <th>Id</th>
+        <th>Nameas</th>
+>>>>>>> 2f90a0380933f40df90c55894497930bfa507560
         <th>Phone</th>
         <th>Role_id</th>
         <th>Geometry</th>
