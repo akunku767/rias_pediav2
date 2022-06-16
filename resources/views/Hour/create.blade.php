@@ -27,7 +27,6 @@
   
   <form method="POST" action="{{ url('hours') }}">
     @csrf
-    <input name="time" type="time" placeholder="time" style="font-size: 14pt">
     <input name="day_id" type="number" placeholder="day_id" style="font-size: 14pt">
     <input name="vendor_id" type="number" placeholder="vendor_id" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Tambah Data</button>

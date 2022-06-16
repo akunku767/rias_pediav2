@@ -24,7 +24,7 @@
       @foreach ($hours as $hour)
       <tr style="height: 42px">
         <td style="width: 100px" >{{ $hour->id}}</td>
-        <td style="width: 150px" >{{ $hour->time }}</td>
+        <td style="width: 150px" >{{ $hour->created_at }}</td>
         <td style="width: 150px" >{{ $hour->day_id }}</td>
         <td style="width: 150px" >{{ $hour->vendor_id }}</td>
         {{-- <td style="width: 150px" >{{ $user->password }}</td> --}}

@@ -29,7 +29,6 @@
     @csrf
     @method('PUT')
     <input name="id" value="{{ $hour->id }}" type="text" placeholder="Id" style="font-size: 14pt" disabled> 
-    <input name="time" value="{{ $hour->name }}" type="text" placeholder="Name" style="font-size: 14pt">
     <input name="day_id" value="{{ $hour->day_id }}" type="text" placeholder="Role Id" style="font-size: 14pt">
     <input name="vendor_id" value="{{ $hour->vendor_id }}" type="text" placeholder="Role Id" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Submit</button>
