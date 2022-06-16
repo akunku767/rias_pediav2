@@ -39,6 +39,9 @@ class VendorController extends Controller
     {
         $request->validate([
             'name' => 'required', 
+            'phone' => 'required',
+            'user_id' => 'required',
+            'geometry' => 'required',
           ]);
         
           $input = $request->all();
@@ -69,7 +72,11 @@ class VendorController extends Controller
     {
         $vendor = Vendor::findOrFail($id);
         return view('vendor.edit', [
-            'vendor' => $vendor
+            'vendor' => $vendor,
+            'phone' => $vendor,
+            'user_id' => $vendor,
+            'geometry' => $vendor,
+
         ]);
     }
 
@@ -84,7 +91,10 @@ class VendorController extends Controller
     {
         $request->validate([
             'name' => 'required', 
-         ]);
+            'phone' => 'required',
+            'user_id' => 'required',
+            'geometry' => 'required',
+          ]);
                
          $vendor = Vendor::find($id)->update($request->all()); 
                 

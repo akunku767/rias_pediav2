@@ -1,6 +1,6 @@
 {{-- //views/post/edit.blade.php --}}
 @extends('layouts.app')
-@section('title', 'Edit Data Vendors')
+@section('title', 'Rias Pedia')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
   <h1 style="text-align: center;">Edit Data Vendors</h1>
@@ -28,10 +28,11 @@
   <form method="POST" action="{{ url('vendors', $vendor->id ) }}">
     @csrf
     @method('PUT')
-    <input name="name" type="text" placeholder="Nama" style="font-size: 14pt"> 
-    <input name="phone" type="number" placeholder="Phone" style="font-size: 14pt">
-    <input name="user_id" type="number" placeholder="User Id" style="font-size: 14pt">
-    <input name="geometry" type="text" placeholder="Geometry" style="font-size: 14pt"> 
+    <input name="id" value="{{ $vendor->id }}" type="text" placeholder="Id" style="font-size: 14pt" disabled> 
+    <input name="name" value="{{ $vendor->name }}" type="text" placeholder="Nama" style="font-size: 14pt"> 
+    <input name="phone" value="{{ $vendor->phone }}" type="number" placeholder="Phone" style="font-size: 14pt">
+    <input name="user_id" value="{{ $vendor->user_id }}" type="number" placeholder="User Id" style="font-size: 14pt">
+    <input name="geometry" value="{{ $vendor->geometry }}" type="text" placeholder="Geometry" style="font-size: 14pt"> 
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Submit</button>
   </form>
 </div>
