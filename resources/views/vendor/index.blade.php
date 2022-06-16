@@ -13,7 +13,7 @@
     <thead>
       <tr>
         <th>Id</th>
-        <th>Name</th>
+        <th>Nameas</th>
         <th>Phone</th>
         <th>Role_id</th>
         <th>Geometry</th>
