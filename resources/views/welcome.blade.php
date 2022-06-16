@@ -6,15 +6,82 @@
 
 
 <div class="content" style="padding-left: 210px">
-  <h1 style="text-align: center;" class="lms fs-1 pt-3">Dashboard</h1>
-  <p>Silahkan pilih menu berikut</h1>
-    <div class="card text-white bg-primary" style="max-width: 18rem;">
-      <div class="card-header">Header</div>
-      <div class="card-body">
-        <h5 class="card-title">Primary card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <h1 style="text-align: center;" class="lms fs-2 p-3">Dashboard Rias Pedia</h1>
+    {{-- Card Menu --}}
+    <section id="maincard">
+      <div class="row justify-content-center">
+          <div class="col-sm-6">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Data </h5>
+                      <p class="card-text">Jumlah Data  Saat Ini Adalah <u><b></b></u> Data .</p>
+                      <div class="row justify-content-between">
+                          <div class="col-4">
+                              <a href="#" class="btn btn-dark  border-0" style="background-image: linear-gradient(to bottom right, rgb(24, 26, 190), rgb(0, 159, 199));">Lihat</a>
+                          </div>
+                          <div class="col-4">
+                              <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> Data</i></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Data </h5>
+                    <p class="card-text">Jumlah Data  Saat Ini Adalah <u><b></b></u> Data .</p>
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <a href="#" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(24, 26, 190), rgb(0, 159, 199));">Lihat</a>
+                        </div>
+                        <div class="col-4">
+                            <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> Data</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Data </h5>
+                    <p class="card-text">Jumlah Data  Saat Ini Adalah <u><b></b></u> Data .</p>
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <a href="#" class="btn btn-dark  border-0" style="background-image: linear-gradient(to bottom right, rgb(24, 26, 190), rgb(0, 159, 199));">Lihat</a>
+                        </div>
+                        <div class="col-4">
+                            <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> Data</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">Data </h5>
+                  <p class="card-text">Jumlah Data  Saat Ini Adalah <u><b></b></u> Data .</p>
+                  <div class="row justify-content-between">
+                      <div class="col-4">
+                          <a href="#" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(24, 26, 190), rgb(0, 159, 199));">Lihat</a>
+                      </div>
+                      <div class="col-4">
+                          <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> Data</i></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
     </div>
+
+    </section>
+    
 
 {{-- Sintaks sidebar, beri kode #FFFFFF untuk menu aktif, dan beri kode #000000 untuk menu tidak aktif --}}
 @include('layouts.sidebar')
