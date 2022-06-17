@@ -25,12 +25,12 @@
   </div>
   @endif
   
-  <form method="POST" action="{{ url('galleries', $gallery->id) }}">
+  <form method="POST" action="{{ url('galleries') }}">
     @csrf
     @method('PUT')
-    <input name="id" value="{{ $gallery->id }}" type="text" placeholder="Id" style="font-size: 14pt" disabled> 
-    <input name="vendor_id" value="{{ $gallery->vendor_id }}" type="text" placeholder="Vendor Id" style="font-size: 14pt">
-    <input name="image" value="{{ $gallery->image }}" type="text" placeholder="Image" style="font-size: 14pt">
+    <input name="id" value="" type="text" placeholder="Id" style="font-size: 14pt" disabled> 
+    <input name="vendor_id" value="" type="text" placeholder="Vendor Id" style="font-size: 14pt">
+    <input name="image" value="" type="text" placeholder="Image" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Submit</button>
   </form>
 </div>
