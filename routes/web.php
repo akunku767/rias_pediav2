@@ -5,6 +5,7 @@ use App\Http\Controllers\DayController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VendorController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HourController;
 use App\Http\Controllers\ServiceController;
 
@@ -15,6 +16,8 @@ Route::resource('roles', RoleController::class);
 Route::resource('users', UserController::class);
 
 Route::resource('vendors', VendorController::class);
+
+Route::resource('galleries', GalleryController::class);
 
 Route::resource('hours', HourController::class);
 
