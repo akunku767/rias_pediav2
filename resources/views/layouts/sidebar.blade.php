@@ -1,4 +1,4 @@
-<div id="mySidebar" class="sidebar" style="width:240px; box-shadow: 0px 4px 20px 0px rgba(30, 214, 183, 0.9);">
+<div id="mySidebar" class="sidebar" style="width:240px; box-shadow: 0px 4px 20px 0px rgba(225,188,134,0.3);">
     <table align="center" style="border: none">
       <tr>
         <td align="center" style="border: none">
