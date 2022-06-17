@@ -2,7 +2,7 @@
     <table align="center" style="border: none">
       <tr>
         <td align="center" style="border: none">
-          <a href="/"><img src="..\img\logo.png" width="200"></a>
+          <a href="/"><img src="{{ asset('img/logo.png') }}" width="200" style="margin-bottom: 22px"></a>
         </td>
       </tr>
     </table>
