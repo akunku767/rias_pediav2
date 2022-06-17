@@ -1,8 +1,8 @@
-<div id="mySidebar" class="sidebar" style="width:240px; box-shadow: 0px 4px 20px 0px rgba(30, 214, 183, 0.9);">
+<div id="mySidebar" class="sidebar" style="width:240px; box-shadow: 0px 4px 20px 0px rgba(225,188,134,0.3);">
     <table align="center" style="border: none">
       <tr>
         <td align="center" style="border: none">
-          <a href="/" class="lms" style="font-size: 24pt">Pilih Menu</a>
+          <a href="\"><img src="..\img\logo.png" width="200px" style="margin-bottom: 22px"></a>
         </td>
       </tr>
     </table>
