@@ -22,7 +22,7 @@
 	  .tambah{
 		margin-right: 100px;
 		padding: 8px 10px;
-		color: #3F51B5;
+		color: #d9a451;
 		text-decoration: none;
 		font-family: arial;
 		border-radius: 3px;
@@ -31,7 +31,7 @@
 	  
 	  .tambah:hover{
 	    color: #FFFFFF;
-		background-color: #3F51B5;
+		background-color: #d9a451;
 		border-radius: 3px;
 	  }
 
@@ -190,7 +190,7 @@
 	  
 	  .lms{
         right: 88px;
-		color: #3F51B5;
+		color: #d9a451;
 		font-size: 18pt;
 		font-family: arial;
 		font-weight: bold;
