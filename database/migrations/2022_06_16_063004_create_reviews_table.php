@@ -17,6 +17,8 @@ class CreateReviewsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('vendor_id');
+            $table->string('description');
+            $table->string('score');
             $table->foreign('user_id')
             ->references('id')->on('users')->onDelete('cascade');
             $table->foreign('vendor_id')

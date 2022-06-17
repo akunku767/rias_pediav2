@@ -6,7 +6,7 @@
   <h1 style="text-align: center;">Create Data Days</h1>
   
   <div style="margin-bottom: 20px">
-    <a class="tambah" href="{{ url('days' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
+    <a class="tambah" href="{{ url('reviews' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
   </div>
 
   @if (session('success'))
@@ -25,9 +25,12 @@
   </div>
   @endif
   
-  <form method="POST" action="{{ url('days') }}">
+  <form method="POST" action="{{ url('reviews') }}">
     @csrf
-    <input name="name" type="text" placeholder="Nama Hari" style="font-size: 14pt"> 
+    <input name="description" type="text" placeholder="description" style="font-size: 14pt"> 
+    <input name="score" type="text" placeholder="score" style="font-size: 14pt"> 
+    <input name="user_id" type="text" placeholder="user_id" style="font-size: 14pt"> 
+    <input name="vendor_id" type="text" placeholder="vendor_id" style="font-size: 14pt"> 
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Tambah Data</button>
   </form>
 </div>

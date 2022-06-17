@@ -6,7 +6,7 @@
   <h1 style="text-align: center;">Edit Data Days</h1>
 
   <div style="margin-bottom: 20px">
-    <a class="tambah" href="{{ url('days' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
+    <a class="tambah" href="{{ url('reviews' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
   </div>
     
   @if (session('success'))
@@ -25,11 +25,14 @@
   </div>
   @endif
   
-  <form method="POST" action="{{ url('days', $day->id ) }}">
+  <form method="POST" action="{{ url('reviews', $review->id ) }}">
     @csrf
     @method('PUT')
-    <input name="id" value="{{ $day->id }}" type="text" placeholder="Id" style="font-size: 14pt" disabled> 
-    <input name="name" value="{{ $day->name }}" type="text" placeholder="Name" style="font-size: 14pt">
+    <input name="id" value="{{ $review->id }}" type="text" placeholder="Id" style="font-size: 14pt" disabled> 
+    <input name="description" value="{{ $review->description }}" type="text" placeholder="description" style="font-size: 14pt">
+    <input name="score" value="{{ $review->score }}" type="text" placeholder="score" style="font-size: 14pt">
+    <input name="user_id" value="{{ $review->user_id }}" type="text" placeholder="User Id" style="font-size: 14pt">
+    <input name="vendor_id" value="{{ $review->vendor_id }}" type="text" placeholder="Vendor Id" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Submit</button>
   </form>
 </div>

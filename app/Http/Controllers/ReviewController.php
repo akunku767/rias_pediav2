@@ -38,7 +38,7 @@ class ReviewController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required', 
+            'description' => 'required', 
           ]);
         
           $input = $request->all();
@@ -82,7 +82,7 @@ class ReviewController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name' => 'required', 
+            'description' => 'required', 
          ]);
                
          $review = Review::find($id)->update($request->all()); 
