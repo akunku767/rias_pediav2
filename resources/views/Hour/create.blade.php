@@ -39,7 +39,7 @@
 //   id = role, user, vendor, service, gallery, review, day, hour
   ["role", "day", "vendor", "service", "gallery", "review", "user"].forEach(id => document.getElementById(id).style.color = "#000000")
   document.getElementById("hour").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
-  document.getElementById("divHour").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
+  document.getElementById("divHour").style.backgroundColor = "#d9a451"; //div.. itu kotak biru
 </script>
 
 
