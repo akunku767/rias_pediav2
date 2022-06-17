@@ -14,7 +14,7 @@
               <div class="card">
                   <div class="card-body">
                       <h5 class="card-title">Data </h5>
-                      <p class="card-text">Jumlah Data  Saat Ini Adalah <u><b></b></u> Data .</p>
+                      <p class="card-text">Jumlah Data Saat Ini Adalah <u><b></b></u> Data .</p>
                       <div class="row justify-content-between">
                           <div class="col-4">
                               <a href="#" class="btn btn-dark  border-0" style="background-image: linear-gradient(to bottom right, rgb(24, 26, 190), rgb(0, 159, 199));">Lihat</a>
@@ -31,7 +31,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Data </h5>
-                    <p class="card-text">Jumlah Data  Saat Ini Adalah <u><b></b></u> Data .</p>
+                    <p class="card-text">Jumlah Data Saat Ini Adalah <u><b></b></u> Data .</p>
                     <div class="row justify-content-between">
                         <div class="col-4">
                             <a href="#" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(24, 26, 190), rgb(0, 159, 199));">Lihat</a>
@@ -49,10 +49,10 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Data </h5>
-                    <p class="card-text">Jumlah Data  Saat Ini Adalah <u><b></b></u> Data .</p>
+                    <p class="card-text">Jumlah Data Saat Ini Adalah <u><b></b></u> Data .</p>
                     <div class="row justify-content-between">
                         <div class="col-4">
-                            <a href="#" class="btn btn-dark  border-0" style="background-image: linear-gradient(to bottom right, rgb(24, 26, 190), rgb(0, 159, 199));">Lihat</a>
+                            <a href="#" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(24, 26, 190), rgb(0, 159, 199));">Lihat</a>
                         </div>
                         <div class="col-4">
                             <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> Data</i></p>
@@ -66,7 +66,7 @@
           <div class="card">
               <div class="card-body">
                   <h5 class="card-title">Data </h5>
-                  <p class="card-text">Jumlah Data  Saat Ini Adalah <u><b></b></u> Data .</p>
+                  <p class="card-text">Jumlah Data Saat Ini Adalah <u><b></b></u> Data .</p>
                   <div class="row justify-content-between">
                       <div class="col-4">
                           <a href="#" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(24, 26, 190), rgb(0, 159, 199));">Lihat</a>
