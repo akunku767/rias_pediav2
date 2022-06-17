@@ -6,7 +6,7 @@
   <h1 style="text-align: center;">Edit Data Hours</h1>
 
   <div style="margin-bottom: 20px">
-    <a class="tambah" href="{{ url('hours') }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
+    <a class="tambah" href="{{ url('hours' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
   </div>
     
   @if (session('success'))
