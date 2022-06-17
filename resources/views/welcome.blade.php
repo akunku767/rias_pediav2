@@ -4,9 +4,8 @@
 @section('content')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
 <div class="content" style="padding-left: 210px">
-  <h1 style="text-align: center;" class="lms fs-2 p-3">Dashboard Rias Pedia</h1>
+    <h1 style="text-align: center; padding-bottom: 14px; border-bottom: 2px solid #444; margin-top: 0;">List Data Role</h1>
     {{-- Card Menu --}}
     <section id="maincard">
       <div class="row justify-content-center">
