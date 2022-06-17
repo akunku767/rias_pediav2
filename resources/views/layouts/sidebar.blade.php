@@ -2,7 +2,7 @@
     <table align="center" style="border: none">
       <tr>
         <td align="center" style="border: none">
-          <a href="/" class="lms" style="font-size: 24pt">Pilih Menu</a>
+          <a href="/"><img src="..\img\logo.png" width="200"></a>
         </td>
       </tr>
     </table>
