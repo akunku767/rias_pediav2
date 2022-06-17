@@ -23,7 +23,7 @@
         <td style="width: 200px" >{{ $role->id}}</td>
         <td style="width: 500px" >{{ $role->name }}</td>
         <td style="width: 100px"><button class="btn-green" style="width: auto"><a href="{{ route('roles.edit', $role->id) }}">Edit</a></button></td>
-        <form method="POST" action="{{ url('days', $role->id ) }}">
+        <form method="POST" action="{{ url('roles', $role->id ) }}">
             @csrf
             @method('DELETE')
             <td style="width: 100px"><button class="btn-red" style="cursor: pointer; width: auto">Hapus</button></td>
@@ -40,7 +40,7 @@
 //   id = role, user, vendor, service, gallery, review, day, hour
   ["day", "user", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
   document.getElementById("role").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
-  document.getElementById("divRole").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
+  document.getElementById("divRole").style.backgroundColor = "#d9a451"; //div.. itu kotak biru
 </script>
 
 @endsection
