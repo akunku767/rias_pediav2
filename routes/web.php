@@ -6,6 +6,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\HourController;
+use App\Http\Controllers\ServiceController;
 
 Route::resource('days', DayController::class);
 
@@ -16,6 +17,8 @@ Route::resource('users', UserController::class);
 Route::resource('vendors', VendorController::class);
 
 Route::resource('hours', HourController::class);
+
+Route::resource('services', ServiceController::class);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
