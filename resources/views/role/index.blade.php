@@ -23,7 +23,7 @@
         <td style="width: 200px" >{{ $role->id}}</td>
         <td style="width: 500px" >{{ $role->name }}</td>
         <td style="width: 100px"><button class="btn-green" style="width: auto"><a href="{{ route('roles.edit', $role->id) }}">Edit</a></button></td>
-        <form method="POST" action="{{ url('days', $role->id ) }}">
+        <form method="POST" action="{{ url('roles', $role->id ) }}">
             @csrf
             @method('DELETE')
             <td style="width: 100px"><button class="btn-red" style="cursor: pointer; width: auto">Hapus</button></td>
