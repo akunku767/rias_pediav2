@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HourController;
+use App\Http\Controllers\ReviewController;
 
 Route::resource('days', DayController::class);
 
@@ -19,6 +20,9 @@ Route::resource('vendors', VendorController::class);
 Route::resource('galleries', GalleryController::class);
 
 Route::resource('hours', HourController::class);
+
+Route::resource('reviews', ReviewController::class);
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
