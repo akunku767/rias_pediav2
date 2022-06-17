@@ -6,7 +6,7 @@
   <h1 style="text-align: center;">Edit Data Hours</h1>
 
   <div style="margin-bottom: 20px">
-    <a class="tambah" href="{{ url('hours') }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
+    <a class="tambah" href="{{ url('hours' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
   </div>
     
   @if (session('success'))
@@ -41,7 +41,7 @@
 //   id = role, user, vendor, service, gallery, review, day, hour
   ["role", "day", "vendor", "service", "gallery", "review", "user"].forEach(id => document.getElementById(id).style.color = "#000000")
   document.getElementById("hour").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
-  document.getElementById("divHour").style.backgroundColor = "#3F51B5"; //div.. itu kotak biru
+  document.getElementById("divHour").style.backgroundColor = "#d9a451"; //div.. itu kotak biru
 </script>
 
 @endsection
