@@ -27,7 +27,6 @@
   
   <form method="POST" action="{{ url('photos') }}">
     @csrf
-    <input name="id" type="text" placeholder="Id" style="font-size: 14pt" disabled>
     <input name="images" type="text" placeholder="Images" style="font-size: 14pt">
     <input name="vendor_id" type="number" placeholder="vendor_id" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Tambah Data</button>

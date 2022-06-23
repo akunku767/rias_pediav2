@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\photo;
+use App\Models\Photo;
 use Illuminate\Http\Request;
 
 class PhotoController extends Controller
@@ -15,8 +15,8 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        $photo = Photo::all(); 
-        return view('photo.index', ['photo' => $photos]);
+        $photos = Photo::all(); 
+        return view('photo.index', ['photos' => $photos]);
     }
 
     /**
@@ -70,7 +70,7 @@ class PhotoController extends Controller
     {
         $photo = Photo::findOrFail($id);
         return view('photo.edit', [
-            'photo' => $photos
+            'photo' => $photo
         ]);
     }
 

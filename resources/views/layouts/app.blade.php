@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="{{ asset('css/Style Isi.css') }}"/>
   <link rel="stylesheet" href="{{ asset('css/all.css') }}"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo.png') }}">
+  <link rel="apple-touch-icon" href="{{ asset('img/logo.png') }}">
   <script src="https://kit.fontawesome.com/8e6e4ad827.js" crossorigin="anonymous"></script>
 </head>
 <body style="background-color: #F1F1F1">

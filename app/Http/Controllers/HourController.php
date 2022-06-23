@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Hours;
+use App\Models\Hour;
 use Illuminate\Http\Request;
 
 class HourController extends Controller
@@ -15,7 +15,7 @@ class HourController extends Controller
      */
     public function index()
     {
-        $hours = Hours::all(); 
+        $hours = Hour::all(); 
         return view('hour.index', ['hours' => $hours]);
     }
 
@@ -44,7 +44,7 @@ class HourController extends Controller
         
           $input = $request->all();
         
-          $hours = Hours::create($input);
+          $hours = Hour::create($input);
          
           return back()->with('success',' Post baru berhasil dibuat.');
     }
@@ -68,7 +68,7 @@ class HourController extends Controller
      */
     public function edit($id)
     {
-        $hours = Hours::findOrFail($id);
+        $hours = Hour::findOrFail($id);
         return view('hour.edit', [
             'hour' => $hours
         ]);
@@ -88,7 +88,7 @@ class HourController extends Controller
             'vendor_id' => 'required',
           ]);
                
-         $hours = Hours::find($id)->update($request->all()); 
+         $hours = Hour::find($id)->update($request->all()); 
                 
          return back()->with('success',' Data telah diperbaharui!');
     }
@@ -101,7 +101,7 @@ class HourController extends Controller
      */
     public function destroy($id)
     {
-        $hours = Hours::find($id);
+        $hours = Hour::find($id);
         $hours->delete();
 
         return back()->with('success',' Penghapusan berhasil.');
