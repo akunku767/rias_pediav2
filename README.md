@@ -1,3 +1,5 @@
+Link coba : https://laravel.grabahanberzakat.site/
+
 **Cara menggunakan project ini :**
 1. Download repository ini
 2. Buat database db_riaspedia
