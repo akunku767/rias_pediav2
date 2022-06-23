@@ -45,7 +45,7 @@ class VendorController extends BaseController
    
         $vendor = Vendor::create($input);
    
-        return $this->sendResponse(new DayResource($vendor), 'Vendor created successfully.');
+        return $this->sendResponse(new VendorResource($vendor), 'Vendor created successfully.');
     } 
    
     /**
