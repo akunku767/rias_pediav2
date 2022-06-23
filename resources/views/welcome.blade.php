@@ -17,10 +17,10 @@
                       <p class="card-text">Jumlah Data Saat Ini Adalah <u><b></b></u> Data .</p>
                       <div class="row justify-content-between">
                           <div class="col-4">
-                              <a href="#" class="btn btn-dark  border-0" style="background-image: linear-gradient(to bottom right, rgb(217,164,81), rgb(225,188,134));">Lihat</a>
+                              <a href="{{ url('roles') }}" class="btn btn-dark  border-0" style="background-image: linear-gradient(to bottom right, rgb(217,164,81), rgb(225,188,134));">Lihat</a>
                           </div>
                           <div class="col-4">
-                              <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> Data</i></p>
+                              <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> {{ $roles->count() }}  Data</i></p>
                           </div>
                       </div>
                   </div>
@@ -34,10 +34,10 @@
                     <p class="card-text">Jumlah Data Saat Ini Adalah <u><b></b></u> Data .</p>
                     <div class="row justify-content-between">
                         <div class="col-4">
-                            <a href="#" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(217,164,81), rgb(225,188,134));">Lihat</a>
+                            <a href="{{ url('users') }}" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(217,164,81), rgb(225,188,134));">Lihat</a>
                         </div>
                         <div class="col-4">
-                            <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> Data</i></p>
+                            <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i>{{ $users->count() }} Data</i></p>
                         </div>
                     </div>
                 </div>
@@ -52,10 +52,10 @@
                     <p class="card-text">Jumlah Data Saat Ini Adalah <u><b></b></u> Data .</p>
                     <div class="row justify-content-between">
                         <div class="col-4">
-                            <a href="#" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(217,164,81), rgb(225,188,134));">Lihat</a>
+                            <a href="{{ url('vendors') }}" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(217,164,81), rgb(225,188,134));">Lihat</a>
                         </div>
                         <div class="col-4">
-                            <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> Data</i></p>
+                            <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i>{{ $vendors->count() }} Data</i></p>
                         </div>
                     </div>
                 </div>
@@ -69,10 +69,10 @@
                   <p class="card-text">Jumlah Data Saat Ini Adalah <u><b></b></u> Data .</p>
                   <div class="row justify-content-between">
                       <div class="col-4">
-                          <a href="#" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(217,164,81), rgb(225,188,134));">Lihat</a>
+                          <a href="{{ url('reviews') }}" class="btn btn-dark border-0" style="background-image: linear-gradient(to bottom right, rgb(217,164,81), rgb(225,188,134));">Lihat</a>
                       </div>
                       <div class="col-4">
-                          <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i> Data</i></p>
+                          <p class="txt text-end fs-3"><i class="bi bi-bar-chart-line"></i>{{ $reviews->count() }} Data</i></p>
                       </div>
                   </div>
               </div>

@@ -9,6 +9,9 @@ use App\Http\Controllers\HourController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\WelcomeController;
+
+Route::resource('/', WelcomeController::class);
 
 Route::resource('days', DayController::class);
 
@@ -36,6 +39,6 @@ Route::resource('photos', PhotoController::class);
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
