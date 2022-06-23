@@ -19,8 +19,6 @@ Route::resource('users', UserController::class);
 
 Route::resource('vendors', VendorController::class);
 
-//Route::resource('galleries', GalleryController::class);
-
 Route::resource('hours', HourController::class);
 
 Route::resource('services', ServiceController::class);
