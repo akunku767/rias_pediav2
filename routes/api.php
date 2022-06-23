@@ -10,6 +10,7 @@ use App\Http\Controllers\API\RoleController;
 use App\Http\Controllers\API\ReviewController;
 use App\Http\Controllers\API\HourController;
 use App\Http\Controllers\API\PhotoController;
+use App\Http\Controllers\API\ServiceController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -35,4 +36,5 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::resource('reviews', ReviewController::class);
     Route::resource('hours', HourController::class);
     Route::resource('photos', PhotoController::class);
+    Route::resource('services', ServiceController::class);
 });
