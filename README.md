@@ -7,14 +7,15 @@
 **Cara menggunakan API :**
 1. Login dahulu menggunakan method POST, dengan perintah => http://localhost:8000/api/login?email=emailmu@gmail.com&password=passwordnya
 2. tersedia 8 tabel, diantaranya: **days, hours, photos, reviews, roles, services, users, vendor**
-3. Untuk CRUD ialah
-   **A. Read**
+
+**Isian CRUD ialah**
+   **1. Read**
       _GET_    | http://localhost:8000/api/namatable (Read keseluruhan)
       _GET_    | http://localhost:8000/api/namatable/{id_table} (Read berdasarkan ID)
-   **B. Create**
+   **2. Create**
       _POST_   | http://localhost:8000/api/namatable?parameter=value
-   **C. Update**
+   **3. Update**
       _PUT_    | http://localhost:8000/api/namatable/{id}?parameter=valueBaru
-   **D. Delete**
+   **4. Delete**
       _DELETE_ | http://localhost:8000/api/namatable/{id}?
 
