@@ -39,8 +39,7 @@ CREATE TABLE `days` (
 --
 
 INSERT INTO `days` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'senin', '2022-06-23 01:03:58', '2022-06-23 01:03:58'),
-(2, 'kamis', '2022-06-23 01:04:04', '2022-06-23 01:04:04');
+(5, 'Senin', '2022-06-20 21:16:48', '2022-06-20 21:16:48');
 
 -- --------------------------------------------------------
 
@@ -61,18 +60,35 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
+-- Struktur dari tabel `galleries`
+--
+
+CREATE TABLE `galleries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `vendor_id` bigint(20) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- Struktur dari tabel `hours`
 --
 
 CREATE TABLE `hours` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `time` datetime NOT NULL DEFAULT current_timestamp(),
   `day_id` bigint(20) UNSIGNED NOT NULL,
   `vendor_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 --
 -- Dumping data untuk tabel `hours`
 --
@@ -81,6 +97,8 @@ INSERT INTO `hours` (`id`, `time`, `day_id`, `vendor_id`, `created_at`, `updated
 (1, '2022-06-23 15:06:43', 1, 1, '2022-06-23 01:06:43', '2022-06-23 01:06:43'),
 (2, '2022-06-23 15:06:50', 2, 2, '2022-06-23 01:06:50', '2022-06-23 01:06:50');
 
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- --------------------------------------------------------
 
 --
@@ -99,21 +117,22 @@ CREATE TABLE `migrations` (
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_100000_create_password_resets_table', 1),
-(2, '2016_06_01_000001_create_oauth_auth_codes_table', 1),
-(3, '2016_06_01_000002_create_oauth_access_tokens_table', 1),
-(4, '2016_06_01_000003_create_oauth_refresh_tokens_table', 1),
-(5, '2016_06_01_000004_create_oauth_clients_table', 1),
-(6, '2016_06_01_000005_create_oauth_personal_access_clients_table', 1),
-(7, '2019_08_19_000000_create_failed_jobs_table', 1),
-(8, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(9, '2022_06_13_085151_create_days_table', 1),
-(10, '2022_06_15_021520_create_roles_table', 1),
-(11, '2022_06_15_024659_create_users_table', 1),
-(12, '2022_06_15_034436_create_vendors_table', 1),
-(13, '2022_06_16_025845_create_hours_table', 1),
-(14, '2022_06_16_063004_create_reviews_table', 1),
-(15, '2022_06_17_023740_create_services_table', 1),
-(16, '2022_06_17_073206_create_photos_table', 1);
+(2, '2019_08_19_000000_create_failed_jobs_table', 1),
+(3, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(4, '2022_06_13_085151_create_days_table', 1),
+(5, '2022_06_15_021520_create_roles_table', 1),
+(6, '2022_06_15_024659_create_users_table', 1),
+(7, '2022_06_15_034436_create_vendors_table', 1),
+(8, '2022_06_16_025845_create_hours_table', 1),
+(9, '2022_06_16_063004_create_reviews_table', 1),
+(10, '2022_06_17_023740_create_services_table', 1),
+(11, '2022_06_17_060340_create_galleries_table', 1),
+(12, '2016_06_01_000001_create_oauth_auth_codes_table', 2),
+(13, '2016_06_01_000002_create_oauth_access_tokens_table', 2),
+(14, '2016_06_01_000003_create_oauth_refresh_tokens_table', 2),
+(15, '2016_06_01_000004_create_oauth_clients_table', 2),
+(16, '2016_06_01_000005_create_oauth_personal_access_clients_table', 2),
+(17, '2022_06_17_073206_create_photos_table', 2);
 
 -- --------------------------------------------------------
 
@@ -224,6 +243,24 @@ CREATE TABLE `personal_access_tokens` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `personal_access_tokens`
+--
+
+INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `created_at`, `updated_at`) VALUES
+(1, 'App\\Models\\User', 1, 'MyApp', 'b6403b5e6ab8797336801775cc76ece8c709e42b9894556c2ee39c74efd24cfb', '[\"*\"]', NULL, '2022-06-20 20:32:44', '2022-06-20 20:32:44'),
+(2, 'App\\Models\\User', 2, 'MyApp', 'c644a5c553e6cf4f40b0e79d0434806af646cd13295a4d799441cf2e63f716d3', '[\"*\"]', NULL, '2022-06-20 20:34:52', '2022-06-20 20:34:52'),
+(3, 'App\\Models\\User', 3, 'MyApp', '150ff2c47745c2290574dfa1c8db701e3053b715f25d162931bd3ce5b21c9208', '[\"*\"]', NULL, '2022-06-20 20:37:56', '2022-06-20 20:37:56'),
+(4, 'App\\Models\\User', 4, 'MyApp', '6c5f56860304f8d18b49ca43852b42097255b02d465528bf3916cb6d6f3646b3', '[\"*\"]', NULL, '2022-06-20 20:38:22', '2022-06-20 20:38:22'),
+(5, 'App\\Models\\User', 5, 'MyApp', '1e61355375f56ff097058772d913f5782c1896ddab22c7c3c84154c61574878f', '[\"*\"]', NULL, '2022-06-20 20:43:33', '2022-06-20 20:43:33'),
+(6, 'App\\Models\\User', 6, 'MyApp', '2d88cb957f3aa9946827355d73bc1a662b0239b9c4b4c9d7e8bbb891e5b7e438', '[\"*\"]', NULL, '2022-06-20 20:43:56', '2022-06-20 20:43:56'),
+(7, 'App\\Models\\User', 7, 'MyApp', '51a4776cafe7757991711dd7b5846e7d8e1771ef33c123cccaf02efd1c128201', '[\"*\"]', NULL, '2022-06-20 20:46:11', '2022-06-20 20:46:11'),
+(8, 'App\\Models\\User', 8, 'MyApp', '1e57ff6b569a3dc821c53f1fedd0701c71e98813c2537247fdf3d750ad200cfe', '[\"*\"]', NULL, '2022-06-20 20:55:52', '2022-06-20 20:55:52'),
+(9, 'App\\Models\\User', 8, 'MyApp', 'ec21146862a8f4d6dc35f30e81a75e992689e136851db40da0336efa6d21e5fe', '[\"*\"]', NULL, '2022-06-20 20:56:47', '2022-06-20 20:56:47'),
+(10, 'App\\Models\\User', 1, 'MyApp', 'a045d851b703a645ad020aa526f9fd1de61e0494da5230560702b25cd7d4174a', '[\"*\"]', '2022-06-21 00:51:09', '2022-06-20 21:01:58', '2022-06-21 00:51:09'),
+(11, 'App\\Models\\User', 8, 'MyApp', 'c5f090254118c813fb0f0d6c65ccebcb7cea8d505ee28fca352191ea677a6a97', '[\"*\"]', NULL, '2022-06-20 21:09:58', '2022-06-20 21:09:58'),
+(12, 'App\\Models\\User', 8, 'MyApp', '103bbf5c78846c81fc7dcef8270c232fbddc0a2549144963feb037ca3016dfa2', '[\"*\"]', NULL, '2022-06-20 21:12:29', '2022-06-20 21:12:29');
+
 -- --------------------------------------------------------
 
 --
@@ -238,6 +275,7 @@ CREATE TABLE `photos` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 --
 -- Dumping data untuk tabel `photos`
 --
@@ -248,6 +286,8 @@ INSERT INTO `photos` (`id`, `image`, `vendor_id`, `created_at`, `updated_at`) VA
 (3, 'styling.jpg', 1, '2022-06-23 01:01:35', '2022-06-23 01:01:35'),
 (4, 'colloring', 2, '2022-06-23 01:01:43', '2022-06-23 01:01:43');
 
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- --------------------------------------------------------
 
 --
@@ -264,6 +304,7 @@ CREATE TABLE `reviews` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 --
 -- Dumping data untuk tabel `reviews`
 --
@@ -272,6 +313,8 @@ INSERT INTO `reviews` (`id`, `user_id`, `vendor_id`, `description`, `score`, `cr
 (1, 1, 1, 'mantap okee', '70', '2022-06-23 01:02:15', '2022-06-23 01:02:15'),
 (2, 3, 2, 'mantaap polll', '70', '2022-06-23 01:03:03', '2022-06-23 01:03:03');
 
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- --------------------------------------------------------
 
 --
@@ -290,8 +333,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', '2022-06-23 00:47:31', '2022-06-23 00:47:31'),
-(2, 'User', '2022-06-23 00:47:37', '2022-06-23 00:47:37');
+(1, 'Admin', '2022-06-20 20:31:26', '2022-06-20 20:31:26');
 
 -- --------------------------------------------------------
 
@@ -308,6 +350,7 @@ CREATE TABLE `services` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 --
 -- Dumping data untuk tabel `services`
 --
@@ -318,6 +361,8 @@ INSERT INTO `services` (`id`, `name`, `price`, `vendor_id`, `created_at`, `updat
 (3, 'Smooting', '100000', 2, '2022-06-23 00:57:42', '2022-06-23 00:57:42'),
 (4, 'Colloring', '200000', 2, '2022-06-23 00:58:05', '2022-06-23 00:58:05');
 
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- --------------------------------------------------------
 
 --
@@ -340,10 +385,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Amin', 'amin@gmail.com', '$2y$10$zwbL.Ss/H.glJ6xyytyQJ.RQOuKD3ag0YObvJRYGec2yEw8KfvCry', NULL, '2022-06-23 00:48:25', '2022-06-23 00:48:25'),
-(2, 1, 'Batra', 'Batra@gmail.com', '$2y$10$MvyoSEJVUlsnOLKTcTrdpuQbw/AUSsc6bMQvdF74zQSZsEQ2wjgBG', NULL, '2022-06-23 00:48:43', '2022-06-23 00:48:43'),
-(3, 2, 'Afiva', 'Afiva@gmail.com', '$2y$10$q1jY88WI.d.2GCJGhTLSfOtPk4zjRyMGZ/6pXhYTf0LYBSoLDVGrK', NULL, '2022-06-23 00:49:04', '2022-06-23 00:49:04'),
-(4, 2, 'Siska', 'Siska@gmail.com', '$2y$10$f005N66tNF6Hfiu1UMd0E.4rYTrr1u.aiVkRLcHhMb3BfrJhJkCvG', NULL, '2022-06-23 00:49:25', '2022-06-23 00:49:25');
+(1, 1, 'Budi', 'budi@gmail.com', '$2y$10$VmjAjglnrf8V6rkgU2/6Q.vZvuinEQDjrjE64NmeL68xA0ESu7L.u', NULL, '2022-06-20 20:32:44', '2022-06-20 20:32:44'),
+(2, 1, 'Hadi', 'hadi@gmail.com', '$2y$10$im4Vpw1JgIrfL0lMP7diduXnP3hSTk8K/8QwNOCUb3w9tZLsdepYy', NULL, '2022-06-20 20:34:52', '2022-06-20 20:34:52'),
+(8, 1, 'Karjo', 'karjo@gmail.com', '$2y$10$vhoGqoSGlWFkhXtmrn.YC.WCGBjJospekbErPUNG9P4XHN9dTc7Ve', NULL, '2022-06-20 20:55:52', '2022-06-20 20:55:52');
 
 -- --------------------------------------------------------
 
@@ -362,6 +406,7 @@ CREATE TABLE `vendors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
 -- Dumping data untuk tabel `vendors`
 --
 
@@ -370,6 +415,8 @@ INSERT INTO `vendors` (`id`, `user_id`, `name`, `phone`, `geometry`, `created_at
 (2, 4, 'Salon Mama', '08543452842', '7° 16′ 49″ S, 112° 43′ 29″ E', '2022-06-23 00:55:37', '2022-06-23 00:55:37');
 
 --
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- Indexes for dumped tables
 --
 
@@ -387,6 +434,16 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+<<<<<<< HEAD
+=======
+-- Indeks untuk tabel `galleries`
+--
+ALTER TABLE `galleries`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `galleries_vendor_id_foreign` (`vendor_id`);
+
+--
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- Indeks untuk tabel `hours`
 --
 ALTER TABLE `hours`
@@ -498,7 +555,7 @@ ALTER TABLE `vendors`
 -- AUTO_INCREMENT untuk tabel `days`
 --
 ALTER TABLE `days`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `failed_jobs`
@@ -507,16 +564,25 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+<<<<<<< HEAD
+=======
+-- AUTO_INCREMENT untuk tabel `galleries`
+--
+ALTER TABLE `galleries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- AUTO_INCREMENT untuk tabel `hours`
 --
 ALTER TABLE `hours`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `oauth_clients`
@@ -534,49 +600,67 @@ ALTER TABLE `oauth_personal_access_clients`
 -- AUTO_INCREMENT untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT untuk tabel `photos`
+--
+ALTER TABLE `photos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT untuk tabel `photos`
 --
 ALTER TABLE `photos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- AUTO_INCREMENT untuk tabel `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `vendors`
 --
 ALTER TABLE `vendors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
+<<<<<<< HEAD
+=======
+-- Ketidakleluasaan untuk tabel `galleries`
+--
+ALTER TABLE `galleries`
+  ADD CONSTRAINT `galleries_vendor_id_foreign` FOREIGN KEY (`vendor_id`) REFERENCES `vendors` (`id`) ON DELETE CASCADE;
+
+--
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- Ketidakleluasaan untuk tabel `hours`
 --
 ALTER TABLE `hours`
