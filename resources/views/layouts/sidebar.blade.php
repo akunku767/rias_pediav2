@@ -52,7 +52,7 @@
     </div>
 
     <div class="terpilih" style="padding: 10px" id="divGallery">
-      <a id="gallery" href="{{ url('galleries') }}" style="text-decoration: none;">
+      <a id="gallery" href="{{ url('photos') }}" style="text-decoration: none;">
         <table class="pilihan" style="border: none">
             <tr>
               <td width="40px" style="border: none"><i class="fa-solid fa-images" aria-hidden="true" style="font-size: 20pt"></i></td>
