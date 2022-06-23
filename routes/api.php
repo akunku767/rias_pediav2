@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\DayController;
+use App\Http\Controllers\API\VendorController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,4 +26,5 @@ Route::post('login', [RegisterController::class, 'login']);
      
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('days', DayController::class);
+    Route::resource('vendors', VendorController::class);
 });
