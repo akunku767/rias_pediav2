@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Jun 2022 pada 10.20
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.4.10
+-- Waktu pembuatan: 23 Jun 2022 pada 10.36
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -60,6 +60,8 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
 -- Struktur dari tabel `galleries`
 --
 
@@ -74,6 +76,7 @@ CREATE TABLE `galleries` (
 -- --------------------------------------------------------
 
 --
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- Struktur dari tabel `hours`
 --
 
@@ -85,6 +88,17 @@ CREATE TABLE `hours` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+--
+-- Dumping data untuk tabel `hours`
+--
+
+INSERT INTO `hours` (`id`, `time`, `day_id`, `vendor_id`, `created_at`, `updated_at`) VALUES
+(1, '2022-06-23 15:06:43', 1, 1, '2022-06-23 01:06:43', '2022-06-23 01:06:43'),
+(2, '2022-06-23 15:06:50', 2, 2, '2022-06-23 01:06:50', '2022-06-23 01:06:50');
+
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- --------------------------------------------------------
 
 --
@@ -261,6 +275,19 @@ CREATE TABLE `photos` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+--
+-- Dumping data untuk tabel `photos`
+--
+
+INSERT INTO `photos` (`id`, `image`, `vendor_id`, `created_at`, `updated_at`) VALUES
+(1, 'potong.jpg', 1, '2022-06-23 01:00:22', '2022-06-23 01:00:22'),
+(2, 'smooting.jpg', 2, '2022-06-23 01:00:36', '2022-06-23 01:00:36'),
+(3, 'styling.jpg', 1, '2022-06-23 01:01:35', '2022-06-23 01:01:35'),
+(4, 'colloring', 2, '2022-06-23 01:01:43', '2022-06-23 01:01:43');
+
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- --------------------------------------------------------
 
 --
@@ -277,6 +304,17 @@ CREATE TABLE `reviews` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+--
+-- Dumping data untuk tabel `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `user_id`, `vendor_id`, `description`, `score`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 'mantap okee', '70', '2022-06-23 01:02:15', '2022-06-23 01:02:15'),
+(2, 3, 2, 'mantaap polll', '70', '2022-06-23 01:03:03', '2022-06-23 01:03:03');
+
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- --------------------------------------------------------
 
 --
@@ -312,6 +350,19 @@ CREATE TABLE `services` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+--
+-- Dumping data untuk tabel `services`
+--
+
+INSERT INTO `services` (`id`, `name`, `price`, `vendor_id`, `created_at`, `updated_at`) VALUES
+(1, 'Potong Rambut', '15000', 1, '2022-06-23 00:56:34', '2022-06-23 00:56:34'),
+(2, 'Styling', '50000', 1, '2022-06-23 00:57:22', '2022-06-23 00:57:22'),
+(3, 'Smooting', '100000', 2, '2022-06-23 00:57:42', '2022-06-23 00:57:42'),
+(4, 'Colloring', '200000', 2, '2022-06-23 00:58:05', '2022-06-23 00:58:05');
+
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- --------------------------------------------------------
 
 --
@@ -355,6 +406,17 @@ CREATE TABLE `vendors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
+-- Dumping data untuk tabel `vendors`
+--
+
+INSERT INTO `vendors` (`id`, `user_id`, `name`, `phone`, `geometry`, `created_at`, `updated_at`) VALUES
+(1, 2, 'Salon papa', '082263645328', '7° 16′ 49″ S, 112° 43′ 29″ E', '2022-06-23 00:55:13', '2022-06-23 00:55:13'),
+(2, 4, 'Salon Mama', '08543452842', '7° 16′ 49″ S, 112° 43′ 29″ E', '2022-06-23 00:55:37', '2022-06-23 00:55:37');
+
+--
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- Indexes for dumped tables
 --
 
@@ -372,6 +434,8 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+<<<<<<< HEAD
+=======
 -- Indeks untuk tabel `galleries`
 --
 ALTER TABLE `galleries`
@@ -379,6 +443,7 @@ ALTER TABLE `galleries`
   ADD KEY `galleries_vendor_id_foreign` (`vendor_id`);
 
 --
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- Indeks untuk tabel `hours`
 --
 ALTER TABLE `hours`
@@ -499,12 +564,15 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+<<<<<<< HEAD
+=======
 -- AUTO_INCREMENT untuk tabel `galleries`
 --
 ALTER TABLE `galleries`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- AUTO_INCREMENT untuk tabel `hours`
 --
 ALTER TABLE `hours`
@@ -541,6 +609,15 @@ ALTER TABLE `photos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+<<<<<<< HEAD
+-- AUTO_INCREMENT untuk tabel `photos`
+--
+ALTER TABLE `photos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+=======
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- AUTO_INCREMENT untuk tabel `reviews`
 --
 ALTER TABLE `reviews`
@@ -575,12 +652,15 @@ ALTER TABLE `vendors`
 --
 
 --
+<<<<<<< HEAD
+=======
 -- Ketidakleluasaan untuk tabel `galleries`
 --
 ALTER TABLE `galleries`
   ADD CONSTRAINT `galleries_vendor_id_foreign` FOREIGN KEY (`vendor_id`) REFERENCES `vendors` (`id`) ON DELETE CASCADE;
 
 --
+>>>>>>> 1168d3553e1ea74d10a64a524569b4ad650ff4c5
 -- Ketidakleluasaan untuk tabel `hours`
 --
 ALTER TABLE `hours`
