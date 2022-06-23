@@ -33,7 +33,10 @@ class ReviewController extends BaseController
         $input = $request->all();
    
         $validator = Validator::make($input, [
-            'name' => 'required',
+            'user_id' => 'required',
+            'vendor_id' => 'required',
+            'description' => 'required',
+            'score' => 'required',
         ]);
    
         if($validator->fails()){
@@ -74,14 +77,20 @@ class ReviewController extends BaseController
         $input = $request->all();
    
         $validator = Validator::make($input, [
-            'name' => 'required',
+            'user_id' => 'required',
+            'vendor_id' => 'required',
+            'description' => 'required',
+            'score' => 'required',
         ]);
    
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
    
-        $review->name = $input['name'];
+        $review->user_id = $input['user_id'];
+        $review->vendor_id = $input['vendor_id'];
+        $review->description = $input['description'];
+        $review->score = $input['score'];
         $review->save();
    
         return $this->sendResponse(new ReviewResource($review), 'Review updated successfully.');
