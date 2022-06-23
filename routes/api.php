@@ -8,6 +8,7 @@ use App\Http\Controllers\API\DayController;
 use App\Http\Controllers\API\RoleController;
 use App\Http\Controllers\API\ReviewController;
 use App\Http\Controllers\API\HourController;
+use App\Http\Controllers\API\ServiceController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -31,4 +32,5 @@ Route::middleware('auth:sanctum')->group( function () {
     Route::resource('roles', RoleController::class);
     Route::resource('reviews', ReviewController::class);
     Route::resource('hours', HourController::class);
+    Route::resource('services', ServiceController::class);
 });
