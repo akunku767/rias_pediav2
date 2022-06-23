@@ -3,7 +3,7 @@
 @section('title', 'Rias Pedia')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
-  <h1 style="text-align: center;">List Data Role</h1>
+  <h1 style="text-align: center;">List Data Roles</h1>
 
   <div style="margin-bottom: 20px">
     <a class="tambah" href="{{ url('roles/create' ) }}"><i class="fa-solid fa-plus"></i> Tambah Data</a>
