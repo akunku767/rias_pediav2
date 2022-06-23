@@ -27,7 +27,7 @@
   
   <form method="POST" action="{{ url('photos') }}">
     @csrf
-    <input name="images" type="text" placeholder="Images" style="font-size: 14pt">
+    <input name="image" type="text" placeholder="Images" style="font-size: 14pt">
     <input name="vendor_id" type="number" placeholder="vendor_id" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Tambah Data</button>
   </form>
