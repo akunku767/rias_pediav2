@@ -29,7 +29,7 @@
     @csrf
     @method('PUT')
     <input name="id" value="{{ $photo->id }}" type="text" placeholder="Id" style="font-size: 14pt" disabled> 
-    <input name="images" value="{{ $photo->images }}" type="text" placeholder="Image" style="font-size: 14pt"> 
+    <input name="image" value="{{ $photo->image }}" type="text" placeholder="Image" style="font-size: 14pt"> 
     <input name="vendor_id" value="{{ $photo->vendor_id }}" type="text" placeholder="Vendor Id" style="font-size: 14pt">
     <button class="btn-blue" style="font-size: 14pt; cursor: pointer">Submit</button>
   </form>
