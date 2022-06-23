@@ -15,6 +15,7 @@ class CreateHoursTable extends Migration
     {
         Schema::create('hours', function (Blueprint $table) {
             $table->id();
+            $table->dateTime('time')->useCurrent();
             $table->unsignedBigInteger('day_id');
             $table->unsignedBigInteger('vendor_id');
             $table->foreign('day_id')
