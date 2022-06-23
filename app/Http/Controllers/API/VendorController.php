@@ -5,7 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Vendor;
-use Validation;
+use Validator;
 use App\Http\Resources\Vendor as VendorResource;
 
 class VendorController extends BaseController
