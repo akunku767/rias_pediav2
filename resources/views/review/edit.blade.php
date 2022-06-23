@@ -3,7 +3,7 @@
 @section('title', 'Rias Pedia')
 @section('content')
 <div class="wrapper" style="padding-left: 260px">
-  <h1 style="text-align: center;">Edit Data Days</h1>
+  <h1 style="text-align: center;">Edit Data Review</h1>
 
   <div style="margin-bottom: 20px">
     <a class="tambah" href="{{ url('reviews' ) }}"><i class="fa-solid fa-circle-left"></i> Kembali</a>
