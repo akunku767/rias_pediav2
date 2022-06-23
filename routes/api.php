@@ -5,9 +5,11 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\DayController;
+use App\Http\Controllers\API\VendorController;
 use App\Http\Controllers\API\RoleController;
 use App\Http\Controllers\API\ReviewController;
 use App\Http\Controllers\API\HourController;
+use App\Http\Controllers\API\ServiceController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,7 +30,9 @@ Route::post('login', [RegisterController::class, 'login']);
      
 Route::middleware('auth:sanctum')->group( function () {
     Route::resource('days', DayController::class);
+    Route::resource('vendors', VendorController::class);
     Route::resource('roles', RoleController::class);
     Route::resource('reviews', ReviewController::class);
     Route::resource('hours', HourController::class);
+    Route::resource('services', ServiceController::class);
 });
