@@ -15,8 +15,8 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        $photo = Photo::all(); 
-        return view('photo.index', ['photo' => $photos]);
+        $photos = Photo::all(); 
+        return view('photo.index', ['photos' => $photos]);
     }
 
     /**
@@ -70,7 +70,7 @@ class PhotoController extends Controller
     {
         $photo = Photo::findOrFail($id);
         return view('photo.edit', [
-            'photo' => $photos
+            'photo' => $photo
         ]);
     }
 
