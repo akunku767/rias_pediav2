@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2022 at 10:07 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.1
+-- Waktu pembuatan: 23 Jun 2022 pada 10.36
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `rias_pedia`
+-- Database: `db_riaspedia`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `days`
+-- Struktur dari tabel `days`
 --
 
 CREATE TABLE `days` (
@@ -35,7 +35,7 @@ CREATE TABLE `days` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `days`
+-- Dumping data untuk tabel `days`
 --
 
 INSERT INTO `days` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `days` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -61,7 +61,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hours`
+-- Struktur dari tabel `hours`
 --
 
 CREATE TABLE `hours` (
@@ -74,7 +74,7 @@ CREATE TABLE `hours` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `hours`
+-- Dumping data untuk tabel `hours`
 --
 
 INSERT INTO `hours` (`id`, `time`, `day_id`, `vendor_id`, `created_at`, `updated_at`) VALUES
@@ -84,7 +84,7 @@ INSERT INTO `hours` (`id`, `time`, `day_id`, `vendor_id`, `created_at`, `updated
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -94,7 +94,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -118,7 +118,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oauth_access_tokens`
+-- Struktur dari tabel `oauth_access_tokens`
 --
 
 CREATE TABLE `oauth_access_tokens` (
@@ -136,7 +136,7 @@ CREATE TABLE `oauth_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oauth_auth_codes`
+-- Struktur dari tabel `oauth_auth_codes`
 --
 
 CREATE TABLE `oauth_auth_codes` (
@@ -151,7 +151,7 @@ CREATE TABLE `oauth_auth_codes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oauth_clients`
+-- Struktur dari tabel `oauth_clients`
 --
 
 CREATE TABLE `oauth_clients` (
@@ -171,7 +171,7 @@ CREATE TABLE `oauth_clients` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oauth_personal_access_clients`
+-- Struktur dari tabel `oauth_personal_access_clients`
 --
 
 CREATE TABLE `oauth_personal_access_clients` (
@@ -184,7 +184,7 @@ CREATE TABLE `oauth_personal_access_clients` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `oauth_refresh_tokens`
+-- Struktur dari tabel `oauth_refresh_tokens`
 --
 
 CREATE TABLE `oauth_refresh_tokens` (
@@ -197,7 +197,7 @@ CREATE TABLE `oauth_refresh_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Struktur dari tabel `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -209,7 +209,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `personal_access_tokens`
+-- Struktur dari tabel `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -227,7 +227,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `photos`
+-- Struktur dari tabel `photos`
 --
 
 CREATE TABLE `photos` (
@@ -239,7 +239,7 @@ CREATE TABLE `photos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `photos`
+-- Dumping data untuk tabel `photos`
 --
 
 INSERT INTO `photos` (`id`, `image`, `vendor_id`, `created_at`, `updated_at`) VALUES
@@ -251,7 +251,7 @@ INSERT INTO `photos` (`id`, `image`, `vendor_id`, `created_at`, `updated_at`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reviews`
+-- Struktur dari tabel `reviews`
 --
 
 CREATE TABLE `reviews` (
@@ -265,7 +265,7 @@ CREATE TABLE `reviews` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `reviews`
+-- Dumping data untuk tabel `reviews`
 --
 
 INSERT INTO `reviews` (`id`, `user_id`, `vendor_id`, `description`, `score`, `created_at`, `updated_at`) VALUES
@@ -275,7 +275,7 @@ INSERT INTO `reviews` (`id`, `user_id`, `vendor_id`, `description`, `score`, `cr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `roles`
+-- Struktur dari tabel `roles`
 --
 
 CREATE TABLE `roles` (
@@ -286,7 +286,7 @@ CREATE TABLE `roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `roles`
+-- Dumping data untuk tabel `roles`
 --
 
 INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -296,7 +296,7 @@ INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `services`
+-- Struktur dari tabel `services`
 --
 
 CREATE TABLE `services` (
@@ -309,7 +309,7 @@ CREATE TABLE `services` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `services`
+-- Dumping data untuk tabel `services`
 --
 
 INSERT INTO `services` (`id`, `name`, `price`, `vendor_id`, `created_at`, `updated_at`) VALUES
@@ -321,7 +321,7 @@ INSERT INTO `services` (`id`, `name`, `price`, `vendor_id`, `created_at`, `updat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -336,7 +336,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -348,7 +348,7 @@ INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `password`, `remember_tok
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vendors`
+-- Struktur dari tabel `vendors`
 --
 
 CREATE TABLE `vendors` (
@@ -362,7 +362,7 @@ CREATE TABLE `vendors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `vendors`
+-- Dumping data untuk tabel `vendors`
 --
 
 INSERT INTO `vendors` (`id`, `user_id`, `name`, `phone`, `geometry`, `created_at`, `updated_at`) VALUES
@@ -374,20 +374,20 @@ INSERT INTO `vendors` (`id`, `user_id`, `name`, `phone`, `geometry`, `created_at
 --
 
 --
--- Indexes for table `days`
+-- Indeks untuk tabel `days`
 --
 ALTER TABLE `days`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Indexes for table `hours`
+-- Indeks untuk tabel `hours`
 --
 ALTER TABLE `hours`
   ADD PRIMARY KEY (`id`),
@@ -395,53 +395,53 @@ ALTER TABLE `hours`
   ADD KEY `hours_vendor_id_foreign` (`vendor_id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `oauth_access_tokens`
+-- Indeks untuk tabel `oauth_access_tokens`
 --
 ALTER TABLE `oauth_access_tokens`
   ADD PRIMARY KEY (`id`),
   ADD KEY `oauth_access_tokens_user_id_index` (`user_id`);
 
 --
--- Indexes for table `oauth_auth_codes`
+-- Indeks untuk tabel `oauth_auth_codes`
 --
 ALTER TABLE `oauth_auth_codes`
   ADD PRIMARY KEY (`id`),
   ADD KEY `oauth_auth_codes_user_id_index` (`user_id`);
 
 --
--- Indexes for table `oauth_clients`
+-- Indeks untuk tabel `oauth_clients`
 --
 ALTER TABLE `oauth_clients`
   ADD PRIMARY KEY (`id`),
   ADD KEY `oauth_clients_user_id_index` (`user_id`);
 
 --
--- Indexes for table `oauth_personal_access_clients`
+-- Indeks untuk tabel `oauth_personal_access_clients`
 --
 ALTER TABLE `oauth_personal_access_clients`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `oauth_refresh_tokens`
+-- Indeks untuk tabel `oauth_refresh_tokens`
 --
 ALTER TABLE `oauth_refresh_tokens`
   ADD PRIMARY KEY (`id`),
   ADD KEY `oauth_refresh_tokens_access_token_id_index` (`access_token_id`);
 
 --
--- Indexes for table `password_resets`
+-- Indeks untuk tabel `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `personal_access_tokens`
+-- Indeks untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -449,14 +449,14 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indexes for table `photos`
+-- Indeks untuk tabel `photos`
 --
 ALTER TABLE `photos`
   ADD PRIMARY KEY (`id`),
   ADD KEY `photos_vendor_id_foreign` (`vendor_id`);
 
 --
--- Indexes for table `reviews`
+-- Indeks untuk tabel `reviews`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`id`),
@@ -464,152 +464,152 @@ ALTER TABLE `reviews`
   ADD KEY `reviews_vendor_id_foreign` (`vendor_id`);
 
 --
--- Indexes for table `roles`
+-- Indeks untuk tabel `roles`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `services`
+-- Indeks untuk tabel `services`
 --
 ALTER TABLE `services`
   ADD PRIMARY KEY (`id`),
   ADD KEY `services_vendor_id_foreign` (`vendor_id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD KEY `users_role_id_foreign` (`role_id`);
 
 --
--- Indexes for table `vendors`
+-- Indeks untuk tabel `vendors`
 --
 ALTER TABLE `vendors`
   ADD PRIMARY KEY (`id`),
   ADD KEY `vendors_user_id_foreign` (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `days`
+-- AUTO_INCREMENT untuk tabel `days`
 --
 ALTER TABLE `days`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `hours`
+-- AUTO_INCREMENT untuk tabel `hours`
 --
 ALTER TABLE `hours`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `oauth_clients`
+-- AUTO_INCREMENT untuk tabel `oauth_clients`
 --
 ALTER TABLE `oauth_clients`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `oauth_personal_access_clients`
+-- AUTO_INCREMENT untuk tabel `oauth_personal_access_clients`
 --
 ALTER TABLE `oauth_personal_access_clients`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `personal_access_tokens`
+-- AUTO_INCREMENT untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `photos`
+-- AUTO_INCREMENT untuk tabel `photos`
 --
 ALTER TABLE `photos`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `reviews`
+-- AUTO_INCREMENT untuk tabel `reviews`
 --
 ALTER TABLE `reviews`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `roles`
+-- AUTO_INCREMENT untuk tabel `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `services`
+-- AUTO_INCREMENT untuk tabel `services`
 --
 ALTER TABLE `services`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `vendors`
+-- AUTO_INCREMENT untuk tabel `vendors`
 --
 ALTER TABLE `vendors`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `hours`
+-- Ketidakleluasaan untuk tabel `hours`
 --
 ALTER TABLE `hours`
   ADD CONSTRAINT `hours_day_id_foreign` FOREIGN KEY (`day_id`) REFERENCES `days` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `hours_vendor_id_foreign` FOREIGN KEY (`vendor_id`) REFERENCES `vendors` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `photos`
+-- Ketidakleluasaan untuk tabel `photos`
 --
 ALTER TABLE `photos`
   ADD CONSTRAINT `photos_vendor_id_foreign` FOREIGN KEY (`vendor_id`) REFERENCES `vendors` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `reviews`
+-- Ketidakleluasaan untuk tabel `reviews`
 --
 ALTER TABLE `reviews`
   ADD CONSTRAINT `reviews_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `reviews_vendor_id_foreign` FOREIGN KEY (`vendor_id`) REFERENCES `vendors` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `services`
+-- Ketidakleluasaan untuk tabel `services`
 --
 ALTER TABLE `services`
   ADD CONSTRAINT `services_vendor_id_foreign` FOREIGN KEY (`vendor_id`) REFERENCES `vendors` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `users`
+-- Ketidakleluasaan untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `vendors`
+-- Ketidakleluasaan untuk tabel `vendors`
 --
 ALTER TABLE `vendors`
   ADD CONSTRAINT `vendors_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
