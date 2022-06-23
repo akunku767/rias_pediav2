@@ -15,7 +15,7 @@ class CreatePhotosTable extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->string('images');
+            $table->string('image');
             $table->unsignedBigInteger('vendor_id');
             $table->foreign('vendor_id')
             ->references('id')->on('vendors')->onDelete('cascade');

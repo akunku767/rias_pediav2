@@ -38,7 +38,7 @@ class PhotoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'images' => 'required',
+            'image' => 'required',
             'vendor_id' => 'required',
           ]);
         
@@ -84,7 +84,7 @@ class PhotoController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'images' => 'required',
+            'image' => 'required',
             'vendor_id' => 'required',
           ]);
                

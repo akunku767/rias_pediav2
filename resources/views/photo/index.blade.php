@@ -23,7 +23,7 @@
       @foreach ($photos as $photo)
       <tr style="height: 42px">
         <td style="width: 100px" >{{ $photo->id}}</td>
-        <td style="width: 150px" >{{ $photo->images }}</td>
+        <td style="width: 150px" >{{ $photo->image }}</td>
         <td style="width: 150px" >{{ $photo->vendor_id }}</td>
         {{-- <td style="width: 150px" >{{ $user->password }}</td> --}}
         <td style="width: 100px"><button class="btn-green" style="width: auto"><a href="{{ route('photos.edit', $photo->id) }}">Edit</a></button></td>
