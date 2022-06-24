@@ -51,7 +51,7 @@ class UserController extends Controller
           $user = User::create([
             'name' => ucwords($request->name),
             'email' => $request->email, 
-            'password' => Hash::make($request->password),
+            'password' => bcrypt($request->password),
             'role_id' => $request->role_id,
           ]);
          
