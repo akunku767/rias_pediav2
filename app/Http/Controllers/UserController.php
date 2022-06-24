@@ -46,8 +46,7 @@ class UserController extends Controller
             'role_id' => 'required',
           ]);
 
-          $input = $request->all();
-        
+        //   $input = $request->all();
         //   $user = User::create($input);
           $user = User::create([
             'name' => ucwords($request->name),
