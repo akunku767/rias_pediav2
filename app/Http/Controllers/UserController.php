@@ -50,7 +50,7 @@ class UserController extends Controller
         
         //   $user = User::create($input);
           $user = User::create([
-            'name' => $request->name,
+            'name' => ucwords($request->name),
             'email' => $request->email, 
             'password' => Hash::make($request->password),
             'role_id' => $request->role_id,
@@ -103,7 +103,12 @@ class UserController extends Controller
             'role_id' => 'required',
           ]);
                
-         $user = User::find($id)->update($request->all()); 
+        //  $user = User::find($id)->update($request->all()); 
+        $user = User::find($id)->update([
+            'name' => ucwords($request->name),
+            'email' => $request->email, 
+            'role_id' => $request->role_id,
+          ]); 
                 
          return back()->with('success',' Data telah diperbaharui!');
     }
