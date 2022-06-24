@@ -44,9 +44,14 @@ class VendorController extends Controller
             'geometry' => 'required',
           ]);
         
-          $input = $request->all();
+        // $input = $request->all();
         
-          $vendor = Vendor::create($input);
+          $vendor = Vendor::create([
+            'name' => ucwords($request->name),
+            'phone' => $request->phone, 
+            'user_id' => $request->user_id,
+            'geometry' => $request->geometry,
+          ]);
          
           return back()->with('success',' Vendor baru berhasil dibuat.');
     }
@@ -96,7 +101,11 @@ class VendorController extends Controller
             'geometry' => 'required',
           ]);
                
-         $vendor = Vendor::find($id)->update($request->all()); 
+         $vendor = Vendor::find($id)->update([
+            'name' => ucwords($request->name),
+            'user_id' => $request->user_id, 
+            'geometry' => $request->geometry,
+         ]); 
                 
          return back()->with('success',' Data telah diperbaharui!');
     }
