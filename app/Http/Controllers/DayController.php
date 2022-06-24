@@ -87,7 +87,9 @@ class DayController extends Controller
             'name' => 'required', 
          ]);
                
-         $day = Day::find($id)->update($request->all()); 
+         $day = Day::find($id)->update([
+            'name' => ucfirst($request->name),
+          ]); 
                 
          return back()->with('success',' Data telah diperbaharui!');
     }
