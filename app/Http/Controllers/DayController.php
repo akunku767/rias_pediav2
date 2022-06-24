@@ -40,9 +40,11 @@ class DayController extends Controller
             'name' => 'required', 
           ]);
         
-          $input = $request->all();
+        //   $input = $request->all();
         
-          $day = Day::create($input);
+          $day = Day::create([
+            'name' => ucfirst($request->name),
+          ]);
          
           return back()->with('success',' Day baru berhasil dibuat.');
     }
