@@ -44,10 +44,15 @@ class ServiceController extends Controller
             'vendor_id' => 'required',
           ]);
         
-          $input = $request->all();
+         // $input = $request->all();
         
-          $services = Service::create($input);
-         
+          $services = Service::create([
+            'name' => ucwords($request->name),
+            'price' => $request->price, 
+            'vendor_id' => $request->vendor_id,
+
+        ]);
+          
           return back()->with('success',' Post baru berhasil dibuat.');
     }
 
@@ -93,7 +98,11 @@ class ServiceController extends Controller
             'price' => 'required',
             'vendor_id' => 'required',
           ]);               
-         $service = Service::find($id)->update($request->all()); 
+         $service = Service::find($id)->update([
+            'name' => ucwords($request->name),
+            'price' => $request->price, 
+            'vendor_id' => $request->vendor_id,
+         ]);
                 
          return back()->with('success',' Data telah diperbaharui!');
     }

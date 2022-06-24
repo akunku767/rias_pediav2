@@ -41,9 +41,14 @@ class ReviewController extends Controller
             'description' => 'required', 
           ]);
         
-          $input = $request->all();
+        // $input = $request->all();
         
-          $review = Review::create($input);
+          $review = Review::create([
+            'description' => ucfirst($request->description),
+            'score' => $request->score, 
+            'user_id' => $request->user_id,
+            'vendor_id' => $request->vendor_id,
+          ]);
          
           return back()->with('success',' Post baru berhasil dibuat.');
     }
@@ -85,7 +90,14 @@ class ReviewController extends Controller
             'description' => 'required', 
          ]);
                
-         $review = Review::find($id)->update($request->all()); 
+        // $review = Review::find($id)->update($request->all()); 
+
+        $review = Review::find($id)->update([
+            'description' => ucfirst($request->description),
+            'score' => $request->score, 
+            'user_id' => $request->user_id,
+            'vendor_id' => $request->vendor_id,
+        ]);
                 
          return back()->with('success',' Data telah diperbaharui!');
     }
