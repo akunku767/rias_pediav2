@@ -25,7 +25,7 @@
       <tr style="height: 42px">
         <td style="width: 100px" >{{ $service->id}}</td>
         <td style="width: 150px" >{{ $service->name }}</td>
-        <td style="width: 150px" >{{ $service->price }}</td>
+        <td style="width: 150px" >Rp {{ number_format($service->price, 0, '', '.') }}</td>
         <td style="width: 150px" >{{ $service->vendor_id }}</td>
         {{-- <td style="width: 150px" >{{ $user->password }}</td> --}}
         <td style="width: 100px"><button class="btn-green" style="width: auto"><a href="{{ route('services.edit', $service->id) }}">Edit</a></button></td>
