@@ -21,7 +21,7 @@
 
     <!-- BASE CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    {{-- <link href="css/style.css" rel="stylesheet"> --}}
 	  <link href="css/vendors.css" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
