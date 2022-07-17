@@ -929,6 +929,7 @@ ul#top_menu li:last-child {
   margin: 0;
   top: 26px;
   height: 30px;
+  left: -130px;
 }
 
 .isiProfile a{
@@ -962,11 +963,23 @@ ul#top_menu li a.login, ul#top_menu li a.wishlist_bt_top, ul#top_menu li a.cart-
     top: 2px;
   }
 }
-ul#top_menu li a.login:before, ul#top_menu li a.wishlist_bt_top:before, ul#top_menu li a.cart-menu-btn:before {
+ul#top_menu li a.wishlist_bt_top:before, ul#top_menu li a.cart-menu-btn:before {
   font-family: 'Glyphter';
   font-size: 21px;
   font-size: 1.3125rem;
   color: #fff;
+  text-indent: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: normal;
+  line-height: 1;
+}
+ul#top_menu li a.login:before{
+  font-family: 'Glyphter';
+  font-size: 21px;
+  font-size: 1.3125rem;
+  color: #444;
   text-indent: 0;
   position: absolute;
   left: 0;
@@ -986,7 +999,7 @@ ul#top_menu li a.profile_btn:before {
   font-weight: normal;
   line-height: 1;
 }
-.sticky ul#top_menu li a.login:before, .sticky ul#top_menu li a.wishlist_bt_top:before, .sticky ul#top_menu li a.cart-menu-btn:before, .sticky ul#top_menu li a.profile_btn:before {
+.sticky ul#top_menu li a.login:before, .sticky ul#top_menu li a.wishlist_bt_top:before, .sticky ul#top_menu li a.cart-menu-btn:before, .sticky ul#top_menu li a.profile_btn:before, .isiProfile:before {
   color: #444;
 }
 ul#top_menu li a.wishlist_bt_top {
@@ -1018,7 +1031,7 @@ ul#top_menu li a.cart-menu-btn:before {
   content: '\0041';
 }
 
-ul#top_menu li a.cart-menu-btn strong, ul#top_menu li a.profile_btn strong {
+ul#top_menu li a.cart-menu-btn strong, ul#top_menu li a.profile_btn strong, .isiProfile_btn {
   font-size: 11px;
   font-size: 0.6875rem;
   width: 15px;
@@ -6537,7 +6550,7 @@ header.header.map_view {
     padding: 15px 15px 5px 15px;
   }
 }
-header.header.map_view ul#top_menu li a.login:before, header.header.map_view ul#top_menu li a.wishlist_bt_top:before, header.header.map_view ul#top_menu li a.cart-menu-btn:before, header.header.map_view ul#top_menu li a.profile_btn:before {
+header.header.map_view ul#top_menu li a.login:before, header.header.map_view ul#top_menu li a.wishlist_bt_top:before, header.header.map_view ul#top_menu li a.cart-menu-btn:before, header.header.map_view ul#top_menu li a.profile_btn:before, .isiProfile:before {
   color: #444;
 }
 header.header.map_view .main-menu > ul > li span > a {
