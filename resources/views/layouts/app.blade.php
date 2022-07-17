@@ -1,30 +1,38 @@
-<!-- //views/layouts/app.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@yield('title')</title>
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/Style Isi.css') }}"/>
-  <link rel="stylesheet" href="{{ asset('css/all.css') }}"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/icon.png') }}">
-  <link rel="apple-touch-icon" href="{{ asset('img/icon.png') }}">
-  <script src="https://kit.fontawesome.com/8e6e4ad827.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Panagea - Premium site template for travel agencies, hotels and restaurant listing.">
+    <meta name="author" content="Ansonika">
+    <title>@yield('title')</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/apple-touch-icon-72x72-precomposed.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
 </head>
-<body style="background-color: #F1F1F1">
-  <div class="container">
-      @yield('content')
+
+<body class="datepicker_mobile_full"><!-- Remove this class to disable datepicker full on mobile -->
+		
+	<div style="width: 100%">
+    @yield('content')
   </div>
-  <script>
-    function openSide() {
-      document.getElementById("mySidebar").style.width = "300px";
-    }
-    function closeSide(){
-      document.getElementById("mySidebar").style.width = "0";
-    }
-  </script>
 </body>
 </html>
+  
