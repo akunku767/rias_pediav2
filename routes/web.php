@@ -10,8 +10,12 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\GoogleController;
 
 Route::resource('/', WelcomeController::class);
+
+Route::get('auth/google',[GoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback',[GoogleController::class, 'handleToGoogleCallback'])->name('google.callback');
 
 Route::resource('days', DayController::class);
 
@@ -42,3 +46,6 @@ Route::resource('photos', PhotoController::class);
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+// Client id 50117810070-4uiis3ijfemvu09kkkrmcsb5hmn72d8k.apps.googleusercontent.com
+// Client secret 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

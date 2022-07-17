@@ -77,7 +77,9 @@
                   </div>
               </div>
           </div>
-      </div>
+        </div>
+
+        <a href="{{ route('google.login') }}">Login Google</a>
     </div>
 
     </section>
