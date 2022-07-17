@@ -22,6 +22,7 @@
     <!-- BASE CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link href="{{ asset('css/vendors.css') }}" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
@@ -32,7 +33,9 @@
 <body class="datepicker_mobile_full"><!-- Remove this class to disable datepicker full on mobile -->
 		
 	<div style="width: 100%">
+    @include('layouts.header')	
     @yield('content')
+    @include('layouts.footer')	
   </div>
 </body>
 </html>

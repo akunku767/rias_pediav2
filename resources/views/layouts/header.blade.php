@@ -1,4 +1,4 @@
-{{-- <!-- /header --> --}}
+{{-- header --}}
 <header class="header menu_fixed">
     <div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
     <div id="logo">
@@ -9,8 +9,18 @@
     </div>
     <ul id="top_menu">
         <li><a href="cart-1.html" class="cart-menu-btn" title="Cart"><strong>4</strong></a></li>
-        <li><a href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a></li>
         <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+        <li><a href="javascript:void(0)" id="profile" class="profile_btn" title="Profile"></a>
+            <div id="isiProfile2">
+            <div id="isiProfile" class="isiProfile">
+                <a id="btnIsi" href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a>
+                <a id="btnIsi" href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a>
+                <a id="btnIsi" href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a>
+                <a id="btnIsi" href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a>
+                <a id="btnIsi" href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a>
+            </div> 
+            </div>
+        </li>                 
     </ul>
     <!-- /top_menu -->
     <a href="#menu" class="btn_mobile">
@@ -22,106 +32,16 @@
     </a>
     <nav id="menu" class="main-menu">
         <ul>
-            <li><span><a href="#0">Home</a></span>
+            <li><span><a href="#0">Home</a></span></li>
+            <li><span><a href="#0">About</a></span></li>
+            <li><span><a href="#0">Vendor</a></span>
                 <ul>
-                    <li><a href="index.html">Home Default</a></li>
-                    <li><a href="index-2.html">Home Slider</a></li>
-                    <li><a href="index-3.html">Home Video BG</a></li>
-                    <li><a href="index-4.html">Home Layer Slider</a></li>
-                    <li><a href="index-5.html">Home Search 2</a></li>
-                    <li><a href="index-10.html">Home Search 3 <strong>New!</strong></a></li>
-                    <li><a href="index-7.html">Home Search 4</a></li>
-                    <li><a href="index-6.html">Home GDPR (EU law)</a></li>
-                    <li><a href="index-8.html">Address Autocomplete</a></li>
-                    <li><a href="index-9.html">Home AirBnb</a></li>
-                </ul>
-            </li>
-            <li><span><a href="#0">Tours</a></span>
-                <ul>
-                    <li>
-                        <span><a href="#0">Tours Grid</a></span>
-                        <ul>
-                            <li><a href="tours-grid-isotope.html">Tours Grid Isotope</a></li>
-                            <li><a href="tours-grid-sidebar.html">Tours Grid Sidebar</a></li>
-                            <li><a href="tours-grid-sidebar-2.html">Tours Grid Sidebar 2</a></li>
-                            <li><a href="tours-grid.html">Tours Grid Simple</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span><a href="#0">Tours List</a></span>
-                        <ul>
-                            <li><a href="tours-list-isotope.html">Tours List Isotope</a></li>
-                            <li><a href="tours-list-sidebar.html">Tours List Sidebar</a></li>
-                            <li><a href="tours-list-sidebar-2.html">Tours List Sidebar 2</a></li>
-                            <li><a href="tours-list.html">Tours List Simple</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="tours-half-screen-map.html">Tours Half Screen Map</a></li>
-                    <li><a href="tour-detail.html">Tour Detail</a></li>
-                    <li><a href="detail-working-contact-form.html">Detail Contact Form <strong>New!</strong></a></li>
-                    <li>
-                        <span><a href="#0">Open Street Map</a></span>
-                        <ul>
-                            <li><a href="tours-half-screen-map-leaflet.html">Tours Half Screen Map</a></li>
-                            <li><a href="tours-list-isotope-leaflet.html">Tours Grid Isotope</a></li>
-                            <li><a href="tours-list-sidebar-leaflet.html">Tours Grid Sidebar</a></li>
-                            <li><a href="tours-list-sidebar-2-leaflet.html">Tours Grid Sidebar 2</a></li>
-                            <li><a href="tours-list-leaflet.html">Tours Grid Simple</a></li>
-                            <li><a href="tours-list-isotope-leaflet.html">Tours List Isotope</a></li>
-                            <li><a href="tours-list-sidebar-leaflet.html">Tours List Sidebar</a></li>
-                            <li><a href="tours-list-sidebar-2-leaflet.html">Tours List Sidebar 2</a></li>
-                            <li><a href="tours-list-leaflet.html">Tours List Simple</a></li>
-                            <li><a href="tour-detail-leaflet.html">Tour Detail</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><span><a href="#0">Hotels</a></span>
-                <ul>
-                    <li>
-                        <span><a href="#0">Hotel Grid</a></span>
-                        <ul>
-                            <li><a href="hotels-grid-isotope.html">Hotel Grid Isotope</a></li>
-                            <li><a href="hotels-grid-sidebar.html">Hotel Grid Sidebar</a></li>
-                            <li><a href="hotels-grid-sidebar-2.html">Hotel Grid Sidebar 2</a></li>
-                            <li><a href="hotels-grid.html">Hotel Grid Simple</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span><a href="#0">Hotel List</a></span>
-                        <ul>
-                            <li><a href="hotels-list-isotope.html">Hotel List Isotope</a></li>
-                            <li><a href="hotels-list-sidebar.html">Hotel List Sidebar</a></li>
-                            <li><a href="hotels-list-sidebar-2.html">Hotel List Sidebar 2</a></li>
-                            <li><a href="hotels-list.html">Hotel List Simple</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#0">Surabaya</a></li>
+                    <li><a href="#0">Jakarta</a></li>
+                    <li><a href="#0">Bandung</a></li>
+                    <li><a href="#0">Bogor</a></li>
                     <li><a href="hotels-half-screen-map.html">Hotel Half Screen Map</a></li>
                     <li><a href="hotel-detail.html">Hotel Detail</a></li>
-                </ul>
-            </li>
-            <li><span><a href="#0">Eat &amp; Drink</a></span>
-                <ul>
-                    <li>
-                        <span><a href="#0">Restaurant Grid</a></span>
-                        <ul>
-                            <li><a href="restaurants-grid-isotope.html">Restaurant Grid Isotope</a></li>
-                            <li><a href="restaurants-grid-sidebar.html">Restaurant Grid Sidebar</a></li>
-                            <li><a href="restaurants-grid-sidebar-2.html">Restaurant Grid Sidebar 2</a></li>
-                            <li><a href="restaurants-grid.html">Restaurant Grid simple</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span><a href="#0">Restaurant List</a></span>
-                        <ul>
-                            <li><a href="restaurants-list-isotope.html">Restaurant List Isotope</a></li>
-                            <li><a href="restaurants-list-sidebar.html">Restaurant List Sidebar</a></li>
-                            <li><a href="restaurants-list-sidebar-2.html">Restaurant List Sidebar 2</a></li>
-                            <li><a href="restaurants-list.html">Restaurant List Simple</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="restaurants-half-screen-map.html">Half Screen Map</a></li>
-                    <li><a href="restaurant-detail.html">Restaurant Detail</a></li>
                 </ul>
             </li>
             <li><span><a href="adventure.html">Adventure</a></span></li>
@@ -160,7 +80,73 @@
                     <li><a href="hamburgers.html">Animated Hamburgers</a></li>
                 </ul>
             </li>
-            <li><span><a href="#0">Buy template</a></span></li>
         </ul>
     </nav>
 </header>
+
+{{-- <!-- Sign In Popup --> --}}
+<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
+    <div class="small-dialog-header">
+        <h3>Sign In</h3>
+    </div>
+    <form>
+        <div class="sign-in-wrapper">
+            <a href="#0" class="social_bt facebook">Login with Facebook</a>
+            <a href="{{ route('google.login') }}" class="social_bt google">Login with Google</a>
+            <div class="divider"><span>Or</span></div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" name="email" id="email">
+                <i class="icon_mail_alt"></i>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" id="password" value="">
+                <i class="icon_lock_alt"></i>
+            </div>
+            <div class="clearfix add_bottom_15">
+                <div class="checkboxes float-left">
+                    <label class="container_check">Remember me
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="float-right mt-1"><a id="forgot" href="javascript:void(0);">Forgot Password?</a></div>
+            </div>
+            <div class="text-center"><input type="submit" value="Log In" class="btn_1 full-width"></div>
+            <div class="text-center">
+                Don’t have an account? <a href="register.html">Sign up</a>
+            </div>
+            <div id="forgot_pw">
+                <div class="form-group">
+                    <label>Please confirm login email below</label>
+                    <input type="email" class="form-control" name="email_forgot" id="email_forgot">
+                    <i class="icon_mail_alt"></i>
+                </div>
+                <p>You will receive an email containing a link allowing you to reset your password to a new preferred one.</p>
+                <div class="text-center"><input type="submit" value="Reset Password" class="btn_1"></div>
+            </div>
+        </div>
+    </form>
+    {{-- <!--form --> --}}
+</div>
+{{-- <!-- /Sign In Popup --> --}}
+
+<script>
+    var profile = document.getElementById("profile");
+    var isiProfile = document.getElementById("isiProfile");
+    var isiProfile2 = document.getElementById("isiProfile2");
+    var btnIsi = document.getElementById("btnIsi");
+    profile.addEventListener("mouseover", buka, false);
+    isiProfile.addEventListener("mouseover", buka, false);
+    isiProfile2.addEventListener("mouseover", buka, false);
+    btnIsi.addEventListener("mouseover", buka, false);
+    isiProfile.addEventListener("mouseout", tutup, false);
+    isiProfile2.addEventListener("mouseout", tutup, false);
+    profile.addEventListener("mouseout", tutup, false);
+
+    function buka()
+    {document.getElementById('isiProfile').style.display = 'block'}
+    function tutup()
+    {document.getElementById('isiProfile').style.display = 'none'}
+</script>
