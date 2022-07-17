@@ -2236,7 +2236,7 @@ video {
 
 @media (max-width: 1024px) {
   #hero_video {
-    background: #ccc url(../img/home_section_1.jpg);
+    /* background: #ccc url(../img/home_section_1.jpg); */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -7568,7 +7568,6 @@ a.address:hover {
 }
 
 .call_section {
-  background: url(../img/bg_call_section.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
