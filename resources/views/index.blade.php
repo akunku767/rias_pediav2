@@ -504,7 +504,7 @@
 		<form>
 			<div class="sign-in-wrapper">
 				<a href="#0" class="social_bt facebook">Login with Facebook</a>
-				<a href="{{ route('google.login') }}" target="_blank" class="social_bt google">Login with Google</a>
+				<a href="{{ route('google.login') }}" class="social_bt google">Login with Google</a>
 				<div class="divider"><span>Or</span></div>
 				<div class="form-group">
 					<label>Email</label>
