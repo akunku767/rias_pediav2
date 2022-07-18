@@ -22,7 +22,7 @@ class GoogleController extends Controller
                 Auth::login($finduser);
                 return redirect()->intended('/users');
             } else{
-                dd($user->id);
+                dd($user);
                 $newUser = User::create([
                     'role_id' => '2',
                     'name' => $user->name,
