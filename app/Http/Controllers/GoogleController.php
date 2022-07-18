@@ -22,14 +22,14 @@ class GoogleController extends Controller
                 Auth::login($finduser);
                 return redirect()->intended('/users');
             } else{
-                // dd($user->id);
+                dd($user->id);
                 $newUser = User::create([
                     'role_id' => '2',
                     'name' => $user->name,
                     'username' => $user->email,
                     'email' => $user->email,
                     'google_id' => $user->id,
-                    // 'avatar' => $user->avatar,
+                    'avatar' => $user->avatar,
                     'password'=> bcrypt('12345678'),
                 ]);
 
