@@ -873,10 +873,18 @@ ul#top_menu li:last-child {
   ul#top_menu li {
     margin: 0 0 0 10px;
   }
+  .isiProfile{
+    margin-right: 17px!important;
+    top: 23px!important;
+  }
 }
 @media (max-width: 767px) {
   ul#top_menu li:first-child {
     display: none;
+  }
+  .isiProfile{
+    margin-right: 17px!important;
+    top: 23px!important;
   }
 }
 
@@ -895,8 +903,6 @@ ul#top_menu li:last-child {
   -ms-border-radius: 0;
   border-radius: 0;
   min-width: 0;
-  width: 150px;
-  top: 60%;
   font-weight: normal;
   text-shadow: none;
   text-transform: none !important;
@@ -914,22 +920,12 @@ ul#top_menu li:last-child {
   -ms-border-radius: 3px;
   border-radius: 3px;
   padding: 10px;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-#isiProfile2{
-  padding: 7px;
-  width: 150px;
+  transition: all 1s linear;
+  width: 100px;
   position: absolute;
   right: -20px;
   margin: 0;
-  top: 26px;
-  height: 30px;
-  left: -130px;
+  top: 29px;
 }
 
 .isiProfile a{

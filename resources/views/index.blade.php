@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Rias Pedia')
-@section('content')		
-	<div id="page">
+@section('content')	
 	<main>
 		<section class="hero_single version_2">
 			<div class="wrapper">
@@ -409,32 +408,5 @@
 		<!--/call_section-->
 	</main>
 	<!-- /main -->
-
-	</div>
-	<!-- page -->
-	
 	<div id="toTop"></div><!-- Back to top button -->
-	
-	<!-- DATEPICKER  -->
-	<script>
-	$(function() {
-	  'use strict';
-	  $('input[name="dates"]').daterangepicker({
-		  autoUpdateInput: false,
-		  minDate:new Date(),
-		  locale: {
-			  cancelLabel: 'Clear'
-		  }
-	  });
-	  $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
-		  $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
-	  });
-	  $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
-		  $(this).val('');
-	  });
-	});
-	</script>
-	
-	<!-- INPUT QUANTITY  -->
-	<script src="js/input_qty.js"></script>
 @endsection

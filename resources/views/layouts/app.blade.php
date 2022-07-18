@@ -24,19 +24,71 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link href="{{ asset('css/vendors.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
     <!-- YOUR CUSTOM CSS -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
 </head>
 
 <body class="datepicker_mobile_full"><!-- Remove this class to disable datepicker full on mobile -->
-		
-	<div style="width: 100%">
+  <div id="page">      
     @include('layouts.header')	
     @yield('content')
-    @include('layouts.footer')	
+    @include('layouts.footer')
   </div>
+  @include('layouts.login')
+  
+  
+  <script type="text/javascript src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
+  <script type="text/javascript src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- DATEPICKER  -->
+	<script>
+
+    $(document).ready(function ($) {
+      $('.login').magnificPopup({
+        type: 'inline',
+  
+        // Fixed position will be used
+        fixContentPos: true,
+  
+        // Since disabled, Magnific Popup
+        // will not put close button
+        // inside content of popup
+        closeBtnInside: false,
+        preloader: false,
+  
+        // Delay in milliseconds before
+        // popup is removed
+        removalDelay: 160,
+  
+        // Class that is added to
+        // popup wrapper and background
+        mainClass: 'mfp-fade'
+      });
+    });
+
+	  $(function() {
+	    'use strict';
+      $('input[name="dates"]').daterangepicker({
+        autoUpdateInput: false,
+        minDate:new Date(),
+        locale: {
+          cancelLabel: 'Clear'
+        }
+      });
+      $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
+        $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
+      });
+      $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
+        $(this).val('');
+      });
+    });
+	</script>
+	
+	<!-- INPUT QUANTITY  -->
+	<script src="{{ asset('js/input_qty.js') }}"></script>
 </body>
 </html>
   

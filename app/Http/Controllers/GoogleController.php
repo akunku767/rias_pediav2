@@ -20,7 +20,7 @@ class GoogleController extends Controller
             $finduser = User::where('google_id',$user->getId())->first();
             if($finduser){
                 Auth::login($finduser);
-                return redirect()->intended('/');
+                return redirect()->intended('/users');
             } else{
                 // dd($user->id);
                 $newUser = User::create([
@@ -29,11 +29,12 @@ class GoogleController extends Controller
                     'username' => $user->email,
                     'email' => $user->email,
                     'google_id' => $user->id,
+                    // 'avatar' => $user->avatar,
                     'password'=> bcrypt('12345678'),
                 ]);
 
                 Auth::login($newUser);
-                return redirect()->intended('/');
+                return redirect()->intended('/users');
             }
         } catch (\Throwable $th) {
             
