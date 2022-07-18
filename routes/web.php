@@ -45,7 +45,7 @@ Route::resource('photos', PhotoController::class);
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 // Client id 50117810070-4uiis3ijfemvu09kkkrmcsb5hmn72d8k.apps.googleusercontent.com
 // Client secret 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
