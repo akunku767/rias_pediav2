@@ -13,8 +13,6 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\GoogleController;
 
-Route::resource('/', IndexController::class);
-
 // Login with google API
 Route::get('auth/google',[GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback',[GoogleController::class, 'handleToGoogleCallback'])->name('google.callback');
@@ -25,20 +23,14 @@ Route::get('auth/logout',[SessionController::class, 'logout'])->name('session.lo
 // Admin
 Route::get('dashboard', function () {return view('admin.index');})->name('dashboard');
 
+Route::resource('/', IndexController::class);
 Route::resource('days', DayController::class);
-
 Route::resource('roles', RoleController::class);
-
 Route::resource('users', UserController::class);
-
 Route::resource('vendors', VendorController::class);
-
 Route::resource('hours', HourController::class);
-
 Route::resource('services', ServiceController::class);
-
 Route::resource('reviews', ReviewController::class);
-
 Route::resource('photos', PhotoController::class);
 /*
 |--------------------------------------------------------------------------

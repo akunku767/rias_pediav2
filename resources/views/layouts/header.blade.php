@@ -78,7 +78,7 @@
             @if (session('google_id'))
             <li><span><a href="{{ route('dashboard') }}">Dashboard</a></span>
             @endif
-            <li><span><a href="adventure.html">Adventure</a></span></li>
+            {{-- <li><span><a href="adventure.html">Adventure</a></span></li>
             <li><span><a href="#0">Pages</a></span>
                 <ul>
                     <li><a href="about.html">About</a></li>
@@ -113,7 +113,7 @@
                     <li><a href="icon-pack-4.html">Icon pack 4</a></li>
                     <li><a href="hamburgers.html">Animated Hamburgers</a></li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
     </nav>
 </header>

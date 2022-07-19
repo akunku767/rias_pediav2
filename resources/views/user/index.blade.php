@@ -41,12 +41,12 @@
 </div>
 
 {{-- Sintaks sidebar, beri kode #FFFFFF untuk menu aktif, dan beri kode #000000 untuk menu tidak aktif --}}
-@include('layouts.sidebar')
-<script>
+{{-- @include('layouts.sidebar') --}}
+{{-- <script>
 //   id = role, user, vendor, service, gallery, review, day, hour
   ["role", "day", "vendor", "service", "gallery", "review", "hour"].forEach(id => document.getElementById(id).style.color = "#000000")
   document.getElementById("user").style.color = "#FFFFFF"; //tulis menu aktif sesuai tabel
   document.getElementById("divUser").style.backgroundColor = "#d9a451"; //div.. itu kotak biru
-</script>
+</script> --}}
 
 @endsection
