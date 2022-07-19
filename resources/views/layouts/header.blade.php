@@ -73,6 +73,8 @@
                     <li><a href="hotel-detail.html">Hotel Detail</a></li>
                 </ul>
             </li>
+            <li><span><a href="#0">Service</a></span></li>
+            <li><span><a href="#0">Review</a></span></li>
             @if (session('google_id'))
             <li><span><a href="{{ route('dashboard') }}">Dashboard</a></span>
             @endif
