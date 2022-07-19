@@ -5,8 +5,8 @@
 		<section class="hero_single version_2">
 			<div class="wrapper">
 				<div class="container">
-					<h3>Book unique experiences</h3>
-					<p>Expolore top rated tours, hotels and restaurants around the world</p>
+					<h3>Rias Pedia</h3>
+					<p>Bring your makeup artist in your hands </p>
 					<form>
 						<div class="row no-gutters custom-search-input-2">
 							<div class="col-lg-4">

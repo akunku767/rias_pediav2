@@ -28,16 +28,16 @@
                 </table>
                 <p style="font-size: 9pt; color:#151515; margin: 0 0 5px 0!important">{{ (Session::has('email') ? Session::get('email') : '' ) }}</p>
                 <div style="width: 100%; border-bottom: solid 2px; position: relative"></div>
-                <a href="javascript:void(0)" class="sign-out" id="sign-out" data-toggle="modal" data-target="#exampleModal"  title="Logout" style="padding: 10px; margin: 0 -10px -10px -10px;">
+                <a href="javascript:void(0)" class="sign-out" id="sign-out" data-toggle="modal" data-target="#exampleModal"  title="Logout" style="padding: 10px; margin: 4px -10px -11px -11px; border-radius: 0px 0px 3px 3px;">
                     <p class="changelogout" style="font-family: 'Poppins', Helvetica, sans-serif!important; font-weight: 500; color: #151515; margin: 0px">
                         <i style="color:#151515" class="fa-solid fa-arrow-right-from-bracket changelogout"  onclick="document.getElementById('sign-out').click()"></i>
                         Logout
                     </p>
                 </a>
             @else
-                <a href="#sign-in-dialog" class="sign-in" id="sign-in" title="Login" style="padding: 10px; margin: 0 -10px -10px -10px;">
+                <a href="#sign-in-dialog" class="sign-in" id="sign-in" title="Login" style="padding: 20px 15px; margin: -10px -10px -11px -11px; border-radius: 3px;">
                     <p class="changelogin" style="font-family: 'Poppins', Helvetica, sans-serif!important; font-weight: 500; color: #151515; margin: 0px">
-                        <i class="changelogin" style="color:#151515" class="fa-solid fa-arrow-right-to-bracket"  onclick="document.getElementById('sign-in').click()"></i>
+                        <i style="color:#151515" class="fa-solid fa-arrow-right-to-bracket changelogin" onclick="document.getElementById('sign-in').click()"></i>
                         Login
                     </p>
                 </a>
@@ -73,6 +73,9 @@
                     <li><a href="hotel-detail.html">Hotel Detail</a></li>
                 </ul>
             </li>
+            @if (session('google_id'))
+            <li><span><a href="{{ route('dashboard') }}">Dashboard</a></span>
+            @endif
             <li><span><a href="adventure.html">Adventure</a></span></li>
             <li><span><a href="#0">Pages</a></span>
                 <ul>

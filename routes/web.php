@@ -10,6 +10,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\SessionController;
 use App\Http\Controllers\GoogleController;
 
 Route::resource('/', IndexController::class);
@@ -20,6 +21,9 @@ Route::get('auth/google/callback',[GoogleController::class, 'handleToGoogleCallb
 
 // Logout session
 Route::get('auth/logout',[SessionController::class, 'logout'])->name('session.logout');
+
+// Admin
+Route::get('dashboard', function () {return view('admin.index');})->name('dashboard');
 
 Route::resource('days', DayController::class);
 
