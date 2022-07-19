@@ -30,7 +30,7 @@
 
 </head>
 
-<body class="datepicker_mobile_full"><!-- Remove this class to disable datepicker full on mobile -->
+<body class="datepicker_mobile_full" onclick="dropdownprofilebody()"><!-- Remove this class to disable datepicker full on mobile -->
   <div id="page">      
     @include('layouts.header')	
     @yield('content')

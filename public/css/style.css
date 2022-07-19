@@ -921,7 +921,7 @@ ul#top_menu li:last-child {
   border-radius: 3px;
   padding: 10px;
   transition: all 1s linear;
-  width: 100px;
+  /* width: 100px; */
   position: absolute;
   right: -20px;
   margin: 0;
@@ -942,7 +942,7 @@ ul#top_menu li a:hover {
   color: #fff;
   opacity: 0.7;
 }
-ul#top_menu li a.login, ul#top_menu li a.wishlist_bt_top, ul#top_menu li a.cart-menu-btn, ul#top_menu li a.profile_btn{
+ul#top_menu li a.login, ul#top_menu li a.wishlist_bt_top, ul#top_menu li a.cart-menu-btn, ul#top_menu li a.profile_btn, ul#top_menu li img.profile_btn{
   display: block;
   width: 22px;
   height: 23px;
@@ -955,7 +955,7 @@ ul#top_menu li a.login, ul#top_menu li a.wishlist_bt_top, ul#top_menu li a.cart-
   transition: opacity 0.5s ease;
 }
 @media (max-width: 991px) {
-  ul#top_menu li a.login, ul#top_menu li a.wishlist_bt_top, ul#top_menu li a.cart-menu-btn, ul#top_menu li a.profile_btn {
+  ul#top_menu li a.login, ul#top_menu li a.wishlist_bt_top, ul#top_menu li a.cart-menu-btn, ul#top_menu li a.profile_btn, ul#top_menu li img.profile_btn {
     top: 2px;
   }
 }
@@ -1015,11 +1015,11 @@ ul#top_menu li a.login:before {
 ul#top_menu li a.profile_btn:before {
   content: '\e08a';
 }
-ul#top_menu li a.cart-menu-btn, ul#top_menu li a.profile_btn {
+ul#top_menu li a.cart-menu-btn, ul#top_menu li a.profile_btn, ul#top_menu li img.profile_btn {
   top: 6px;
 }
 @media (max-width: 991px) {
-  ul#top_menu li a.cart-menu-btn, ul#top_menu li a.profile_btn {
+  ul#top_menu li a.cart-menu-btn, ul#top_menu li a.profile_btn, ul#top_menu li img.profile_btn {
     top: 0;
   }
 }

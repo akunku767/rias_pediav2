@@ -2,7 +2,7 @@
 <header class="header menu_fixed">
     <div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
     <div id="logo">
-        <a href="{{ route('home') }}">
+        <a href="{{ url('/') }}">
             <img src="img/logo.png" width="150" height="36" alt="" class="logo_normal">
             <img src="img/logo_sticky.png" width="150" height="36" alt="" class="logo_sticky">
         </a>
@@ -11,9 +11,21 @@
         <li><a href="cart-1.html" class="cart-menu-btn" title="Cart"><strong>4</strong></a></li>
         <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
         <li id="isiProfile" class="isiProfile">
-            <a href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a>
+            @if (session('google_id'))
+                <p style="font-size: 10pt; color:#151515; margin: 0 0 5px 0!important"><b>{{ (Session::has('name') ? Session::get('name') : '' ) }}</b></p>
+                <p style="font-size: 10pt; color:#151515; margin: 0 0 5px 0!important">{{ (Session::has('email') ? Session::get('email') : '' ) }}</p>
+                <p style="font-size: 10pt; color:#151515; margin: 0 0 5px 0!important">{{ (Session::has('roles') ? Session::get('roles') : '' ) }}</p>
+                <img style="width: 20px" src="{{ (Session::has('avatar') ? Session::get('avatar') : '' ) }}" alt="">
+            @else
+                <a href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a>
+            @endif
         </li>
-        <li><a href="javascript:void(0)" id="profile" class="profile_btn" title="Profile"></a></li>           
+        <li>@if (session('google_id'))
+                <img id="profile" class="profile_btn" onclick="dropdownprofile()" style="width: 23px; cursor: pointer" src="{{ (Session::has('avatar') ? Session::get('avatar') : '' ) }}" alt="">
+            @else
+                <a href="javascript:void(0)" id="profile" class="profile_btn" onclick="dropdownprofile()" title="Profile"></a>
+            @endif
+        </li>           
     </ul>
     <!-- /top_menu -->
     <a href="#menu" class="btn_mobile">
@@ -78,6 +90,7 @@
 </header>
 
 <script>
+    var i=0;
     var profile = document.getElementById("profile");
     var isiProfile = document.getElementById("isiProfile");
     var btnIsi = document.getElementById("btnIsi");
@@ -85,7 +98,26 @@
     profile.addEventListener("mouseover", buka, false);
     isiProfile.addEventListener("mouseover", buka, false);
     isiProfile.addEventListener("mouseout", tutup, false);
-    profile.addEventListener("mouseout", tutup, false);
+    // profile.addEventListener("mouseout", tutup, false);
+
+    function dropdownprofile(){
+        i++;
+
+        if((i%2) != 0){
+            document.getElementById('isiProfile').style.display = 'block';
+        }else{
+            document.getElementById('isiProfile').style.display = 'none';
+        }
+    }
+
+    function dropdownprofilebody(){
+        if((i%2) != 0){
+            i++;
+            document.getElementById('isiProfile').style.display = 'block';
+        }else{
+            document.getElementById('isiProfile').style.display = 'none';
+        }
+    }
 
     function buka()
     {document.getElementById('isiProfile').style.display = 'block'}

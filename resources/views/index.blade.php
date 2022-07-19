@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Rias Pedia')
 @section('content')	
-	<main>
+	<main onclick="tutup()">
 		<section class="hero_single version_2">
 			<div class="wrapper">
 				<div class="container">
