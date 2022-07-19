@@ -1,3 +1,7 @@
+@section('head')
+<!-- Bootstrap core CSS-->
+<link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+@endsection
 {{-- header --}}
 <header class="header menu_fixed">
     <div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
@@ -8,16 +12,36 @@
         </a>
     </div>
     <ul id="top_menu">
-        <li><a href="cart-1.html" class="cart-menu-btn" title="Cart"><strong>4</strong></a></li>
+        <li><a href="cart-1.html" class="cart-menu-btn" title="Cart"><strong>0</strong></a></li>
         <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
         <li id="isiProfile" class="isiProfile">
             @if (session('google_id'))
-                <p style="font-size: 10pt; color:#151515; margin: 0 0 5px 0!important"><b>{{ (Session::has('name') ? Session::get('name') : '' ) }}</b></p>
-                <p style="font-size: 10pt; color:#151515; margin: 0 0 5px 0!important">{{ (Session::has('email') ? Session::get('email') : '' ) }}</p>
-                <p style="font-size: 10pt; color:#151515; margin: 0 0 5px 0!important">{{ (Session::has('roles') ? Session::get('roles') : '' ) }}</p>
-                <img style="width: 20px" src="{{ (Session::has('avatar') ? Session::get('avatar') : '' ) }}" alt="">
+                <table>
+                    <tr>
+                        <td>
+                            <p style="font-size: 10pt; color:#151515; margin: 0 0 5px 0!important"><b>{{ (Session::has('name') ? Session::get('name') : '' ) }}</b></p>
+                        </td>
+                        <td align="right">
+                            <p style="font-size: 8pt; color:#151515; margin: 0 0 5px 0!important">{{ (Session::has('role') ? Session::get('role') : 'User' ) }}</p>
+                        </td>
+                    </tr>
+                </table>
+                <p style="font-size: 9pt; color:#151515; margin: 0 0 5px 0!important">{{ (Session::has('email') ? Session::get('email') : '' ) }}</p>
+                <div style="width: 100%; border-bottom: solid 2px; position: relative"></div>
+                <a href="javascript:void(0)" class="sign-out" id="sign-out" data-toggle="modal" data-target="#exampleModal"  title="Logout" style="padding: 10px; margin: 0 -10px -10px -10px;">
+                    <p class="changelogout" style="font-family: 'Poppins', Helvetica, sans-serif!important; font-weight: 500; color: #151515; margin: 0px">
+                        <i style="color:#151515" class="fa-solid fa-arrow-right-from-bracket changelogout"  onclick="document.getElementById('sign-out').click()"></i>
+                        Logout
+                    </p>
+                </a>
             @else
-                <a href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a>
+                <a href="#sign-in-dialog" class="sign-in" id="sign-in" title="Login" style="padding: 10px; margin: 0 -10px -10px -10px;">
+                    <p class="changelogin" style="font-family: 'Poppins', Helvetica, sans-serif!important; font-weight: 500; color: #151515; margin: 0px">
+                        <i class="changelogin" style="color:#151515" class="fa-solid fa-arrow-right-to-bracket"  onclick="document.getElementById('sign-in').click()"></i>
+                        Login
+                    </p>
+                </a>
+                
             @endif
         </li>
         <li>@if (session('google_id'))
@@ -98,11 +122,9 @@
     profile.addEventListener("mouseover", buka, false);
     isiProfile.addEventListener("mouseover", buka, false);
     isiProfile.addEventListener("mouseout", tutup, false);
-    // profile.addEventListener("mouseout", tutup, false);
 
     function dropdownprofile(){
         i++;
-
         if((i%2) != 0){
             document.getElementById('isiProfile').style.display = 'block';
         }else{

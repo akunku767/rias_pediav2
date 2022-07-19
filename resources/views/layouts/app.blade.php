@@ -27,7 +27,8 @@
     <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
     <!-- YOUR CUSTOM CSS -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/8e6e4ad827.js" crossorigin="anonymous"></script>
+    @yield('head')
 </head>
 
 <body class="datepicker_mobile_full" onclick="dropdownprofilebody()"><!-- Remove this class to disable datepicker full on mobile -->
@@ -37,6 +38,7 @@
     @include('layouts.footer')
   </div>
   @include('layouts.login')
+  @include('layouts.logout')
   
   
   <script type="text/javascript src="{{ asset('js/jquery.magnific-popup.js') }}"></script>

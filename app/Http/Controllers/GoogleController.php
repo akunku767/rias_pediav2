@@ -21,7 +21,6 @@ class GoogleController extends Controller
         try {
             $user = Socialite::driver('google')->user();
             $finduser = User::where('google_id',$user->getId())->first();
-            $findrole = Role::where('id',$finduser->role_id)->first();
             Session::put('google_id', $user->getId());
             Session::put('name', $user->getName());
             Session::put('email', $user->getEmail());
@@ -29,12 +28,12 @@ class GoogleController extends Controller
 
             if($finduser){
                 // dd($finduser->role_id);
-                Session::put('roles', $findrole->name);
+                $findrole = Role::where('id',$finduser->role_id)->first();
+                Session::put('role', $findrole->name);
                 Auth::login($finduser);
                 return redirect(session('url'));
             } else{
                 // dd($user);
-                Session::put('roles', 'User');
                 $newUser = User::create([
                     'role_id' => '2',
                     'name' => $user->name,
@@ -45,6 +44,7 @@ class GoogleController extends Controller
                     'password'=> bcrypt('12345678'),
                 ]);
                 
+                Session::put('role', 'User');
                 Auth::login($newUser);
                 return redirect(session('url'));
             }

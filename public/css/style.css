@@ -921,7 +921,6 @@ ul#top_menu li:last-child {
   border-radius: 3px;
   padding: 10px;
   transition: all 1s linear;
-  /* width: 100px; */
   position: absolute;
   right: -20px;
   margin: 0;
@@ -933,6 +932,22 @@ ul#top_menu li:last-child {
   padding: 20px;
   text-decoration: none;
   display: block;
+}
+
+.sign-in:hover{
+  background-color: #004dda;
+}
+
+.sign-out:hover{
+  background-color: #bb0000;
+}
+
+.sign-out:hover>p.changelogout, .sign-out:hover i.changelogout{
+  color: white!important;
+}
+
+.sign-in:hover>p.changelogin, .sign-in:hover i.changelogin{
+  color: white!important;
 }
 
 ul#top_menu li a {
@@ -1009,9 +1024,9 @@ ul#top_menu li a.login {
   text-indent: -9999px;
   overflow: hidden;
 }
-ul#top_menu li a.login:before {
+/* ul#top_menu li a.login:before {
   content: '\0042';
-}
+} */
 ul#top_menu li a.profile_btn:before {
   content: '\e08a';
 }

@@ -14,8 +14,12 @@ use App\Http\Controllers\GoogleController;
 
 Route::resource('/', IndexController::class);
 
+// Login with google API
 Route::get('auth/google',[GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback',[GoogleController::class, 'handleToGoogleCallback'])->name('google.callback');
+
+// Logout session
+Route::get('auth/logout',[SessionController::class, 'logout'])->name('session.logout');
 
 Route::resource('days', DayController::class);
 
