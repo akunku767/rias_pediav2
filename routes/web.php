@@ -21,7 +21,7 @@ Route::get('auth/google/callback',[GoogleController::class, 'handleToGoogleCallb
 Route::get('auth/logout',[SessionController::class, 'logout'])->name('session.logout');
 
 // Admin
-Route::get('dashboard', function () {return view('admin.index');})->name('dashboard');
+Route::get('dashboard', [SessionController::class, 'logout'])->name('dashboard.index');
 
 Route::resource('/', IndexController::class);
 Route::resource('days', DayController::class);
