@@ -75,7 +75,7 @@
             </li>
             <li><span><a href="#0">Service</a></span></li>
             <li><span><a href="#0">Review</a></span></li>
-            @if (session('role')!="User")
+            @if (session('role')=="Admin")
             <li><span><a href="{{ route('dashboard.index') }}">Dashboard</a></span>
             @endif
             {{-- <li><span><a href="adventure.html">Adventure</a></span></li>
