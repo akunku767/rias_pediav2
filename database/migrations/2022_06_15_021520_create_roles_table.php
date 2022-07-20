@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateRolesTable extends Migration
 {
@@ -18,6 +19,22 @@ class CreateRolesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        DB::table('roles')->insert(
+            array(
+                'name' => 'Admin'
+            )
+        );
+        DB::table('roles')->insert(
+            array(
+                'name' => 'Vendor'
+            )
+        );
+        DB::table('roles')->insert(
+            array(
+                'name' => 'User'
+            )
+        );
     }
 
     /**

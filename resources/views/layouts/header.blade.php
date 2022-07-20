@@ -22,7 +22,7 @@
                             <p style="font-size: 10pt; color:#151515; margin: 0 0 5px 0!important"><b>{{ (Session::has('name') ? Session::get('name') : '' ) }}</b></p>
                         </td>
                         <td align="right">
-                            <p style="font-size: 8pt; color:#151515; margin: 0 0 5px 0!important">{{ (Session::has('role') ? Session::get('role') : 'User' ) }}</p>
+                            <p style="font-size: 8pt; color:#dc3545; margin: 0 0 5px 0!important"><strong>[{{ (Session::has('role') ? Session::get('role') : 'User' ) }}]</strong></p>
                         </td>
                     </tr>
                 </table>
