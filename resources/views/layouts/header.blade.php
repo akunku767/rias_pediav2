@@ -15,7 +15,7 @@
         <li><a href="cart-1.html" class="cart-menu-btn" title="Cart"><strong>0</strong></a></li>
         <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
         <li id="isiProfile" class="isiProfile">
-            @if (session('google_id'))
+            @if (session('name'))
                 <table>
                     <tr>
                         <td>
@@ -44,7 +44,7 @@
                 
             @endif
         </li>
-        <li>@if (session('google_id'))
+        <li>@if (session('name'))
                 <img id="profile" class="profile_btn" onclick="dropdownprofile()" style="width: 23px; cursor: pointer" src="{{ (Session::has('avatar') ? Session::get('avatar') : '' ) }}" alt="">
             @else
                 <a href="javascript:void(0)" id="profile" class="profile_btn" onclick="dropdownprofile()" title="Profile"></a>
@@ -75,7 +75,7 @@
             </li>
             <li><span><a href="#0">Service</a></span></li>
             <li><span><a href="#0">Review</a></span></li>
-            @if (session('role')=="Admin")
+            @if (session('role')!="User" && session('role')!="")
             <li><span><a href="{{ route('dashboard.index') }}">Dashboard</a></span>
             @endif
             {{-- <li><span><a href="adventure.html">Adventure</a></span></li>

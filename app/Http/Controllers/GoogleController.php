@@ -30,6 +30,7 @@ class GoogleController extends Controller
             if($finduser){
                 // dd($finduser->role_id);
                 $findrole = Role::where('id',$finduser->role_id)->first();
+                Session::put('id', $finduser->id);
                 Session::put('role', $findrole->name);
                 Auth::login($finduser);
                 return redirect(session('url'));
@@ -45,9 +46,13 @@ class GoogleController extends Controller
                     'password'=> bcrypt('12345678'),
                 ]);
                 
-                Session::put('role', 'User');
-                Auth::login($newUser);
-                return redirect(session('url'));
+                $finduser = User::where('google_id',$user->getId())->first();
+                if($finduser){
+                    Auth::login($newUser);
+                    Session::put('id', $finduser->id);
+                    Session::put('role', 'User');
+                    return redirect(session('url'));
+                }
             }
         } catch (\Throwable $th) {
             

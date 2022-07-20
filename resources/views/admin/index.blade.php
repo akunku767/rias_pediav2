@@ -1,7 +1,7 @@
 @extends('admin.layouts.app')
 @section('title', 'Rias Pedia - Admin Dashboard')
 
-@if (session('role')=="Admin")
+@if (session('role')=="Admin" || session('role')=="Vendor")
   @section('content')
     <div class="container-fluid">
       <!-- Breadcrumbs-->

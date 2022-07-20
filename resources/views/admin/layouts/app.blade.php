@@ -27,6 +27,31 @@
     <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
     <!-- Your custom styles -->
     <link href="css/custom.css" rel="stylesheet">
+    <style>
+      ::-webkit-scrollbar, ::-webkit-scrollbar-corner {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: rgb(252, 252, 253);
+        background-color: var(--gray-50);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: rgb(142, 137, 162);
+        background-color: var(--gray-600);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-track:vertical {
+        border-left: solid 1px rgba(0, 0, 0, 0.1);
+      }
+
+      ::-webkit-scrollbar-track:horizontal {
+        border-top: solid 1px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </head>
 
   <body class="fixed-nav sticky-footer" id="page-top">
