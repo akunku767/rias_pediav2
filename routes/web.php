@@ -11,6 +11,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleController;
 
 // Login with google API
@@ -21,7 +22,7 @@ Route::get('auth/google/callback',[GoogleController::class, 'handleToGoogleCallb
 Route::get('auth/logout',[SessionController::class, 'logout'])->name('session.logout');
 
 // Admin
-Route::get('dashboard', [SessionController::class, 'logout'])->name('dashboard.index');
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 Route::resource('/', IndexController::class);
 Route::resource('days', DayController::class);

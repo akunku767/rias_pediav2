@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-@if (!session('role'))
-<script>window.location.href = "/";</script>
-@endif
+@if (session('role')=="Admin")
 <html lang="en">
 
 <head>
@@ -359,3 +357,6 @@
 	
 </body>
 </html>
+@else
+<script>window.location.href = "/";</script>
+@endif
