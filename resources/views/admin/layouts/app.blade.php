@@ -41,9 +41,7 @@
       }
 
       body::-webkit-scrollbar-thumb {
-        background-color: rgb(142, 137, 162);
-        background-color: var(--gray-600);
-        border-radius: 4px;
+        background-color: #151515;
       }
 
       body::-webkit-scrollbar-track:vertical {

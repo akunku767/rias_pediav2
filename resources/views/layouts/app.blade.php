@@ -29,6 +29,29 @@
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8e6e4ad827.js" crossorigin="anonymous"></script>
     @yield('head')
+    <style>
+      body::-webkit-scrollbar, ::-webkit-scrollbar-corner {
+        width: 8px;
+        height: 8px;
+      }
+
+      body::-webkit-scrollbar-track {
+        background-color: rgb(252, 252, 253);
+        background-color: var(--gray-50);
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: #4a4a4a;
+      }
+
+      body::-webkit-scrollbar-track:vertical {
+        border-left: solid 1px rgba(0, 0, 0, 0.1);
+      }
+
+      body::-webkit-scrollbar-track:horizontal {
+        border-top: solid 1px rgba(0, 0, 0, 0.1);
+      }
+    </style>
 </head>
 
 <body class="datepicker_mobile_full" onclick="dropdownprofilebody()"><!-- Remove this class to disable datepicker full on mobile -->
