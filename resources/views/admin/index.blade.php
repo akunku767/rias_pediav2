@@ -19,7 +19,13 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-cogs"></i>
               </div>
-              <div class="mr-5"><h5>{{ $roles->count() }} Total Roles!</h5></div>
+              <div class="mr-5">
+                @if($roles->count() == 0)
+                  <h5>Empty Role</h5>
+                @else
+                  <h5>{{ $roles->count() }} Total Roles</h5>
+                @endif
+              </div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="messages.html">
               <span class="float-left">View Details</span>
@@ -35,7 +41,13 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-users"></i>
               </div>
-              <div class="mr-5"><h5>{{ $users->count() }} Total Users!</h5></div>
+              <div class="mr-5">
+                @if($users->count() == 0)
+                  <h5>Empty User</h5>
+                @else
+                  <h5>{{ $users->count() }} Total Users</h5>
+                @endif
+              </div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="bookings.html">
               <span class="float-left">View Details</span>
@@ -51,7 +63,13 @@
               <div class="card-body-icon">
                 <i class="fa fa-fw fa-home"></i>
               </div>
-              <div class="mr-5"><h5>{{ $vendors->count() }} Total Vendors!</h5></div>
+              <div class="mr-5">
+                @if($vendors->count() == 0)
+                  <h5>Empty Vendor</h5>
+                @else
+                  <h5>{{ $vendors->count() }} Total Vendors</h5>
+                @endif
+              </div>
             </div>
             <a class="card-footer text-white clearfix small z-1" href="bookmarks.html">
               <span class="float-left">View Details</span>
@@ -76,7 +94,7 @@
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fa fa-angle-up"></i>
+    <i style="font-size: 15pt;" class="fa fa-angle-up"></i>
   </a>
 @else
   <script>window.location.href = "/";</script>
