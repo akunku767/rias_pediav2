@@ -1,4 +1,4 @@
-  <!-- Navigation-->
+  {{-- <!-- Navigation--> --}}
   <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
     <a class="navbar-brand" href="{{ url('/') }}"><img src="img/logo.png" data-retina="true" alt="" width="150" height="36"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,19 +12,25 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Role">
+          <a class="nav-link" href="javascript:void(0)">
+            <i class="fa fa-fw fa-cogs"></i>
+            <span class="nav-link-text">Role</span>
+          </a>
+        </li>
+		    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
           <a class="nav-link" href="messages.html">
             <i class="fa fa-fw fa-envelope-open"></i>
             <span class="nav-link-text">Messages</span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="" data-original-title="Bookings">
+		    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="" data-original-title="Bookings">
           <a class="nav-link" href="bookings.html">
             <i class="fa fa-fw fa-calendar-check-o"></i>
             <span class="nav-link-text">Bookings <span class="badge badge-pill badge-primary">6 New</span></span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="My listings">
+		    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My listings">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMylistings" data-parent="#mylistings">
             <i class="fa fa-fw fa-list"></i>
             <span class="nav-link-text">My listings</span>
@@ -33,39 +39,39 @@
             <li>
               <a href="listings.html">Pending <span class="badge badge-pill badge-primary">6</span></a>
             </li>
-			<li>
+			      <li>
               <a href="listings.html">Active <span class="badge badge-pill badge-success">6</span></a>
             </li>
-			<li>
+		      	<li>
               <a href="listings.html">Expired <span class="badge badge-pill badge-danger">6</span></a>
             </li>
           </ul>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviews">
+		    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviews">
           <a class="nav-link" href="reviews.html">
             <i class="fa fa-fw fa-star"></i>
             <span class="nav-link-text">Reviews</span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookmarks">
+		    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bookmarks">
           <a class="nav-link" href="bookmarks.html">
             <i class="fa fa-fw fa-heart"></i>
             <span class="nav-link-text">Bookmarks</span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add listing">
+		    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add listing">
           <a class="nav-link" href="add-listing.html">
             <i class="fa fa-fw fa-plus-circle"></i>
             <span class="nav-link-text">Add listing</span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="My profile">
+		    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My profile">
           <a class="nav-link" href="user-profile.html">
             <i class="fa fa-fw fa-user"></i>
             <span class="nav-link-text">My Profile</span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+		    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#Components">
             <i class="fa fa-fw fa-gear"></i>
             <span class="nav-link-text">Components</span>
@@ -74,7 +80,7 @@
             <li>
               <a href="charts.html">Charts</a>
             </li>
-			<li>
+			      <li>
               <a href="tables.html">Tables</a>
             </li>
           </ul>
@@ -184,4 +190,4 @@
       </ul>
     </div>
   </nav>
-  <!-- /Navigation-->
+  {{-- <!-- /Navigation--> --}}
