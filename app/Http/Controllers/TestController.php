@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Test;
+use Illuminate\Support\Facades\Validator;
 
 class TestController extends Controller
 {
@@ -35,7 +37,22 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'filename' => 'required',
+            'filename.*' => 'mimes:doc,docx,PDF,pdf,jpg,jpeg,png|max:2000'
+        ]);
+        if ($request->hasfile('filename')) {            
+            $filename = round(microtime(true) * 1000).'-'.str_replace(' ','-',$request->file('filename')->getClientOriginalName());
+            $request->file('filename')->move(public_path('images'), $filename);
+             Test::create(
+                    [                        
+                        'data_file' =>$filename
+                    ]
+                );
+            echo'Success';
+        }else{
+            echo'Gagal';
+        }
     }
 
     /**
