@@ -29,11 +29,8 @@ Route::get('auth/logout',[SessionController::class, 'logout'])->name('session.lo
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 // Roles
-// Route::get('dashboard/roles', function () {
-//     return view('admin.roles');
-// })->name('dashboard.roles');
-
 Route::resource('dashboard/roles', RoleController::class);
+Route::post('dashboard/roles',[RoleController::class, 'store'])->name('roles.create');
 
 
 Route::resource('/', IndexController::class);

@@ -1,5 +1,6 @@
   {{-- <!-- Navigation--> --}}
   <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
+    <div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
     <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" data-retina="true" alt="" width="150" height="36"></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -176,7 +177,7 @@
             <div class="input-group">
               <input class="form-control search-top" type="text" placeholder="Search for...">
               <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary" style="cursor: pointer" type="button">
                   <i class="fa fa-search"></i>
                 </button>
               </span>
