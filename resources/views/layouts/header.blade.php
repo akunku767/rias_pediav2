@@ -45,7 +45,7 @@
             @endif
         </li>
         <li>@if (session('name'))
-                <img id="profile" class="profile_btn" onclick="dropdownprofile()" style="width: 23px; cursor: pointer" src="{{ (Session::has('avatar') ? Session::get('avatar') : '' ) }}" alt="">
+                <img id="profile" class="profile_btn" onclick="dropdownprofile()" style="width: 23px; cursor: pointer; border-radius: 30px" src="{{ (Session::has('avatar') ? Session::get('avatar') : '' ) }}" alt="">
             @else
                 <a href="javascript:void(0)" id="profile" class="profile_btn" onclick="dropdownprofile()" title="Profile"></a>
             @endif
