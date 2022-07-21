@@ -44,7 +44,10 @@ Route::resource('vendors', VendorController::class);
 Route::resource('hours', HourController::class);
 Route::resource('services', ServiceController::class);
 Route::resource('reviews', ReviewController::class);
+Route::resource('tests', PhotoController::class);
 Route::resource('photos', PhotoController::class);
+Route::get('/uploads', [TestController::class, 'index'])->name('uploads');
+Route::post('/save', [TestController::class, 'store'])->name('uploads.store');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
