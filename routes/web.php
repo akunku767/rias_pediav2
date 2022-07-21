@@ -29,9 +29,12 @@ Route::get('auth/logout',[SessionController::class, 'logout'])->name('session.lo
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 // Roles
-Route::get('dashboard/roles', function () {
-    return view('admin.roles');
-})->name('dashboard.roles');
+// Route::get('dashboard/roles', function () {
+//     return view('admin.roles');
+// })->name('dashboard.roles');
+
+Route::resource('dashboard/roles', RoleController::class);
+
 
 Route::resource('/', IndexController::class);
 Route::resource('days', DayController::class);
