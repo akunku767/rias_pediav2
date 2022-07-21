@@ -13,11 +13,10 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\TestController;
 
 // Testing
-Route::get('/test', function () {
-    return view('test');
-})->name('test');
+Route::resource('test', TestController::class);
 
 // Login with google API
 Route::get('auth/google',[GoogleController::class, 'redirectToGoogle'])->name('google.login');
