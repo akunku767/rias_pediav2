@@ -6,14 +6,15 @@
   @section('content')
         <div class="container-fluid">
       <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
+      <ol class="breadcrumb" style="margin-bottom: 30px">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="{{ url('dashboard') }}">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">Tables</li>
       </ol>
+      <a href="#create" data-toggle="modal" data-target="create" class="tambahdata"><i class="fa fa-plus"></i> Tambah Data</a>
 		<!-- Example DataTables Card-->
-      <div class="card mb-3">
+      <div class="card mb-3" style="margin-top: 20px">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
@@ -38,19 +39,15 @@
                 <tr style="height: 42px">
                   <td style="width: 200px" >{{ $role->id}}</td>
                   <td style="width: 500px" >{{ $role->name }}</td>
-                  <td style="width: 100px"><button class="btn-green" style="width: auto"><a href="{{ route('roles.edit', $role->id) }}">Edit</a></button></td>
-                  <form method="POST" action="{{ url('roles', $role->id ) }}">
-                      @csrf
-                      @method('DELETE')
-                      <td style="width: 100px"><button class="btn-red" style="cursor: pointer; width: auto">Hapus</button></td>
-                  </form>
+                  <td style="width: 80px"><a href=""><i class="fa fa-pencil text-dark" style="font-size: 15pt"></i></a></td>
+                  <td style="width: 80px"><a href=""><i class="fa fa-trash text-danger" style="font-size: 15pt"></i></a></td>
                 </tr>
                 @endforeach
               </tbody>
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        <div class="card-footer small text-muted">Updated at {{ $updated->updated_at }}</div>
       </div>
 	  <!-- /tables-->
 	  </div>

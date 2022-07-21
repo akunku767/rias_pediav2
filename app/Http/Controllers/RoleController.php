@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Role;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class RoleController extends Controller
 {
@@ -15,8 +16,13 @@ class RoleController extends Controller
      */
     public function index()
     {
+        $updated = DB::table("roles")
+        ->orderBy("updated_at", "asc")
+        ->first();
+
+
         $roles = Role::all(); 
-        return view('admin.role.index', ['roles' => $roles]);
+        return view('admin.role.index', ['roles' => $roles, 'updated' => $updated]);
     }
 
     /**
