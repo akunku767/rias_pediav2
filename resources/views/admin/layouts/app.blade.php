@@ -77,7 +77,7 @@
 
   <body class="fixed-nav sticky-footer" id="page-top">
     @include('admin.layouts.header')
-    <div>
+    <div class="content-wrapper">
       @yield('content')
     </div>
     @include('admin.layouts.footer')
