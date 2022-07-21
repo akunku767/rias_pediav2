@@ -15,9 +15,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleController;
 
 // Testing
-Route::get('/test', function () {
-    return view('test');
-})->name('test');
+Route::resource('test', TestController::class)->name('test');
 
 // Login with google API
 Route::get('auth/google',[GoogleController::class, 'redirectToGoogle'])->name('google.login');
