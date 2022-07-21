@@ -27,7 +27,7 @@
                 @endif
               </div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="{{ route('dashboard.roles') }}">
+            <a class="card-footer text-white clearfix small z-1" href="{{ url('dashboard/roles') }}">
               <span class="float-left">View Details</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
