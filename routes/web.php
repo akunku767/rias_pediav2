@@ -14,6 +14,11 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GoogleController;
 
+// Testing
+Route::get('/test', function () {
+    return view('test');
+})->name('test');
+
 // Login with google API
 Route::get('auth/google',[GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback',[GoogleController::class, 'handleToGoogleCallback'])->name('google.callback');
