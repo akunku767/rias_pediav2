@@ -13,7 +13,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Role">
-          <a class="nav-link" href="javascript:void(0)">
+          <a class="nav-link" href="{{ route('dashboard.roles') }}">
             <i class="fa fa-fw fa-cogs"></i>
             <span class="nav-link-text">Role</span>
           </a>
