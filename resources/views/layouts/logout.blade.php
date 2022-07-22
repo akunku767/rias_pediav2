@@ -11,7 +11,7 @@
         <div class="modal-body">Are you sure want to logout?</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-danger" href="{{ route('session.logout') }}">Logout</a>
+          <a class="btn btn-danger" href="{{ route('auth.logout') }}">Logout</a>
         </div>
       </div>
     </div>

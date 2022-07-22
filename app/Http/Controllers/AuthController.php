@@ -11,7 +11,7 @@ use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 
-class GoogleController extends Controller
+class AuthController extends Controller
 {
     public function redirectToGoogle(){
         return Socialite::driver('google')->redirect();
@@ -57,5 +57,11 @@ class GoogleController extends Controller
         } catch (\Throwable $th) {
             
         }
+    }
+
+    public function logout()
+    {
+        Session::flush();
+        return redirect('/');
     }
 }

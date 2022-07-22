@@ -4,17 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="Panagea - Premium site template for travel agencies, hotels and restaurant listing.">
     <meta name="author" content="Ansonika">
     <meta name="google-site-verification" content="-3n39au53fTHd6KIrrldXmN3PREAyq2RIAIa1U7Hhyk" />
     <title>@yield('title')</title>
         
-    {{-- <!-- Favicons--> --}}
-    <link rel="shortcut icon" href="{{ asset('img/apple-touch-icon-72x72-precomposed.png') }}" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="{{ asset('img/apple-touch-icon-57x57-precomposed.png') }}">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ asset('img/apple-touch-icon-72x72-precomposed.png') }}">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ asset('img/apple-touch-icon-114x114-precomposed.png') }}">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ asset('img/apple-touch-icon-144x144-precomposed.png') }}">
+    @yield('head')
 
     {{-- <!-- GOOGLE WEB FONT --> --}}
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
@@ -29,6 +24,10 @@
     <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
     <!-- Your custom styles -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
 
     <style>
       body::-webkit-scrollbar, ::-webkit-scrollbar-corner {
@@ -77,9 +76,7 @@
 
   <body class="fixed-nav sticky-footer" id="page-top">
     @include('admin.layouts.header')
-    <div class="content-wrapper">
       @yield('content')
-    </div>
     @include('admin.layouts.footer')
     @include('admin.layouts.logout')
 
@@ -90,8 +87,8 @@
     <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     <!-- Page level plugin JavaScript-->
     <script src="{{ asset('vendor/chart.js/Chart.js') }}"></script>
-    <script src="{{ asset('vendor/datatables/jquery.dataTables.js') }}"></script>
-    <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.js') }}"></script>
+    {{-- <script src="{{ asset('vendor/datatables/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.js') }}"></script> --}}
     <script src="{{ asset('vendor/jquery.selectbox-0.2.js') }}"></script>
     <script src="{{ asset('vendor/retina-replace.min.js') }}"></script>
     <script src="{{ asset('vendor/jquery.magnific-popup.min.js') }}"></script>

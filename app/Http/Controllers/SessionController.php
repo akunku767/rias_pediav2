@@ -8,9 +8,5 @@ use Illuminate\Support\Facades\Session;
 
 class SessionController extends Controller
 {
-    public function logout()
-    {
-        Session::flush();
-        return redirect('/');
-    }
+    
 }

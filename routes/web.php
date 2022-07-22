@@ -10,32 +10,31 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\IndexController;
-use App\Http\Controllers\SessionController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TestController;
 
 // Testing
 Route::resource('test', TestController::class);
 
 // Login with google API
-Route::get('auth/google',[GoogleController::class, 'redirectToGoogle'])->name('google.login');
-Route::get('auth/google/callback',[GoogleController::class, 'handleToGoogleCallback'])->name('google.callback');
+Route::get('auth/google',[AuthController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback',[AuthController::class, 'handleToGoogleCallback'])->name('google.callback');
 
 // Logout session
-Route::get('auth/logout',[SessionController::class, 'logout'])->name('session.logout');
+Route::get('auth/logout',[AuthController::class, 'logout'])->name('auth.logout');
 
 // Admin
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 // Roles
-Route::resource('dashboard/roles', RoleController::class);
-Route::post('dashboard/roles',[RoleController::class, 'store'])->name('roles.create');
+Route::get('dashboard/roles', [RoleController::class, 'index'])->name('roles.index');
+Route::post('dashboard/roles/create',[RoleController::class, 'store'])->name('roles.create');
 
 
 Route::resource('/', IndexController::class);
 Route::resource('days', DayController::class);
-Route::resource('roles', RoleController::class);
+// Route::resource('roles', RoleController::class);
 Route::resource('users', UserController::class);
 Route::resource('vendors', VendorController::class);
 Route::resource('hours', HourController::class);
