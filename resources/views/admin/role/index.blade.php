@@ -6,20 +6,13 @@
   <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ asset('img/apple-touch-icon-114x114-precomposed.png') }}">
   <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ asset('img/apple-touch-icon-144x144-precomposed.png') }}">
 
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
   
-  {{-- <!-- Bootstrap core CSS-->
-  <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <!-- Main styles -->
-  <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-  <!-- Icon fonts-->
-  <link href="{{ asset('vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-  <!-- Plugin styles -->
-  <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
-  <!-- Your custom styles -->
-  <link href="{{ asset('css/custom.css') }}" rel="stylesheet"> --}}
+  
 
 </head>
 
@@ -33,7 +26,6 @@
 @section('title', 'Rias Pedia - Roles Dashboard')
 @section('content')
 
-<main>
 <div class="content-wrapper">
   <div class="container-fluid">
     <!-- Breadcrumbs-->
@@ -89,7 +81,6 @@
     <!-- /tables-->
   </div>
 </div>
-</main>
 
 {{-- Modal create --}}
 <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -126,13 +117,13 @@
 <!-- /container-fluid-->
 @endsection
 
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#dataTable').DataTable();
+  });
+</script>
+
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
   <i style="font-size: 15pt;" class="fa fa-angle-up"></i>
 </a>
-
-<script>
-  $(document).ready(function(){
-    $('#dataTable').DataTable();
-  });
-</script>

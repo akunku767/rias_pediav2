@@ -92,9 +92,11 @@
     <script src="{{ asset('vendor/jquery.selectbox-0.2.js') }}"></script>
     <script src="{{ asset('vendor/retina-replace.min.js') }}"></script>
     <script src="{{ asset('vendor/jquery.magnific-popup.min.js') }}"></script>
+    
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('js/admin.js') }}"></script>
     <!-- Custom scripts for this page-->
     <script src="{{ asset('js/admin-charts.js') }}"></script>
   </body>
+
 </html>
