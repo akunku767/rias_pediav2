@@ -73,7 +73,7 @@
                 <ul id="additional_links">
                     <li><a href="#0">Terms and conditions</a></li>
                     <li><a href="#0">Privacy</a></li>
-                    <li><span>© 2019 Panagea</span></li>
+                    <li><span>Copyright © RIAS PEDIA 2022</span></li>
                 </ul>
             </div>
         </div>
