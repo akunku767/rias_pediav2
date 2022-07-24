@@ -25,6 +25,15 @@ Author URI: http://themeforest.net/user/Ansonika/
 /* 1.  SITE STRUCTURE */
 /*============================================================================================*/
 /*Import*/
+
+.btn-create{
+  background-color: #0bcd55
+}
+
+.btn-create:hover{
+  background-color: #09b349
+}
+
 a{
   text-decoration: none!important;
 }
