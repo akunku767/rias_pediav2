@@ -8,11 +8,9 @@
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
   <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-  <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
-  
-  
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
 
 </head>
 
@@ -51,25 +49,23 @@
               <tr>
                 <th width="10%" style="color: #000000">ID</th>
                 <th style="color: #000000">Role</th>
-                <th colspan="2" style="color: #000000">Aksi</th>
+                <th style="color: #000000">Aksi</th>
               </tr>
             </thead>
-            <tfoot>
-              <tr>
-                <th width="10%" style="color: #000000">ID</th>
-                <th style="color: #000000">Role</th>
-                <th colspan="2" style="color: #000000">Aksi</th>
-              </tr>
-            </tfoot>
             <tbody>
               @foreach ($roles as $role)
               <tr style="height: 42px">
                 <td style="width: 200px">{{ $role->id}}</td>
                 <td style="width: 500px">{{ $role->name }}</td>
-                <td style="width: 80px"><a class="btntable" href=""><i class="fa fa-pencil text-dark"
-                      style="font-size: 15pt"></i></a></td>
-                <td style="width: 80px"><a class="btntable" href=""><i class="fa fa-trash text-danger"
-                      style="font-size: 15pt"></i></a></td>
+                <td style="width: 80px">
+                  <a class="btntable" href="">
+                    <i class="fa fa-pencil text-dark" style="font-size: 15pt"></i>
+                  </a>
+                  &nbsp;
+                  <a class="btntable" href="">
+                    <i class="fa fa-trash text-danger" style="font-size: 15pt"></i>
+                  </a>
+                </td>
               </tr>
               @endforeach
             </tbody>
@@ -80,6 +76,7 @@
     </div>
     <!-- /tables-->
   </div>
+  <!-- /container-fluid-->
 </div>
 
 {{-- Modal create --}}
@@ -114,14 +111,16 @@
     </div>
   </div>
 </div>
-<!-- /container-fluid-->
-@endsection
 
 <script type="text/javascript">
   $(document).ready(function () {
     $('#dataTable').DataTable();
   });
 </script>
+
+@endsection
+
+
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">

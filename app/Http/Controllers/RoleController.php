@@ -17,7 +17,7 @@ class RoleController extends Controller
     public function index()
     {
         $updated = DB::table("roles")
-        ->orderBy("updated_at", "asc")
+        ->orderBy("updated_at", "desc")
         ->first();
 
 

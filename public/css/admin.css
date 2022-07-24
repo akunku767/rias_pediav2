@@ -25,6 +25,10 @@ Author URI: http://themeforest.net/user/Ansonika/
 /* 1.  SITE STRUCTURE */
 /*============================================================================================*/
 /*Import*/
+a{
+  text-decoration: none!important;
+}
+
 .btntable:hover{
   -webkit-text-shadow: 5px 5px 10px rgba(65, 65, 65, 0.5);
   text-shadow: 5px 5px 10px rgba(65, 65, 65, 0.5);
