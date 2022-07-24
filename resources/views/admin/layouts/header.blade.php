@@ -13,12 +13,46 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Role">
-          <a class="nav-link" href="{{ url('dashboard/roles') }}">
+          <a class="nav-link" href="{{ route('roles.index') }}">
             <i class="fa fa-fw fa-cogs"></i>
             <span class="nav-link-text">Role</span>
           </a>
         </li>
-		    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
+          <a class="nav-link" href="{{ url('dashboard/users') }}">
+            <i class="fa fa-fw fa-users"></i>
+            <span class="nav-link-text">User</span>
+          </a>
+        </li>
+
+        {{-- Menu vendor for role admin --}}
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
+          <a class="nav-link" href="{{ url('dashboard/users') }}">
+            <i class="fa fa-fw fa-home"></i>
+            <span class="nav-link-text">Vendor</span>
+          </a>
+        </li>
+
+        {{-- Menu vendor for role vendor --}}
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Vendor">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMylistings" data-parent="#mylistings">
+            <i class="fa fa-fw fa-home"></i>
+            <span class="nav-link-text">Vendor</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMylistings">
+            <li>
+              <a href="javascript:void(0)"><i class="fa fa-fw fa-wrench" aria-hidden="true"></i> Setting</a>
+            </li>
+			      <li>
+              <a href="javascript:void(0)"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> Service</a>
+            </li>
+		      	<li>
+              <a href="javascript:void(0)"><i class="fa fa-fw fa-star" aria-hidden="true"></i> Review</a>
+            </li>
+          </ul>
+        </li>
+
+		    {{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
           <a class="nav-link" href="messages.html">
             <i class="fa fa-fw fa-envelope-open"></i>
             <span class="nav-link-text">Messages</span>
@@ -84,7 +118,7 @@
               <a href="tables.html">Tables</a>
             </li>
           </ul>
-        </li>
+        </li> --}}
       </ul>
       <ul class="navbar-nav sidenav-toggler" style="height: 100%">
         <li class="nav-item">
