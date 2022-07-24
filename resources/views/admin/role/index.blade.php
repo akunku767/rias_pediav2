@@ -1,16 +1,20 @@
 <head>
-  <!-- Favicons--> 
+  <!-- Favicons-->
   <link rel="shortcut icon" href="{{ asset('img/apple-touch-icon-72x72-precomposed.png') }}" type="image/x-icon">
   <link rel="apple-touch-icon" type="image/x-icon" href="{{ asset('img/apple-touch-icon-57x57-precomposed.png') }}">
-  <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ asset('img/apple-touch-icon-72x72-precomposed.png') }}">
-  <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ asset('img/apple-touch-icon-114x114-precomposed.png') }}">
-  <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ asset('img/apple-touch-icon-144x144-precomposed.png') }}">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72"
+    href="{{ asset('img/apple-touch-icon-72x72-precomposed.png') }}">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+    href="{{ asset('img/apple-touch-icon-114x114-precomposed.png') }}">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+    href="{{ asset('img/apple-touch-icon-144x144-precomposed.png') }}">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet">
   <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
@@ -25,6 +29,22 @@
 @section('content')
 
 <div class="content-wrapper">
+
+  {{-- Alert status --}}
+  @if (session('create'))
+    <script>swal("Success", "{{ session('create') }}", "success");</script>
+  @elseif(session('update'))
+    <script>swal("Success", "{{ session('update') }}", "success");</script>
+  @elseif(session('destroy'))
+    <script>swal("Success", "{{ session('destroy') }}", "success");</script>
+  @elseif ($errors->any())
+    <script>swal("Error", "{{ $error }}", "error");</script>
+  @endif
+
+  @if ($errors->any())
+    <script>swal("Error", "{{ $error }}", "error");</script>
+  @endif
+
   <div class="container-fluid">
     <!-- Breadcrumbs-->
     <ol class="breadcrumb" style="margin-bottom: 30px">
@@ -44,27 +64,32 @@
       </div>
       <div class="card-body">
         <div class="table-responsive">
-          <table class="table table-bordered" id="dataTable" width="100%" style="text-align: center" cellspacing="0">
+          <table class="table table-bordered table-striped" id="dataTable" width="100%" style="text-align: center"
+            cellspacing="0">
             <thead>
               <tr>
-                <th width="10%" style="color: #000000">ID</th>
+                <th width="10%" style="color: #000000">No.</th>
                 <th style="color: #000000">Role</th>
                 <th style="color: #000000">Aksi</th>
               </tr>
             </thead>
             <tbody>
-              @foreach ($roles as $role)
+              @foreach ($roles as $no => $role)
               <tr style="height: 42px">
-                <td style="width: 200px">{{ $role->id}}</td>
+                <td style="width: 200px">{{ ++$no }}</td>
                 <td style="width: 500px">{{ $role->name }}</td>
                 <td style="width: 80px">
-                  <a class="btntable" href="">
+                  <a class="btntable" href="#Edit{{ $role->id }}" data-toggle="modal"
+                    data-target="#Edit{{ $role->id }}">
                     <i class="fa fa-pencil text-dark" style="font-size: 15pt"></i>
                   </a>
+                  @include('admin.layouts.role.edit')
                   &nbsp;|&nbsp;
-                  <a class="btntable" href="">
+                  <a class="btntable" href="#Delete{{ $role->id }}" data-toggle="modal"
+                    data-target="#Delete{{ $role->id }}">
                     <i class="fa fa-trash text-danger" style="font-size: 15pt"></i>
                   </a>
+                  @include('admin.layouts.role.delete')
                 </td>
               </tr>
               @endforeach
@@ -92,7 +117,7 @@
       <form method="POST" action="{{ route('roles.create') }}">
         @csrf
         <div class="modal-body">
-          <table width="100%">
+          <table class="table-borderless" width="100%">
             <tr>
               <td width="40%">
                 <span>Role</span>

@@ -32,7 +32,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('role.create');
+        //
     }
 
     /**
@@ -47,11 +47,10 @@ class RoleController extends Controller
             'name' => 'required', 
           ]);
         
-          $input = $request->all();
-        
+          $input = $request->all(); 
           $role = Role::create($input);
          
-          return back()->with('success',' Post baru berhasil dibuat.');
+          return back()->with('create',"A new role's data has been added");
     }
 
     /**
@@ -73,10 +72,7 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        $role = Role::findOrFail($id);
-        return view('role.edit', [
-            'role' => $role
-        ]);
+        //
     }
 
     /**
@@ -94,7 +90,7 @@ class RoleController extends Controller
                
          $role = Role::find($id)->update($request->all()); 
                 
-         return back()->with('success',' Data telah diperbaharui!');
+         return back()->with('update',"A role data has been updated");
     }
 
     /**
@@ -108,6 +104,6 @@ class RoleController extends Controller
         $role = Role::find($id);
         $role->delete();
 
-        return back()->with('success',' Penghapusan berhasil.');
+        return back()->with('destroy',"A role data has been destroyed");
     }
 }

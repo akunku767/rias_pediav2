@@ -30,6 +30,8 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.
 // Roles
 Route::get('dashboard/roles', [RoleController::class, 'index'])->name('roles.index');
 Route::post('dashboard/roles/create',[RoleController::class, 'store'])->name('roles.create');
+Route::post('dashboard/roles/{id}/edit',[RoleController::class, 'update'])->name('roles.update');
+Route::delete('dashboard/roles/{id}',[RoleController::class, 'destroy'])->name('roles.destroy');
 
 
 Route::resource('/', IndexController::class);
