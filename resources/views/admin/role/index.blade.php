@@ -61,7 +61,7 @@
                   <a class="btntable" href="">
                     <i class="fa fa-pencil text-dark" style="font-size: 15pt"></i>
                   </a>
-                  &nbsp;
+                  &nbsp;|&nbsp;
                   <a class="btntable" href="">
                     <i class="fa fa-trash text-danger" style="font-size: 15pt"></i>
                   </a>
@@ -84,7 +84,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Create Data Role</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="cursor: pointer">
           <span aria-hidden="true">×</span>
         </button>
