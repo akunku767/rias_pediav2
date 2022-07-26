@@ -35,7 +35,7 @@
       <li class="breadcrumb-item">
         <a href="{{ route('dashboard.index') }}">Dashboard</a>
       </li>
-      <li class="breadcrumb-item active">Tables</li>
+      <li class="breadcrumb-item active">Roles</li>
     </ol>
     <a href="#create" data-toggle="modal" data-target="#create" class="tambahdata">
       <i class="fa fa-plus"></i>
