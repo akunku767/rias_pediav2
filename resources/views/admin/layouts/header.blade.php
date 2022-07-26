@@ -12,46 +12,47 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Role">
-          <a class="nav-link" href="{{ route('roles.index') }}">
-            <i class="fa fa-fw fa-cogs"></i>
-            <span class="nav-link-text">Role</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
-          <a class="nav-link" href="{{ route('users.index') }}">
-            <i class="fa fa-fw fa-users"></i>
-            <span class="nav-link-text">User</span>
-          </a>
-        </li>
+        @if(session('role')=="Admin")
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Role">
+            <a class="nav-link" href="{{ route('roles.index') }}">
+              <i class="fa fa-fw fa-cogs"></i>
+              <span class="nav-link-text">Role</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
+            <a class="nav-link" href="{{ route('users.index') }}">
+              <i class="fa fa-fw fa-users"></i>
+              <span class="nav-link-text">User</span>
+            </a>
+          </li>
 
-        {{-- Menu vendor for role admin --}}
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
-          <a class="nav-link" href="{{ route('vendors.index') }}">
-            <i class="fa fa-fw fa-home"></i>
-            <span class="nav-link-text">Vendor</span>
-          </a>
-        </li>
-
-        {{-- Menu vendor for role vendor --}}
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Vendor">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMylistings" data-parent="#mylistings">
-            <i class="fa fa-fw fa-home"></i>
-            <span class="nav-link-text">Vendor</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseMylistings">
-            <li>
-              <a href="javascript:void(0)"><i class="fa fa-fw fa-wrench" aria-hidden="true"></i> Setting</a>
-            </li>
-			      <li>
-              <a href="javascript:void(0)"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> Service</a>
-            </li>
-		      	<li>
-              <a href="javascript:void(0)"><i class="fa fa-fw fa-star" aria-hidden="true"></i> Review</a>
-            </li>
-          </ul>
-        </li>
-
+          {{-- Menu vendor for role admin --}}
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
+            <a class="nav-link" href="{{ route('vendors.index') }}">
+              <i class="fa fa-fw fa-home"></i>
+              <span class="nav-link-text">Vendor</span>
+            </a>
+          </li>
+        @elseif(session('role')="Vendor")
+          {{-- Menu vendor for role vendor --}}
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Vendor">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMylistings" data-parent="#mylistings">
+              <i class="fa fa-fw fa-home"></i>
+              <span class="nav-link-text">Vendor</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseMylistings">
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-fw fa-wrench" aria-hidden="true"></i> Setting</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> Service</a>
+              </li>
+              <li>
+                <a href="javascript:void(0)"><i class="fa fa-fw fa-star" aria-hidden="true"></i> Review</a>
+              </li>
+            </ul>
+          </li>
+        @endif
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
           <a class="nav-link" href="javascript:void(0)">
             <i class="fa fa-fw fa-user-circle"></i>
