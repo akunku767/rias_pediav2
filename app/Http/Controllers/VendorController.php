@@ -56,7 +56,7 @@ class VendorController extends Controller
         
         // $input = $request->all();
         $finduser = User::where('name',$request->user)->first();
-        if(!$findrole){
+        if(!$finduser){
             return back()->with('fail',"Invalid create vendor");
         }
         $vendor = Vendor::create([
