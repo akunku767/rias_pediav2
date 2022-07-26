@@ -67,7 +67,7 @@ class UserController extends Controller
           'name' => ucwords($request->name),
           'email' => $request->email, 
           'password' => bcrypt($request->password),
-          'role_id' => $findrole->role_id,
+          'role_id' => $findrole->id,
         ]);
          
         return back()->with('success',"A new user has been added");
@@ -118,7 +118,7 @@ class UserController extends Controller
         $user = User::find($id)->update([
             'name' => ucwords($request->name),
             'email' => $request->email, 
-            'role_id' => $findrole->role_id,
+            'role_id' => $findrole->id,
         ]); 
                 
         return back()->with('success',"An user has been updated");
