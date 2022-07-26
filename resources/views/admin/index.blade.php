@@ -1,3 +1,15 @@
+<head>
+  <!-- Favicons-->
+  <link rel="shortcut icon" href="{{ asset('img/apple-touch-icon-72x72-precomposed.png') }}" type="image/x-icon">
+  <link rel="apple-touch-icon" type="image/x-icon" href="{{ asset('img/apple-touch-icon-57x57-precomposed.png') }}">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72"
+    href="{{ asset('img/apple-touch-icon-72x72-precomposed.png') }}">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+    href="{{ asset('img/apple-touch-icon-114x114-precomposed.png') }}">
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+    href="{{ asset('img/apple-touch-icon-144x144-precomposed.png') }}">
+</head>
+
 @if (session('role')=="User" || session('role')=="")
 <script>
   window.location.href = "/";
@@ -32,7 +44,7 @@
               @endif
             </div>
           </div>
-          <a class="card-footer text-white clearfix small z-1" href="{{ url('dashboard/roles') }}">
+          <a class="card-footer text-white clearfix small z-1" href="{{ route('roles.index') }}">
             <span class="float-left">View Details</span>
             <span class="float-right">
               <i class="fa fa-angle-right"></i>
@@ -54,7 +66,7 @@
               @endif
             </div>
           </div>
-          <a class="card-footer text-white clearfix small z-1" href="bookings.html">
+          <a class="card-footer text-white clearfix small z-1" href="{{ route('users.index') }}">
             <span class="float-left">View Details</span>
             <span class="float-right">
               <i class="fa fa-angle-right"></i>
@@ -76,7 +88,7 @@
               @endif
             </div>
           </div>
-          <a class="card-footer text-white clearfix small z-1" href="bookmarks.html">
+          <a class="card-footer text-white clearfix small z-1" href="{{ route('vendors.index') }}">
             <span class="float-left">View Details</span>
             <span class="float-right">
               <i class="fa fa-angle-right"></i>

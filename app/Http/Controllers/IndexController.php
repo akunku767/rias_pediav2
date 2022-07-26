@@ -30,7 +30,6 @@ class IndexController extends Controller
                 Session::put('avatar', $finduser->avatar);
                 return view('index');  
             }else {
-                // Session::flush();
                 return redirect('auth/logout');
             }
         

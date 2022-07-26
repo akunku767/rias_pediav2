@@ -20,7 +20,6 @@ class RoleController extends Controller
         ->orderBy("updated_at", "desc")
         ->first();
 
-
         $roles = Role::all(); 
         return view('admin.role.index', ['roles' => $roles, 'updated' => $updated]);
     }
@@ -50,7 +49,7 @@ class RoleController extends Controller
           $input = $request->all(); 
           $role = Role::create($input);
          
-          return back()->with('create',"A new role's data has been added");
+          return back()->with('success',"A new role has been added");
     }
 
     /**
@@ -90,7 +89,7 @@ class RoleController extends Controller
                
          $role = Role::find($id)->update($request->all()); 
                 
-         return back()->with('update',"A role data has been updated");
+         return back()->with('success',"A role has been updated");
     }
 
     /**
@@ -104,6 +103,6 @@ class RoleController extends Controller
         $role = Role::find($id);
         $role->delete();
 
-        return back()->with('destroy',"A role data has been destroyed");
+        return back()->with('success',"A role has been destroyed");
     }
 }

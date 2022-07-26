@@ -12,15 +12,7 @@
           @csrf
           <div class="modal-body">
             <table class="table table-borderless" width="100%">
-                <tr>
-                    <td width="40%">
-                      <span>Id</span>
-                    </td>
-                    <td width="60%">
-                      <input type="text" name="id" value="{{ $role->id }}" style="width: 100%" disabled>
-                    </td>
-                  </tr>
-                <tr>
+              <tr>
                 <td width="40%">
                   <span>Role</span>
                 </td>

@@ -19,7 +19,7 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
-          <a class="nav-link" href="{{ url('dashboard/users') }}">
+          <a class="nav-link" href="{{ route('users.index') }}">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">User</span>
           </a>
@@ -27,7 +27,7 @@
 
         {{-- Menu vendor for role admin --}}
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
-          <a class="nav-link" href="{{ url('dashboard/users') }}">
+          <a class="nav-link" href="{{ route('vendors.index') }}">
             <i class="fa fa-fw fa-home"></i>
             <span class="nav-link-text">Vendor</span>
           </a>
@@ -50,6 +50,13 @@
               <a href="javascript:void(0)"><i class="fa fa-fw fa-star" aria-hidden="true"></i> Review</a>
             </li>
           </ul>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="User">
+          <a class="nav-link" href="javascript:void(0)">
+            <i class="fa fa-fw fa-user-circle"></i>
+            <span class="nav-link-text">Profile</span>
+          </a>
         </li>
 
 		    {{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">

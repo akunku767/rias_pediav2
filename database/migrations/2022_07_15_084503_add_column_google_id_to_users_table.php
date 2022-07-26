@@ -14,10 +14,20 @@ class AddColumnGoogleIdToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('username')->after('email')->nullable();
-            $table->string('google_id')->after('username')->nullable();
-            $table->text('avatar')->after('google_id')->nullable();
+            $table->string('google_id')->after('email')->nullable();
+            $table->text('avatar')->after('google_id')->default("img/avatar.jpg");
         });
+
+        DB::table('users')->insert(
+            array(
+                'name' => 'SAdmin Rias Pedia',
+                'role_id' => '1',
+                'email' => 'admin@riaspedia.com',
+                'password' => bcrypt('12345678'),
+                'avatar' => 'img/avatar.jpg',
+            )
+        );
+
     }
 
     /**

@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 
 class UserController extends Controller
@@ -17,8 +20,15 @@ class UserController extends Controller
      */
     public function index()
     {
+        Session::put('url', request()->fullUrl()); 
+        $updated = DB::table("users")
+        ->orderBy("updated_at", "desc")
+        ->first();
+
+        $roles = Role::all(); 
+
         $users = User::all(); 
-        return view('user.index', ['users' => $users]);
+        return view('admin.user.index', ['users' => $users, 'updated' => $updated, 'roles' => $roles]);
     }
 
     /**
@@ -28,7 +38,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        // returs
     }
 
     /**
@@ -43,19 +53,24 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required', 
             'password' => 'required',
-            'role_id' => 'required',
+            'role' => 'required',
           ]);
 
         //   $input = $request->all();
         //   $user = User::create($input);
-          $user = User::create([
-            'name' => ucwords($request->name),
-            'email' => $request->email, 
-            'password' => bcrypt($request->password),
-            'role_id' => $request->role_id,
-          ]);
+        
+        $findrole = Role::where('name',$request->role)->first();
+        if(!$findrole){
+          return back()->with('fail',"Invalid create user");
+        }
+        $user = User::create([
+          'name' => ucwords($request->name),
+          'email' => $request->email, 
+          'password' => bcrypt($request->password),
+          'role_id' => $findrole->role_id,
+        ]);
          
-          return back()->with('success',' User baru berhasil dibuat.');
+        return back()->with('success',"A new user has been added");
     }
 
     /**
@@ -77,13 +92,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-        return view('user.edit', [
-            'user' => $user,
-            'email' => $user, 
-            'password' => $user,
-            'role_id' => $user,
-        ]);
+        //
     }
 
     /**
@@ -98,18 +107,21 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required', 
-            'password' => 'required',
-            'role_id' => 'required',
+            'role' => 'required',
           ]);
                
         //  $user = User::find($id)->update($request->all()); 
+        $findrole = Role::where('name',$request->role)->first();
+        if(!$findrole){
+          return back()->with('fail',"Invalid update user");
+        }
         $user = User::find($id)->update([
             'name' => ucwords($request->name),
             'email' => $request->email, 
-            'role_id' => $request->role_id,
-          ]); 
+            'role_id' => $findrole->role_id,
+        ]); 
                 
-         return back()->with('success',' Data telah diperbaharui!');
+        return back()->with('success',"An user has been updated");
     }
 
     /**
@@ -123,6 +135,6 @@ class UserController extends Controller
         $user = User::find($id);
         $user->delete();
 
-        return back()->with('success',' Penghapusan berhasil.');
+        return back()->with('success',"An user has been destroyed");
     }
 }

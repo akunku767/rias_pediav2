@@ -21,6 +21,9 @@ Route::resource('test', TestController::class);
 Route::get('auth/google',[AuthController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback',[AuthController::class, 'handleToGoogleCallback'])->name('google.callback');
 
+// Login static 
+Route::post('auth/login',[AuthController::class, 'login'])->name('auth.login');
+
 // Logout session
 Route::get('auth/logout',[AuthController::class, 'logout'])->name('auth.logout');
 
@@ -33,12 +36,20 @@ Route::post('dashboard/roles/create',[RoleController::class, 'store'])->name('ro
 Route::post('dashboard/roles/{id}/edit',[RoleController::class, 'update'])->name('roles.update');
 Route::delete('dashboard/roles/{id}',[RoleController::class, 'destroy'])->name('roles.destroy');
 
+// Users
+Route::get('dashboard/users', [UserController::class, 'index'])->name('users.index');
+Route::post('dashboard/users/create',[UserController::class, 'store'])->name('users.create');
+Route::post('dashboard/users/{id}/edit',[UserController::class, 'update'])->name('users.update');
+Route::delete('dashboard/users/{id}',[UserController::class, 'destroy'])->name('users.destroy');
+
+// Vendors
+Route::get('dashboard/vendors', [VendorController::class, 'index'])->name('vendors.index');
+Route::post('dashboard/vendors/create',[VendorController::class, 'store'])->name('vendors.create');
+Route::post('dashboard/vendors/{id}/edit',[VendorController::class, 'update'])->name('vendors.update');
+Route::delete('dashboard/vendors/{id}',[VendorController::class, 'destroy'])->name('vendors.destroy');
 
 Route::resource('/', IndexController::class);
 Route::resource('days', DayController::class);
-// Route::resource('roles', RoleController::class);
-Route::resource('users', UserController::class);
-Route::resource('vendors', VendorController::class);
 Route::resource('hours', HourController::class);
 Route::resource('services', ServiceController::class);
 Route::resource('reviews', ReviewController::class);

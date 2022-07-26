@@ -3,7 +3,8 @@
     <div class="small-dialog-header">
         <h3>Sign In</h3>
     </div>
-    <form>
+    <form method="POST" action="{{ route('auth.login') }}">
+        @csrf
         <div class="sign-in-wrapper">
             <a href="#0" class="social_bt facebook">Login with Facebook</a>
             <a href="{{ route('google.login') }}" class="social_bt google">Login with Google</a>

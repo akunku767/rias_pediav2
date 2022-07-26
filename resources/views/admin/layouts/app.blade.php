@@ -76,6 +76,23 @@
   </head>
 
   <body class="fixed-nav sticky-footer" id="page-top">
+    {{-- Alert status --}}
+    @if (session('success'))
+      <script>swal("Success", "{{ session('susscess') }}", "success");</script>
+    @elseif(session('fail'))
+      <script>swal("Success", "{{ session('fail') }}", "error");</script>
+    @elseif ($errors->any())
+      @foreach ($errors->all() as $error)
+        <script>swal("Error", "{{ $error }}", "error");</script>
+      @endforeach
+    @endif
+
+    @if ($errors->any())
+      @foreach ($errors->all() as $error)
+        <script>swal("Error", "{{ $error }}", "error");</script>
+      @endforeach
+    @endif
+    
     @include('admin.layouts.header')
       @yield('content')
     @include('admin.layouts.footer')

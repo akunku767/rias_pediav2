@@ -32,6 +32,7 @@ class AuthController extends Controller
                 $findrole = Role::where('id',$finduser->role_id)->first();
                 Session::put('id', $finduser->id);
                 Session::put('role', $findrole->name);
+                Session::put('statusLogSuccess', "Hi ".session('name')."! Welcome back");
                 Auth::login($finduser);
                 return redirect(session('url'));
             } else{
@@ -39,18 +40,18 @@ class AuthController extends Controller
                 $newUser = User::create([
                     'role_id' => $findroleuser->id,
                     'name' => $user->name,
-                    'username' => $user->email,
                     'email' => $user->email,
                     'google_id' => $user->id,
                     'avatar' => $user->avatar,
-                    'password'=> bcrypt('12345678'),
+                    'password'=> bcrypt('1qa2ws3ed4rf5tg'),
                 ]);
                 
                 $finduser = User::where('google_id',$user->getId())->first();
                 if($finduser){
-                    Auth::login($newUser);
                     Session::put('id', $finduser->id);
                     Session::put('role', 'User');
+                    Session::put('statusLogSuccess', "Hi ".session('name')."! Welcome to Rias Pedia");
+                    Auth::login($newUser);
                     return redirect(session('url'));
                 }
             }
@@ -58,10 +59,31 @@ class AuthController extends Controller
             
         }
     }
-
-    public function logout()
-    {
+    public function login(Request $request){
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+   
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            $finduser = User::where('email',$request->email)->first();
+            $findrole = Role::where('id',$finduser->role_id)->first();
+            Session::put('id', $finduser->id);
+            Session::put('role', $findrole->name);
+            Session::put('name', $finduser->name);
+            Session::put('email', $finduser->email);
+            Session::put('avatar', $finduser->avatar);
+            // Auth::login($credentials);
+            return redirect(session('url'))->with('statusLogSuccess', "Hi ".session('name')."! Welcome back");
+        } else{
+            return redirect(session('url'))->with('statusLogFail', "Your email or password is wrong, please try again!");
+        }
+        
+    }
+    public function logout(){
         Session::flush();
+        Session::put('statusLogSuccess', "Successfully logged out");
         return redirect('/');
     }
 }

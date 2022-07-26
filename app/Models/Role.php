@@ -11,4 +11,9 @@ class Role extends Model
     protected $fillable = [
         'name',
     ];
+
+    protected $primaryKey = 'id';
+    public function user(){
+        return $this->belongsTo('App\Models\User', 'name');
+    }
 }

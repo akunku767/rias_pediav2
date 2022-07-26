@@ -17,7 +17,6 @@ class User extends Authenticatable
         'password',
         'role_id',
         'google_id',
-        'username',
         'avatar',
     ];
 
@@ -30,4 +29,8 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function role(){
+        return $this->hasOne('App\Models\Role', 'name');
+    }
 }

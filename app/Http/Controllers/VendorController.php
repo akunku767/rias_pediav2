@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Vendor;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 class VendorController extends Controller
 {
@@ -15,8 +18,15 @@ class VendorController extends Controller
      */
     public function index()
     {
+        Session::put('url', request()->fullUrl()); 
+        $updated = DB::table("vendors")
+        ->orderBy("updated_at", "desc")
+        ->first();
+
+        $users = User::all(); 
+
         $vendors = Vendor::all(); 
-            return view('vendor.index', ['vendors' => $vendors]);
+        return view('admin.vendor.index', ['vendors' => $vendors, 'updated' => $updated, 'users' => $users]);
     }
 
     /**
@@ -26,7 +36,7 @@ class VendorController extends Controller
      */
     public function create()
     {
-        return view('vendor.create');
+        //
     }
 
     /**
@@ -40,20 +50,23 @@ class VendorController extends Controller
         $request->validate([
             'name' => 'required', 
             'phone' => 'required',
-            'user_id' => 'required',
-            'geometry' => 'required',
+            'user' => 'required',
+            'geometry' => 'required|string',
           ]);
         
         // $input = $request->all();
-        
-          $vendor = Vendor::create([
+        $finduser = User::where('name',$request->user)->first();
+        if(!$findrole){
+            return back()->with('fail',"Invalid create vendor");
+        }
+        $vendor = Vendor::create([
             'name' => ucwords($request->name),
             'phone' => $request->phone, 
-            'user_id' => $request->user_id,
+            'user_id' => $finduser->id,
             'geometry' => $request->geometry,
-          ]);
+        ]);
          
-          return back()->with('success',' Vendor baru berhasil dibuat.');
+          return back()->with('success',"A new vendor has been added");
     }
 
     /**
@@ -75,14 +88,7 @@ class VendorController extends Controller
      */
     public function edit($id)
     {
-        $vendor = Vendor::findOrFail($id);
-        return view('vendor.edit', [
-            'vendor' => $vendor,
-            'phone' => $vendor,
-            'user_id' => $vendor,
-            'geometry' => $vendor,
-
-        ]);
+        //
     }
 
     /**
@@ -97,17 +103,22 @@ class VendorController extends Controller
         $request->validate([
             'name' => 'required', 
             'phone' => 'required',
-            'user_id' => 'required',
+            'user' => 'required',
             'geometry' => 'required',
           ]);
-               
-         $vendor = Vendor::find($id)->update([
+        
+        $finduser = User::where('name',$request->user)->first();
+        if(!$finduser){
+            return back()->with('fail',"Invalid update vendor");
+        }
+        $vendor = Vendor::find($id)->update([
             'name' => ucwords($request->name),
-            'user_id' => $request->user_id, 
+            'phone' => $request->phone, 
+            'user_id' => $finduser->id,
             'geometry' => $request->geometry,
-         ]); 
+        ]); 
                 
-         return back()->with('success',' Data telah diperbaharui!');
+        return back()->with('success',"A vendor has been updated");
     }
 
     /**
@@ -121,6 +132,6 @@ class VendorController extends Controller
         $vendor = Vendor::find($id);
         $vendor->delete();
 
-        return back()->with('success',' Penghapusan berhasil.');
+        return back()->with('success',"A vendor has been destroyed");
     }
 }

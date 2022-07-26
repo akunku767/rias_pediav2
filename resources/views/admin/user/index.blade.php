@@ -25,10 +25,13 @@
 @endif
 
 @extends('admin.layouts.app')
-@section('title', 'Rias Pedia - Roles Dashboard')
+@section('title', 'Rias Pedia - Users Dashboard')
 @section('content')
 
 <div class="content-wrapper">
+
+  
+
   <div class="container-fluid">
     <!-- Breadcrumbs-->
     <ol class="breadcrumb" style="margin-bottom: 30px">
@@ -44,7 +47,7 @@
     <!-- Example DataTables Card-->
     <div class="card mb-3" style="margin-top: 20px">
       <div class="card-header">
-        <i class="fa fa-table"></i> Data Table Roles
+        <i class="fa fa-table"></i> Data Table Users
       </div>
       <div class="card-body">
         <div class="table-responsive">
@@ -53,27 +56,37 @@
             <thead>
               <tr>
                 <th width="10%" style="color: #000000">No.</th>
+                <th style="color: #000000">Name</th>
                 <th style="color: #000000">Role</th>
+                <th style="color: #000000">Email</th>
                 <th style="color: #000000">Aksi</th>
               </tr>
             </thead>
             <tbody>
-              @foreach ($roles as $no => $role)
+              @foreach ($users as $no => $user)
               <tr style="height: 42px">
                 <td style="width: 10%">{{ ++$no }}</td>
-                <td>{{ $role->name }}</td>
+                <td align="left">{{ $user->name }}</td>
+                <td align="left">
+                  @foreach ($roles as $role)
+                    @if(($user->role_id) == ($role->id))
+                      {{ $role->name }}
+                    @endif
+                  @endforeach
+                </td>
+                <td align="left">{{ $user->email }}</td>
                 <td style="width: 80px">
-                  <a class="btntable" href="#Edit{{ $role->id }}" data-toggle="modal"
-                    data-target="#Edit{{ $role->id }}">
+                  <a class="btntable" href="#Edit{{ $user->id }}" data-toggle="modal"
+                    data-target="#Edit{{ $user->id }}">
                     <i class="fa fa-pencil text-dark" style="font-size: 15pt"></i>
                   </a>
-                  @include('admin.role.edit')
+                  @include('admin.user.edit')
                   &nbsp;|&nbsp;
-                  <a class="btntable" href="#Delete{{ $role->id }}" data-toggle="modal"
-                    data-target="#Delete{{ $role->id }}">
+                  <a class="btntable" href="#Delete{{ $user->id }}" data-toggle="modal"
+                    data-target="#Delete{{ $user->id }}">
                     <i class="fa fa-trash text-danger" style="font-size: 15pt"></i>
                   </a>
-                  @include('admin.role.delete')
+                  @include('admin.user.delete')
                 </td>
               </tr>
               @endforeach
@@ -93,21 +106,50 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Create Data Role</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Create Data User</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="cursor: pointer">
           <span aria-hidden="true">×</span>
         </button>
       </div>
-      <form method="POST" action="{{ route('roles.create') }}">
+      <form method="POST" action="{{ route('users.create') }}">
         @csrf
         <div class="modal-body">
           <table class="table-borderless" width="100%">
-            <tr>
+            <tr height="40px" style="font-size: 1.15rem; color: black;">
+              <td width="40%">
+                <span>Name</span>
+              </td>
+              <td width="60%">
+                <input type="text" name="name" placeholder="Input name" style="width: 100%" required>
+              </td>
+            </tr>
+            <tr height="40px" style="font-size: 1.15rem; color: black;">
               <td width="40%">
                 <span>Role</span>
               </td>
               <td width="60%">
-                <input type="text" name="name" placeholder="Input role for user" style="width: 100%" required>
+                <input name="role" list="role_id" placeholder="Choose role" style="width: 100%" required>
+                <datalist id="role_id">  
+                  @foreach ($roles as $role)
+                    <option data-value="{{ $role->id }}">{{ $role->name }}</option>
+                  @endforeach
+                </datalist>
+              </td>
+            </tr>
+            <tr height="40px" style="font-size: 1.15rem; color: black;">
+              <td width="40%">
+                <span>Email</span>
+              </td>
+              <td width="60%">
+                <input type="email" name="email" placeholder="Input email" style="width: 100%" required>
+              </td>
+            </tr>
+            <tr height="40px" style="font-size: 1.15rem; color: black;">
+              <td width="40%">
+                <span>Password</span>
+              </td>
+              <td width="60%">
+                <input type="password" name="password" placeholder="Input password" style="width: 100%" required>
               </td>
             </tr>
           </table>
