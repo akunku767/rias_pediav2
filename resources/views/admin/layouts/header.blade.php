@@ -12,6 +12,7 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
+
         @if(session('role')=="Admin")
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Role">
             <a class="nav-link" href="{{ route('roles.index') }}">
@@ -33,7 +34,7 @@
               <span class="nav-link-text">Vendor</span>
             </a>
           </li>
-        @elseif(session('role')="Vendor")
+        @elseif(session('role')=="Vendor")
           {{-- Menu vendor for role vendor --}}
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Vendor">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMylistings" data-parent="#mylistings">
