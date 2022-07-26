@@ -146,7 +146,7 @@
                 <span>Phone</span>
               </td>
               <td width="60%">
-                <input type="number" name="phone" placeholder="Input phone" style="width: 100%" required>
+                <input type="tel" value="+62" name="phone" placeholder="Input phone" style="width: 100%" required>
               </td>
             </tr>
             <tr height="40px" style="font-size: 1.15rem; color: black;">

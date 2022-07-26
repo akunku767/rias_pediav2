@@ -3,7 +3,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Edit Data User</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Edit Data Vendor</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="cursor: pointer">
             <span aria-hidden="true">×</span>
           </button>
@@ -46,7 +46,7 @@
                   <span>Phone</span>
                 </td>
                 <td width="60%">
-                  <input type="number" name="phone" placeholder="Input phone" style="width: 100%" value="{{ $vendor->phone }}" required>
+                  <input type="tel" name="phone" placeholder="Input phone" style="width: 100%" value="{{ $vendor->phone }}" required>
                 </td>
               </tr>
               <tr height="40px" style="font-size: 1.15rem; color: black;">

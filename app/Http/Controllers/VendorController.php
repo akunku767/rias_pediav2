@@ -59,14 +59,35 @@ class VendorController extends Controller
         if(!$finduser){
             return back()->with('fail',"Invalid create vendor");
         }
-        $vendor = Vendor::create([
-            'name' => ucwords($request->name),
-            'phone' => $request->phone, 
-            'user_id' => $finduser->id,
-            'geometry' => $request->geometry,
-        ]);
+        if($request->phone=='+62'){
+            return back()->with('fail',"Invalid input phone");
+        }elseif(strpos($request->phone, "+620")!=""){
+            $vendor = Vendor::create([
+                'name' => ucwords($request->name),
+                'phone' => str_replace("+620","+62",$request->phone), 
+                'user_id' => $finduser->id,
+                'geometry' => $request->geometry,
+            ]);
+            return back()->with('success',"A new vendor has been added");
+        }elseif(strpos($request->phone, "08")=="0"){
+            $vendor = Vendor::create([
+                'name' => ucwords($request->name),
+                'phone' => str_replace("08","+62",$request->phone), 
+                'user_id' => $finduser->id,
+                'geometry' => $request->geometry,
+            ]);
+            return back()->with('success',"A new vendor has been added");
+        }else{
+            $vendor = Vendor::create([
+                'name' => ucwords($request->name),
+                'phone' => $request->phone, 
+                'user_id' => $finduser->id,
+                'geometry' => $request->geometry,
+            ]);
+        
          
-          return back()->with('success',"A new vendor has been added");
+            return back()->with('success',"A new vendor has been added");
+        }
     }
 
     /**
@@ -111,14 +132,34 @@ class VendorController extends Controller
         if(!$finduser){
             return back()->with('fail',"Invalid update vendor");
         }
-        $vendor = Vendor::find($id)->update([
-            'name' => ucwords($request->name),
-            'phone' => $request->phone, 
-            'user_id' => $finduser->id,
-            'geometry' => $request->geometry,
-        ]); 
+        if($request->phone=='+62'){
+            return back()->with('fail',"Invalid input phone");
+        }elseif(strpos($request->phone, "+620")!=""){
+            $vendor = Vendor::find($id)->update([
+                'name' => ucwords($request->name),
+                'phone' => str_replace("+620","+62",$request->phone), 
+                'user_id' => $finduser->id,
+                'geometry' => $request->geometry,
+            ]); 
+            return back()->with('success',"A new vendor has been added");
+        }elseif(strpos($request->phone, "08")=="0"){
+            $vendor = Vendor::find($id)->update([
+                'name' => ucwords($request->name),
+                'phone' => str_replace("08","+62",$request->phone), 
+                'user_id' => $finduser->id,
+                'geometry' => $request->geometry,
+            ]); 
+            return back()->with('success',"A new vendor has been added");
+        }else{
+            $vendor = Vendor::find($id)->update([
+                'name' => ucwords($request->name),
+                'phone' => $request->phone, 
+                'user_id' => $finduser->id,
+                'geometry' => $request->geometry,
+            ]); 
                 
-        return back()->with('success',"A vendor has been updated");
+            return back()->with('success',"A vendor has been updated");
+        }
     }
 
     /**

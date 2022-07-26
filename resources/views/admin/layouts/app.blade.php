@@ -80,7 +80,7 @@
     @if (session('success'))
       <script>swal("Success", "{{ session('susscess') }}", "success");</script>
     @elseif(session('fail'))
-      <script>swal("Success", "{{ session('fail') }}", "error");</script>
+      <script>swal("Error", "{{ session('fail') }}", "error");</script>
     @elseif ($errors->any())
       @foreach ($errors->all() as $error)
         <script>swal("Error", "{{ $error }}", "error");</script>
