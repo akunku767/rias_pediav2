@@ -73,7 +73,15 @@
                     <li><a href="hotel-detail.html">Hotel Detail</a></li>
                 </ul>
             </li>
-            <li><span><a href="#0">Service</a></span></li>
+            <li><span><a href="#0">Service</a></span>
+                <ul>
+                    <li><a href="basic make up.html">Basic Make Up</a></li>
+                    <li><a href="hairstyling.html">Hair Styling</a></li>
+                    <li><a href="nail.html">Nail Art</a></li>
+                    <li><a href="class.html">Beauty Class</a></li>
+                    <li><a href="wedding.html">Make Up Wedding</a></li>
+                </ul>
+             </li>
             <li><span><a href="#0">Review</a></span></li>
             @if (session('role')!="User" && session('role')!="")
             <li><span><a href="{{ route('dashboard.index') }}">Dashboard</a></span>
