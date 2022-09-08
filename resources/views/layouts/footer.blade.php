@@ -2,7 +2,7 @@
     <div class="container margin_60_35">
         <div class="row">
             <div class="col-lg-5 col-md-12 p-r-5">
-                <p><img src="img/logo.svg" width="150" height="36" alt=""></p>
+                <p><img src="img/logo_sticky.png" width="150" height="36" alt=""></p>
                 <p>Mea nibh meis philosophia eu. Duis legimus efficiantur ea sea. Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu. Nihil facilisi indoctum an vix, ut delectus expetendis vis.</p>
                 <div class="follow_us">
                     <ul>
@@ -29,7 +29,7 @@
                 <h5>Contact with Us</h5>
                 <ul class="contacts">
                     <li><a href="tel://61280932400"><i class="ti-mobile"></i> + 61 23 8093 3400</a></li>
-                    <li><a href="mailto:info@Panagea.com"><i class="ti-email"></i> info@Panagea.com</a></li>
+                    <li><a href="mailto:info@Riaspedia.com"><i class="ti-email"></i> info@Riaspedia.com</a></li>
                 </ul>
                 <div id="newsletter">
                 <h6>Newsletter</h6>

@@ -13,7 +13,7 @@
     </div>
     <ul id="top_menu">
         <li><a href="cart-1.html" class="cart-menu-btn" title="Cart"><strong>0</strong></a></li>
-        <li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+        <li><a href="/wishlist" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
         <li id="isiProfile" class="isiProfile">
             @if (session('name'))
                 <table>
