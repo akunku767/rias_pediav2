@@ -51,7 +51,7 @@
 				<div class="row no-gutters">
 					<div class="col-lg-5">
 						<figure>
-							<small>Historic</small>
+							{{-- <small>Historic</small> --}}
 							<a href="detail-salon"><img src="img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
 						</figure>
 					</div>
@@ -74,7 +74,7 @@
 				<div class="row no-gutters">
 					<div class="col-lg-5">
 						<figure>
-							<small>Churches</small>
+							{{-- <small>Churches</small> --}}
 							<a href="detail-salon"><img src="img/tour_2.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
 						</figure>
 					</div>
@@ -97,7 +97,7 @@
 				<div class="row no-gutters">
 					<div class="col-lg-5">
 						<figure>
-							<small>Museum</small>
+							{{-- <small>Museum</small> --}}
 							<a href="detail-salon"><img src="img/tour_3.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
 						</figure>
 					</div>
@@ -120,7 +120,7 @@
 				<div class="row no-gutters">
 					<div class="col-lg-5">
 						<figure>
-							<small>Historic</small>
+							{{-- <small>Historic</small> --}}
 							<a href="detail-salon"><img src="img/tour_4.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
 						</figure>
 					</div>
@@ -143,7 +143,7 @@
 				<div class="row no-gutters">
 					<div class="col-lg-5">
 						<figure>
-							<small>Walking</small>
+							{{-- <small>Walking</small> --}}
 							<a href="detail-salon"><img src="img/tour_5.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
 						</figure>
 					</div>
