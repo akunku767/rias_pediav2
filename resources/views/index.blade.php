@@ -13,7 +13,7 @@
 							<div class="col-lg-10">
 								<div class="form-group">
 									<input class="form-control" type="text" placeholder="Makeup Artist...">
-									<i class="icon_pin_alt"></i>
+									<i class="icon_map_alt"></i>
 								</div>
 							</div>
 
