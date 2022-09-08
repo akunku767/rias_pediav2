@@ -131,7 +131,9 @@
 							
 							<hr>
 							<h3>Location</h3>
-							<div id="map" class="map map_single add_bottom_30"></div>
+							<div id="map" class="map map_single add_bottom_30">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.950768970166!2d112.69136771392488!3d-7.359415694689349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e356f967045b%3A0x8735ab47f46ce057!2sAzzum%20Makeup%20Artist!5e0!3m2!1sen!2sid!4v1662605318989!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
 							<!-- End Map -->
 						</section>
 						<!-- /section -->
