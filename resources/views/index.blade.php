@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Rias Pedia')
-@section('content')	
+@section('content')
 
 	<main onclick="tutup()">
 		<section class="hero_single version_2">
@@ -16,8 +16,8 @@
 									<i class="icon_pin_alt"></i>
 								</div>
 							</div>
-							
-							
+
+
 							<div class="col-lg-2">
 								<input type="submit" class="btn_search" value="Search">
 							</div>
@@ -156,7 +156,7 @@
 			<hr class="large">
 		</div>
 		<!-- /container -->
-		
+
 		<div class="container container-custom margin_30_95">
 			<section class="add_bottom_45">
 				<div class="main_title_3">
@@ -222,7 +222,7 @@
 				<a href="hotels-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a>
 			</section>
 			<!-- /section -->
-			
+
 			{{-- <section class="add_bottom_45">
 				<div class="main_title_3">
 					<span><em></em></span>
@@ -300,7 +300,7 @@
 		</div>
 		<!-- /container -->
 
-		<div class="bg_color_1">
+		{{-- <div class="bg_color_1">
 			<div class="container margin_80_55">
 				<div class="main_title_2">
 					<span><em></em></span>
@@ -369,7 +369,7 @@
 				<p class="btn_home_align"><a href="blog.html" class="btn_1 rounded">View all news</a></p>
 			</div>
 			<!-- /container -->
-		</div>
+		</div> --}}
 		<!-- /bg_color_1 -->
 
 		<div class="call_section" style="background: url({{ asset('img/bg_call_section.jpg') }}) center center no-repeat fixed;">
