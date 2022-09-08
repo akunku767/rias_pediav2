@@ -1,42 +1,23 @@
 @extends('layouts.app')
 @section('title', 'Rias Pedia')
 @section('content')	
+
 	<main onclick="tutup()">
 		<section class="hero_single version_2">
 			<div class="wrapper">
 				<div class="container">
 					<h3>Rias Pedia</h3>
 					<p>Bring your makeup artist in your hands </p>
-					<form>
+					<form action="list-salon">
 						<div class="row no-gutters custom-search-input-2">
-							<div class="col-lg-4">
+							<div class="col-lg-10">
 								<div class="form-group">
-									<input class="form-control" type="text" placeholder="Hotel, City...">
+									<input class="form-control" type="text" placeholder="Makeup Artist...">
 									<i class="icon_pin_alt"></i>
 								</div>
 							</div>
-							<div class="col-lg-3">
-								<div class="form-group">
-									<input class="form-control" type="text" name="dates" placeholder="When..">
-									<i class="icon_calendar"></i>
-								</div>
-							</div>
-							<div class="col-lg-3">
-								<div class="panel-dropdown">
-									<a href="#">Guests <span class="qtyTotal">1</span></a>
-									<div class="panel-dropdown-content">
-										<!-- Quantity Buttons -->
-										<div class="qtyButtons">
-											<label>Adults</label>
-											<input type="text" name="qtyInput" value="1">
-										</div>
-										<div class="qtyButtons">
-											<label>Childrens</label>
-											<input type="text" name="qtyInput" value="0">
-										</div>
-									</div>
-								</div>
-							</div>
+							
+							
 							<div class="col-lg-2">
 								<input type="submit" class="btn_search" value="Search">
 							</div>
@@ -51,19 +32,19 @@
 		<div class="container container-custom margin_80_0">
 			<div class="main_title_2">
 				<span><em></em></span>
-				<h2>Our Popular Tours</h2>
-				<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+				<h2>Our Popular MUA</h2>
+				<!-- <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> -->
 			</div>
 			<div id="reccomended" class="owl-carousel owl-theme">
 				<div class="item">
 					<div class="box_grid">
 						<figure>
 							<a href="#0" class="wish_bt"></a>
-							<a href="tour-detail.html"><img src="img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+							<a href="detail-salon"><img src="img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
 							<small>Historic</small>
 						</figure>
 						<div class="wrapper">
-							<h3><a href="tour-detail.html">Arc Triomphe</a></h3>
+							<h3><a href="detail-salon">Mecca Profesional Makeup Artist & Wedding Organizer</a></h3>
 							<p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu.</p>
 							<span class="price">From <strong>$54</strong> /per person</span>
 						</div>
@@ -180,18 +161,18 @@
 			<section class="add_bottom_45">
 				<div class="main_title_3">
 					<span><em></em></span>
-					<h2>Popular Hotels and Accommodations</h2>
-					<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+					<h2>Top Makeup</h2>
+					<p>Find a makeup place that is on promotion.</p>
 				</div>
 				<div class="row">
 					<div class="col-xl-3 col-lg-6 col-md-6">
 						<a href="hotel-detail.html" class="grid_item">
 							<figure>
 								<div class="score"><strong>8.9</strong></div>
-								<img src="img/hotel_1.jpg" class="img-fluid" alt="">
+								<img src="img/makeup.jpg" class="img-fluid" alt="">
 								<div class="info">
 									<div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-									<h3>Mariott Hotel</h3>
+									<h3>CHERRY JESSICA MAKEUP STUDIO</h3>
 								</div>
 							</figure>
 						</a>
@@ -201,10 +182,10 @@
 						<a href="hotel-detail.html" class="grid_item">
 							<figure>
 								<div class="score"><strong>7.9</strong></div>
-								<img src="img/hotel_2.jpg" class="img-fluid" alt="">
+								<img src="img/makeup1.jpg" class="img-fluid" alt="">
 								<div class="info">
 									<div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-									<h3>Concorde Hotel </h3>
+									<h3>RORO Make Up Artist</h3>
 								</div>
 							</figure>
 						</a>
@@ -214,10 +195,10 @@
 						<a href="hotel-detail.html" class="grid_item">
 							<figure>
 								<div class="score"><strong>7.0</strong></div>
-								<img src="img/hotel_3.jpg" class="img-fluid" alt="">
+								<img src="img/makeup2.jpg" class="img-fluid" alt="">
 								<div class="info">
 									<div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-									<h3>Louvre Hotel</h3>
+									<h3>FIFI AMEL SOE. MAKE-UP ARTIST STUDIO</h3>
 								</div>
 							</figure>
 						</a>
@@ -227,10 +208,10 @@
 						<a href="hotel-detail.html" class="grid_item">
 							<figure>
 								<div class="score"><strong>8.9</strong></div>
-								<img src="img/hotel_4.jpg" class="img-fluid" alt="">
+								<img src="img/makeup4.jpg" class="img-fluid" alt="">
 								<div class="info">
 									<div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-									<h3>Park Yatt Hotel</h3>
+									<h3>Mariana Gunadi Makeup Artist</h3>
 								</div>
 							</figure>
 						</a>
@@ -242,7 +223,7 @@
 			</section>
 			<!-- /section -->
 			
-			<section class="add_bottom_45">
+			{{-- <section class="add_bottom_45">
 				<div class="main_title_3">
 					<span><em></em></span>
 					<h2>Popular Restaurants</h2>
@@ -301,7 +282,7 @@
 				<!-- /row -->
 				<a href="restaurants-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a>
 			</section>
-			<!-- /section -->
+			<!-- /section --> --}}
 
 			<div class="banner mb-0">
 				<div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">

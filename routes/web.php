@@ -57,6 +57,12 @@ Route::resource('tests', PhotoController::class);
 Route::resource('photos', PhotoController::class);
 Route::get('/uploads', [TestController::class, 'index'])->name('uploads');
 Route::post('/save', [TestController::class, 'store'])->name('uploads.store');
+
+//Dummy
+Route::get('/detail-salon', function () {return view('vendor\detailsalon'); });
+Route::get('/list-salon', function () {return view('vendor\listsalon'); });
+
+// Route::get('list-salon', function () {return view('listsalon'); });
 /*
 |--------------------------------------------------------------------------
 | Web Routes
