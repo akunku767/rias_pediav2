@@ -17,7 +17,6 @@
 								</div>
 							</div>
 
-
 							<div class="col-lg-2">
 								<input type="submit" class="btn_search" value="Search">
 							</div>
