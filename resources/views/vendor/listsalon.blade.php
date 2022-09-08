@@ -58,7 +58,7 @@
 					<div class="col-lg-7">
 						<div class="wrapper">
 							<a href="#0" class="wish_bt"></a>
-							<h3><a href="tour-detail.html">Arc Triomphe</a></h3>
+							<h3><a href="tour-detail.html">Azzum Makeup Artist</a></h3>
 							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no.</p>
 							<span class="price">From <strong>$54</strong> /per person</span>
 						</div>
