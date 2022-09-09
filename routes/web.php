@@ -50,6 +50,8 @@ Route::delete('dashboard/vendors/{id}',[VendorController::class, 'destroy'])->na
 
 // User->Vendors
 Route::get('/detail-salon/{slug}', [VendorController::class, 'detail'])->name('vendors.detailsalon');
+Route::get('/list-salon', [VendorController::class, 'list'])->name('vendors.listsalon');
+
 
 
 Route::resource('/', IndexController::class);
@@ -64,7 +66,7 @@ Route::post('/save', [TestController::class, 'store'])->name('uploads.store');
 
 //Dummy
 // Route::get('/detail-salon', function () {return view('vendor\detailsalon'); });
-Route::get('/list-salon', function () {return view('vendor\listsalon'); });
+// Route::get('/list-salon', function () {return view('vendor\listsalon'); });
 Route::get('/wishlist', function () {return view('wishlist'); });
 
 

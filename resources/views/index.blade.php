@@ -8,7 +8,7 @@
 				<div class="container">
 					<h3>Rias Pedia</h3>
 					<p>Bring your makeup artist in your hands </p>
-					<form action="list-salon">
+					<form action="{{ route('vendors.listsalon') }}">
 						<div class="row no-gutters custom-search-input-2">
 							<div class="col-lg-10">
 								<div class="form-group">
@@ -56,7 +56,7 @@
                 @endforeach
 			</div>
 			<!-- /carousel -->
-			<p class="btn_home_align"><a href="tours-grid-isotope.html" class="btn_1 rounded">View all Tours</a></p>
+			<p class="btn_home_align"><a href="{{ route('vendors.listsalon') }}" class="btn_1 rounded">View all MUA</a></p>
 			<hr class="large">
 		</div>
 		<!-- /container -->
