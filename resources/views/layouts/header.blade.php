@@ -7,8 +7,8 @@
     <div id="preloader"><div data-loader="circle-side"></div></div><!-- /Page Preload -->
     <div id="logo">
         <a href="{{ url('/') }}">
-            <img src="img/logo.png" width="150" height="36" alt="" class="logo_normal">
-            <img src="img/logo_sticky.png" width="150" height="36" alt="" class="logo_sticky">
+            <img src="{{ asset('img/logo.png') }}" width="150" height="36" alt="" class="logo_normal">
+            <img src="{{ asset('img/logo_sticky.png') }}" width="150" height="36" alt="" class="logo_sticky">
         </a>
     </div>
     <ul id="top_menu">
@@ -41,7 +41,7 @@
                         Login
                     </p>
                 </a>
-                
+
             @endif
         </li>
         <li>@if (session('name'))
@@ -49,7 +49,7 @@
             @else
                 <a href="javascript:void(0)" id="profile" class="profile_btn" onclick="dropdownprofile()" title="Profile"></a>
             @endif
-        </li>           
+        </li>
     </ul>
     <!-- /top_menu -->
     <a href="#menu" class="btn_mobile">
@@ -158,5 +158,5 @@
     {document.getElementById('isiProfile').style.display = 'block'}
     function tutup()
     {document.getElementById('isiProfile').style.display = 'none'}
- 
+
 </script>

@@ -2,7 +2,7 @@
     <div class="container margin_60_35">
         <div class="row">
             <div class="col-lg-5 col-md-12 p-r-5">
-                <p><img src="img/logo_sticky.png" width="150" height="36" alt=""></p>
+                <p><img src="{{ asset('img/logo_sticky.png') }}" width="150" height="36" alt=""></p>
                 <p>Mea nibh meis philosophia eu. Duis legimus efficiantur ea sea. Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu. Nihil facilisi indoctum an vix, ut delectus expetendis vis.</p>
                 <div class="follow_us">
                     <ul>
@@ -66,7 +66,7 @@
                             </select>
                         </div>
                     </li>
-                    <li><img src="img/cards_all.svg" alt=""></li>
+                    <li><img src="{{ asset('img/cards_all.svg') }}" alt=""></li>
                 </ul>
             </div>
             <div class="col-lg-6">
@@ -82,6 +82,6 @@
 {{-- <!--/footer--> --}}
 
 <!-- COMMON SCRIPTS -->
-<script src="js/common_scripts.js"></script>
-<script src="js/main.js"></script>
-<script src="assets/validate.js"></script>
+<script src="{{ asset('js/common_scripts.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('assets/validate.js') }}"></script>

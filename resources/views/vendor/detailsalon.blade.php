@@ -8,9 +8,13 @@
 					<h1 class="fadeInUp"><span></span>Tour detail p</h1>
 				</div> -->
 				<span class="magnific-gallery">
-					<a href="img/gallery/tour_list_1.jpg" class="btn_photos" title="Photo title" data-effect="mfp-zoom-in">View photos</a>
-					<a href="img/gallery/tour_list_2.jpg" title="Photo title" data-effect="mfp-zoom-in"></a>
-					<a href="img/gallery/tour_list_3.jpg" title="Photo title" data-effect="mfp-zoom-in"></a>
+					{{-- <a href="{{ asset('img/gallery/tour_list_1.jpg') }}" class="btn_photos" title="Photo title" data-effect="mfp-zoom-in">View photos</a>
+					<a href="{{ asset('img/gallery/tour_list_2.jpg') }}" title="Photo title" data-effect="mfp-zoom-in"></a>
+					<a href="{{ asset('img/gallery/tour_list_3.jpg') }}" title="Photo title" data-effect="mfp-zoom-in"></a> --}}
+					<a href="{{$scrape->image}}" class="btn_photos" title="Thumbnail" data-effect="mfp-zoom-in">
+                        <img src="{{$scrape->image}}" style="height: 150px" alt="">
+                    </a>
+
 				</span>
 			</div>
 		</section>
@@ -30,6 +34,16 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<section id="description">
+                            <h2>{{$scrape->id}}</h2>
+                            <h2>{{$scrape->name}}</h2>
+                            <h2>{{$scrape->rating}}</h2>
+                            <h2>{{$scrape->review}}</h2>
+                            <h2>{{$scrape->address}}</h2>
+                            <h2>{{$scrape->open}}</h2>
+                            <h2>{{$scrape->web}}</h2>
+                            <h2>{{$scrape->phone}}</h2>
+
+
 							<h2>Description</h2>
 							<p>Per consequat adolescens ex, cu nibh commune <strong>temporibus vim</strong>, ad sumo viris eloquentiam sed. Mea appareat omittantur eloquentiam ad, nam ei quas oportere democritum. Prima causae admodum id est, ei timeam inimicus sed. Sit an meis aliquam, cetero inermis vel ut. An sit illum euismod facilisis, tamquam vulputate pertinacia eum at.</p>
 							<p>Cum et probo menandri. Officiis consulatu pro et, ne sea sale invidunt, sed ut sint <strong>blandit</strong> efficiendi. Atomorum explicari eu qui, est enim quaerendum te. Quo harum viris id. Per ne quando dolore evertitur, pro ad cibo commune.</p>
@@ -128,25 +142,25 @@
 								</div>
 							</div> -->
 							<!-- /row -->
-							
+
 							<hr>
 							<h3>Location</h3>
 							<div id="map" class="map map_single add_bottom_30">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.950768970166!2d112.69136771392488!3d-7.359415694689349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e356f967045b%3A0x8735ab47f46ce057!2sAzzum%20Makeup%20Artist!5e0!3m2!1sen!2sid!4v1662605318989!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							{{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.950768970166!2d112.69136771392488!3d-7.359415694689349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e356f967045b%3A0x8735ab47f46ce057!2sAzzum%20Makeup%20Artist!5e0!3m2!1sen!2sid!4v1662605318989!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+                            <iframe src="{{$scrape->iframeMap}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							</div>
 							<!-- End Map -->
 						</section>
 						<!-- /section -->
-					
+
 						<section id="reviews">
 							<h2>Reviews</h2>
 							<div class="reviews-container">
 								<div class="row">
 									<div class="col-lg-3">
 										<div id="review_summary">
-											<strong>8.5</strong>
-											<em>Superb</em>
-											<small>Based on 4 reviews</small>
+											<strong>{{$scrape->rating}}</strong>
+											<small>Based on {{$scrape->review}}</small>
 										</div>
 									</div>
 									<div class="col-lg-9">
@@ -202,10 +216,10 @@
 
 							<hr>
 
-							<div class="reviews-container">
+							{{-- <div class="reviews-container">
 
 								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="img/avatar1.jpg" alt="">
+									<figure class="rev-thumb"><img src="{{ asset('img/avatar1.jpg') }}" alt="">
 									</figure>
 									<div class="rev-content">
 										<div class="rating">
@@ -223,7 +237,7 @@
 								</div>
 								<!-- /review-box -->
 								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="img/avatar2.jpg" alt="">
+									<figure class="rev-thumb"><img src="{{ asset('img/avatar2.jpg') }}" alt="">
 									</figure>
 									<div class="rev-content">
 										<div class="rating">
@@ -241,7 +255,7 @@
 								</div>
 								<!-- /review-box -->
 								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="img/avatar3.jpg" alt="">
+									<figure class="rev-thumb"><img src="{{ asset('img/avatar3.jpg') }}" alt="">
 									</figure>
 									<div class="rev-content">
 										<div class="rating">
@@ -258,14 +272,14 @@
 									</div>
 								</div>
 								<!-- /review-box -->
-							</div>
+							</div> --}}
 							<!-- /review-container -->
 						</section>
 						<!-- /section -->
 						<hr>
 
 							<div class="add-review">
-								<h5>Leave a Review</h5>
+								<h5>Leave a Suggestion</h5>
 								<form>
 									<div class="row">
 										<div class="form-group col-md-6">
@@ -294,7 +308,7 @@
 											</div>
 										</div>
 										<div class="form-group col-md-12">
-											<label>Your Review</label>
+											<label>Your Suggestion</label>
 											<textarea name="review_text" id="review_text" class="form-control" style="height:130px;"></textarea>
 										</div>
 										<div class="form-group col-md-12 add_top_20">
@@ -305,7 +319,7 @@
 							</div>
 					</div>
 					<!-- /col -->
-					
+
 					<aside class="col-lg-4" id="sidebar">
 						<div class="box_detail booking">
 							<div class="price">

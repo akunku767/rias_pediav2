@@ -5,14 +5,23 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Vendor extends Model
+class Scrape extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'name',
+        'rating',
+        'review',
+        'address',
+        'open',
+        'web',
         'phone',
-        'user_id',
-        'geometry',
+        'image',
+        'iframeMap',
+        'slug'
     ];
+
+
 }

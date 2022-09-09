@@ -21,7 +21,7 @@ Route::resource('test', TestController::class);
 Route::get('auth/google',[AuthController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback',[AuthController::class, 'handleToGoogleCallback'])->name('google.callback');
 
-// Login static 
+// Login static
 Route::post('auth/login',[AuthController::class, 'login'])->name('auth.login');
 
 // Logout session
@@ -30,23 +30,27 @@ Route::get('auth/logout',[AuthController::class, 'logout'])->name('auth.logout')
 // Admin
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
-// Roles
+// Admin->Roles
 Route::get('dashboard/roles', [RoleController::class, 'index'])->name('roles.index');
 Route::post('dashboard/roles/create',[RoleController::class, 'store'])->name('roles.create');
 Route::post('dashboard/roles/{id}/edit',[RoleController::class, 'update'])->name('roles.update');
 Route::delete('dashboard/roles/{id}',[RoleController::class, 'destroy'])->name('roles.destroy');
 
-// Users
+// Admin->Users
 Route::get('dashboard/users', [UserController::class, 'index'])->name('users.index');
 Route::post('dashboard/users/create',[UserController::class, 'store'])->name('users.create');
 Route::post('dashboard/users/{id}/edit',[UserController::class, 'update'])->name('users.update');
 Route::delete('dashboard/users/{id}',[UserController::class, 'destroy'])->name('users.destroy');
 
-// Vendors
+// Admin->Vendors
 Route::get('dashboard/vendors', [VendorController::class, 'index'])->name('vendors.index');
 Route::post('dashboard/vendors/create',[VendorController::class, 'store'])->name('vendors.create');
 Route::post('dashboard/vendors/{id}/edit',[VendorController::class, 'update'])->name('vendors.update');
 Route::delete('dashboard/vendors/{id}',[VendorController::class, 'destroy'])->name('vendors.destroy');
+
+// User->Vendors
+Route::get('/detail-salon/{slug}', [VendorController::class, 'detail'])->name('vendors.detailsalon');
+
 
 Route::resource('/', IndexController::class);
 Route::resource('days', DayController::class);
@@ -59,7 +63,7 @@ Route::get('/uploads', [TestController::class, 'index'])->name('uploads');
 Route::post('/save', [TestController::class, 'store'])->name('uploads.store');
 
 //Dummy
-Route::get('/detail-salon', function () {return view('vendor\detailsalon'); });
+// Route::get('/detail-salon', function () {return view('vendor\detailsalon'); });
 Route::get('/list-salon', function () {return view('vendor\listsalon'); });
 Route::get('/wishlist', function () {return view('wishlist'); });
 

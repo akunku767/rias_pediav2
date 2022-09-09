@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -23,19 +24,22 @@ class IndexController extends Controller
             if($finduser){
                 $findrole = Role::where('id',$finduser->role_id)->first();
                 Session::put('url', request()->fullUrl());
-                Session::put('role', $findrole->name); 
+                Session::put('role', $findrole->name);
                 Session::put('google_id', $finduser->id);
                 Session::put('name', $finduser->name);
                 Session::put('email', $finduser->email);
                 Session::put('avatar', $finduser->avatar);
-                return view('index');  
+
+                $lists = DB::table("scrapes")->orderBy("review", "asc")->limit(10)->get();
+                return view('index', compact('lists'));
             }else {
                 return redirect('auth/logout');
             }
-        
+
         }else{
-            Session::put('url', request()->fullUrl()); 
-            return view('index');
+            Session::put('url', request()->fullUrl());
+            $lists = DB::table("scrapes")->orderBy("review", "asc")->limit(10)->get();
+            return view('index', compact('lists'));
         }
     }
 
@@ -104,4 +108,5 @@ class IndexController extends Controller
     {
         //
     }
+
 }
