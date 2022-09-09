@@ -326,10 +326,9 @@
 
 					<aside class="col-lg-4" id="sidebar">
 						<div class="box_detail booking">
-							<div class="price">
-								<span>45$ <small>person</small></span>
-								<div class="score"><span>Good<em>10 Reviews</em></span><strong>5.0</strong></div>
-							</div>
+								<h3> Phone Number </h3>
+								<h3>{{$scrape->phone}}</h3>
+							
 							<!-- <div class="form-group input-dates">
 								<input class="form-control" type="text" name="dates" placeholder="When..">
 								<i class="icon_calendar"></i>
@@ -347,7 +346,7 @@
 									</div>
 								</div>
 							</div> -->
-							<a href="cart-1.html" class="btn_1 full-width purchase">Contact With Us</a>
+							<a href="cart-1.html" class="btn_1 full-width purchase">Need Help? Contact Us</a>
 							<a href="wishlist.html" class="btn_1 full-width outline wishlist"><i class="icon_heart"></i> Add to wishlist</a>
 							<!-- <div class="text-center"><small>No money charged in this step</small></div> -->
 						</div>
