@@ -46,8 +46,8 @@
 
 							<h2>About Us</h2>
 							{{-- <p>Isna Dewi Makeup <strong></strong></p> --}}
-							<p>Dengan Jam Kerja <strong>{{$scrape->open}}</strong> 
-								Segera datangi Isna Dewi Makeup, dan pesan sesuai yang anda inginkan.</p>
+							<p>Working Hours <strong>{{$scrape->open}}</strong> 
+								Coming soon Isna Dewi Makeup, and order according to what you want.</p>
 							<h3>Instagram photos feed</h3>
 							<div id="instagram.com" class="clearfix">
 							<a href="{{$scrape->web}}">{{$scrape->web}}</a>

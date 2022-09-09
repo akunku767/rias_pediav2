@@ -65,8 +65,8 @@
 			<section class="add_bottom_45">
 				<div class="main_title_3">
 					<span><em></em></span>
-					<h2>Top Makeup</h2>
-					<p>Find a makeup place that is on promotion.</p>
+					<h2>Other people are also searching</h2>
+					<p>This is the search result.</p>
 				</div>
 				<div class="row">
 					<div class="col-xl-3 col-lg-6 col-md-6">
