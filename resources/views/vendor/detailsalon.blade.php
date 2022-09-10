@@ -34,22 +34,25 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<section id="description">
-                            <h2>{{$scrape->id}}</h2>
+                            {{-- <h2>{{$scrape->id}}</h2> --}}
                             <h2>{{$scrape->name}}</h2>
-                            <h2>{{$scrape->rating}}</h2>
-                            <h2>{{$scrape->review}}</h2>
-                            <h2>{{$scrape->address}}</h2>
-                            <h2>{{$scrape->open}}</h2>
-                            <h2>{{$scrape->web}}</h2>
-                            <h2>{{$scrape->phone}}</h2>
+                            {{-- <h2>{{$scrape->rating}}</h2> --}}
+                            {{-- <h2>{{$scrape->review}}</h2> --}}
+                            {{-- <h2>{{$scrape->address}}</h2> --}}
+                            {{-- <h2>{{$scrape->open}}</h2> --}}
+                            {{-- <h2>{{$scrape->web}}</h2> --}}
+                            {{-- <h2>{{$scrape->phone}}</h2> --}}
 
 
-							<h2>Description</h2>
-							<p>Per consequat adolescens ex, cu nibh commune <strong>temporibus vim</strong>, ad sumo viris eloquentiam sed. Mea appareat omittantur eloquentiam ad, nam ei quas oportere democritum. Prima causae admodum id est, ei timeam inimicus sed. Sit an meis aliquam, cetero inermis vel ut. An sit illum euismod facilisis, tamquam vulputate pertinacia eum at.</p>
-							<p>Cum et probo menandri. Officiis consulatu pro et, ne sea sale invidunt, sed ut sint <strong>blandit</strong> efficiendi. Atomorum explicari eu qui, est enim quaerendum te. Quo harum viris id. Per ne quando dolore evertitur, pro ad cibo commune.</p>
+							<h2>About Us</h2>
+							{{-- <p>Isna Dewi Makeup <strong></strong></p> --}}
+							<p>Working Hours <strong>{{$scrape->open}}</strong> 
+								Coming soon Isna Dewi Makeup, and order according to what you want.</p>
 							<h3>Instagram photos feed</h3>
-							<div id="instagram-feed" class="clearfix"></div>
-							<hr>
+							<div id="instagram.com" class="clearfix">
+							<a href="{{$scrape->web}}">{{$scrape->web}}</a>
+							</div>
+							{{-- <hr> --}}
 
 							<!-- <h3>Program <small>(60 minutes)</small></h3>
 							<p>
@@ -147,7 +150,8 @@
 							<h3>Location</h3>
 							<div id="map" class="map map_single add_bottom_30">
 							{{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.950768970166!2d112.69136771392488!3d-7.359415694689349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e356f967045b%3A0x8735ab47f46ce057!2sAzzum%20Makeup%20Artist!5e0!3m2!1sen!2sid!4v1662605318989!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
-                            <iframe src="{{$scrape->iframeMap}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							Jl. Delta Pelangi 1 No.30, Ngingas, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256
+							<iframe src="{{$scrape->iframeMap}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							</div>
 							<!-- End Map -->
 						</section>
@@ -322,15 +326,14 @@
 
 					<aside class="col-lg-4" id="sidebar">
 						<div class="box_detail booking">
-							<div class="price">
-								<span>45$ <small>person</small></span>
-								<div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div>
-							</div>
-							<div class="form-group input-dates">
+								<h3> Phone Number </h3>
+								<h3>{{$scrape->phone}}</h3>
+							
+							<!-- <div class="form-group input-dates">
 								<input class="form-control" type="text" name="dates" placeholder="When..">
 								<i class="icon_calendar"></i>
-							</div>
-							<div class="panel-dropdown">
+							</div> -->
+							<!-- <div class="panel-dropdown">
 								<a href="#">Guests <span class="qtyTotal">1</span></a>
 								<div class="panel-dropdown-content right">
 									<div class="qtyButtons">
@@ -342,10 +345,10 @@
 										<input type="text" name="qtyInput" value="0">
 									</div>
 								</div>
-							</div>
-							<a href="cart-1.html" class="btn_1 full-width purchase">Purchase</a>
+							</div> -->
+							<a href="cart-1.html" class="btn_1 full-width purchase">Need Help? Contact Us</a>
 							<a href="wishlist.html" class="btn_1 full-width outline wishlist"><i class="icon_heart"></i> Add to wishlist</a>
-							<div class="text-center"><small>No money charged in this step</small></div>
+							<!-- <div class="text-center"><small>No money charged in this step</small></div> -->
 						</div>
 						<ul class="share-buttons">
 							<li><a class="fb-share" href="#0"><i class="social_facebook"></i> Share</a></li>
