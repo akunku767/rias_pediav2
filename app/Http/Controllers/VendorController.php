@@ -99,8 +99,37 @@ class VendorController extends Controller
      */
     public function detail($slug)
     {
+        $checkView = Scrape::where('slug', $slug)->first();
+        $addView = Scrape::where('slug', $slug)->update([
+            'views' => ($checkView->views)+1,
+        ]);
         $scrape = Scrape::where('slug', $slug)->first();
+
         return view('vendor.detailsalon', compact('scrape'));
+    }
+
+    public function list()
+    {
+        $lists = Scrape::orderBy('name', 'ASC')->get();
+        return view('vendor.listsalon', compact('lists'));
+    }
+
+    public function search(Request $request)
+    {
+        $lists = Scrape::where('name', 'like', '%'.$request->searchMUA.'%')->get();
+        return view('vendor.listsalon', compact('lists'));
+    }
+
+    public function popular()
+    {
+        $lists = Scrape::orderBy('review', 'DESC')->get();
+        return view('vendor.listsalon', compact('lists'));
+    }
+
+    public function latest()
+    {
+        $lists = Scrape::orderBy('id', 'DESC')->get();
+        return view('vendor.listsalon', compact('lists'));
     }
 
     /**

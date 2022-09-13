@@ -36,6 +36,8 @@
 						<section id="description">
                             {{-- <h2>{{$scrape->id}}</h2> --}}
                             <h2>{{$scrape->name}}</h2>
+                            <h4>{{$scrape->views}} Views</h4>
+                            <h4>Last updated on {{$scrape->updated}}</h4>
                             {{-- <h2>{{$scrape->rating}}</h2> --}}
                             {{-- <h2>{{$scrape->review}}</h2> --}}
                             {{-- <h2>{{$scrape->address}}</h2> --}}
@@ -46,7 +48,7 @@
 
 							<h2>About Us</h2>
 							{{-- <p>Isna Dewi Makeup <strong></strong></p> --}}
-							<p>Working Hours <strong>{{$scrape->open}}</strong> 
+							<p>Working Hours <strong>{{$scrape->open}}</strong>
 								Coming soon Isna Dewi Makeup, and order according to what you want.</p>
 							<h3>Instagram photos feed</h3>
 							<div id="instagram.com" class="clearfix">
@@ -150,7 +152,7 @@
 							<h3>Location</h3>
 							<div id="map" class="map map_single add_bottom_30">
 							{{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.950768970166!2d112.69136771392488!3d-7.359415694689349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e356f967045b%3A0x8735ab47f46ce057!2sAzzum%20Makeup%20Artist!5e0!3m2!1sen!2sid!4v1662605318989!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
-							Jl. Delta Pelangi 1 No.30, Ngingas, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur 61256
+							{{$scrape->address}}
 							<iframe src="{{$scrape->iframeMap}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 							</div>
 							<!-- End Map -->
@@ -171,7 +173,7 @@
 										<div class="row">
 											<div class="col-lg-10 col-9">
 												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar" role="progressbar" style="width: {{$scrape->star5}}%" aria-valuenow="{{$scrape->star5}}" aria-valuemin="0" aria-valuemax="100"></div>
 												</div>
 											</div>
 											<div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
@@ -180,7 +182,7 @@
 										<div class="row">
 											<div class="col-lg-10 col-9">
 												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar" role="progressbar" style="width: {{$scrape->star4}}%" aria-valuenow="{{$scrape->star4}}" aria-valuemin="0" aria-valuemax="100"></div>
 												</div>
 											</div>
 											<div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
@@ -189,7 +191,7 @@
 										<div class="row">
 											<div class="col-lg-10 col-9">
 												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar" role="progressbar" style="width: {{$scrape->star3}}%" aria-valuenow="{{$scrape->star3}}" aria-valuemin="0" aria-valuemax="100"></div>
 												</div>
 											</div>
 											<div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
@@ -198,7 +200,7 @@
 										<div class="row">
 											<div class="col-lg-10 col-9">
 												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar" role="progressbar" style="width: {{$scrape->star2}}%" aria-valuenow="{{$scrape->star2}}" aria-valuemin="0" aria-valuemax="100"></div>
 												</div>
 											</div>
 											<div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
@@ -207,7 +209,7 @@
 										<div class="row">
 											<div class="col-lg-10 col-9">
 												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+													<div class="progress-bar" role="progressbar" style="width: {{$scrape->star1}}%" aria-valuenow="{{$scrape->star1}}" aria-valuemin="0" aria-valuemax="100"></div>
 												</div>
 											</div>
 											<div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
@@ -328,7 +330,7 @@
 						<div class="box_detail booking">
 								<h3> Phone Number </h3>
 								<h3>{{$scrape->phone}}</h3>
-							
+
 							<!-- <div class="form-group input-dates">
 								<input class="form-control" type="text" name="dates" placeholder="When..">
 								<i class="icon_calendar"></i>
@@ -346,7 +348,7 @@
 									</div>
 								</div>
 							</div> -->
-							<a href="cart-1.html" class="btn_1 full-width purchase">Need Help? Contact Us</a>
+							<a href="tel://{{ $scrape->phone }}" class="btn_1 full-width purchase">Need Help? Contact Us</a>
 							<a href="wishlist.html" class="btn_1 full-width outline wishlist"><i class="icon_heart"></i> Add to wishlist</a>
 							<!-- <div class="text-center"><small>No money charged in this step</small></div> -->
 						</div>

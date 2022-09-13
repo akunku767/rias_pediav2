@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Scrape;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 
@@ -30,16 +31,20 @@ class IndexController extends Controller
                 Session::put('email', $finduser->email);
                 Session::put('avatar', $finduser->avatar);
 
-                $lists = DB::table("scrapes")->orderBy("review", "asc")->limit(10)->get();
-                return view('index', compact('lists'));
+                $lists = Scrape::orderBy('review', 'DESC')->limit(10)->get();
+                $popViews = Scrape::orderBy('views', 'DESC')->limit(4)->get();
+                $count = DB::table("scrapes")->get();
+                return view('index', compact('lists'), compact('popViews'), ['count' => $count]);
             }else {
                 return redirect('auth/logout');
             }
 
         }else{
             Session::put('url', request()->fullUrl());
-            $lists = DB::table("scrapes")->orderBy("review", "asc")->limit(10)->get();
-            return view('index', compact('lists'));
+            $lists = Scrape::orderBy('review', 'DESC')->limit(10)->get();
+            $popViews = Scrape::orderBy('views', 'DESC')->limit(10)->get();
+            $countTable = Scrape::all();
+            return view('index', compact('lists', 'popViews', 'countTable'));
         }
     }
 

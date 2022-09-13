@@ -8,11 +8,12 @@
 				<div class="container">
 					<h3>Rias Pedia</h3>
 					<p>Bring your makeup artist in your hands </p>
-					<form action="{{ route('vendors.listsalon') }}">
+					<form method="POST" action="{{ route('vendors.searchsalon') }}">
+                        @csrf
 						<div class="row no-gutters custom-search-input-2">
 							<div class="col-lg-10">
 								<div class="form-group">
-									<input class="form-control" type="text" placeholder="Makeup Artist...">
+									<input class="form-control" name="searchMUA" type="text" placeholder="Makeup Artist...">
 									<i class="icon_map_alt"></i>
 								</div>
 							</div>
@@ -43,12 +44,13 @@
                                 <a href="{{ url('detail-salon', $list->slug ) }}"><img src="{{ $list->image }}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
                             </figure>
                             <div class="wrapper">
+                                {{-- <h4>{{ $list->slug }}</h4> --}}
                                 <h3><a href="{{ url("/detail-salon", $list->slug ) }}">{{ $list->name }}</a></h3>
                                 <p>{{ $list->address }}</p>
                                 <strong>{{ $list->phone }}</strong>
                             </div>
                             <ul>
-                                <li><div class="score"><span><em>{{ $list->review }}</em></span><strong>{{ $list->rating }}</strong></div></li>
+                                <li><div class="score"><span><em>{{ $list->review }} Reviews</em></span><strong>{{ $list->rating }}</strong></div></li>
                             </ul>
                         </div>
                     </div>
@@ -69,61 +71,26 @@
 					<p>This is the search result.</p>
 				</div>
 				<div class="row">
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="hotel-detail.html" class="grid_item">
-							<figure>
-								<div class="score"><strong>8.9</strong></div>
-								<img src="img/makeup.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-									<h3>CHERRY JESSICA MAKEUP STUDIO</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="hotel-detail.html" class="grid_item">
-							<figure>
-								<div class="score"><strong>7.9</strong></div>
-								<img src="img/makeup1.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-									<h3>RORO Make Up Artist</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="hotel-detail.html" class="grid_item">
-							<figure>
-								<div class="score"><strong>7.0</strong></div>
-								<img src="img/makeup2.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-									<h3>FIFI AMEL SOE. MAKE-UP ARTIST STUDIO</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="hotel-detail.html" class="grid_item">
-							<figure>
-								<div class="score"><strong>8.9</strong></div>
-								<img src="img/makeup4.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<div class="cat_star"><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i></div>
-									<h3>Mariana Gunadi Makeup Artist</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
+                    @foreach ($popViews as $popView)
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <a href="{{ url('detail-salon', $popView->slug ) }}" class="grid_item">
+                                <figure>
+                                    <div class="score"><strong>{{ $popView->rating }}</strong></div>
+                                    <img src="{{ $popView->image }}" class="img-fluid" alt="">
+                                    <div class="info">
+                                        <div class="cat_star"><i class="icon-eye-1"></i> {{ $popView->views }} View</div>
+                                        <h3>{{ $popView->name }}</h3>
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- /grid_item -->
+                    @endforeach
 				</div>
 				<!-- /row -->
-				<a href="hotels-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a>
+                {{-- @foreach ($countTable as $countTable) --}}
+			    	<a href="hotels-grid-isotope.html"><strong>View all ({{ $countTable->count() }}) <i class="arrow_carrot-right"></i></strong></a>
+                {{-- @endforeach --}}
 			</section>
 			<!-- /section -->
 

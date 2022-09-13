@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('title', 'Rias Pedia')
-@section('content')	
+@section('content')
 
 	<main>
-		
+
 		<section class="hero_in tours">
 			<div class="wrapper">
 				<div class="container">
@@ -12,18 +12,24 @@
 			</div>
 		</section>
 		<!--/hero_in-->
-		
+
 		<div class="filters_listing sticky_horizontal">
 			<div class="container">
 				<ul class="clearfix">
 					<li>
 						<div class="switch-field">
 							<input type="radio" id="all" name="listing_filter" value="all">
-							<label for="all">All</label>
+							<label for="all">
+                                <a href="{{ route('vendors.listsalon') }}">All</a>
+                            </label>
 							<input type="radio" id="popular" name="listing_filter" value="popular">
-							<label for="popular">Popular</label>
+							<label for="popular">
+                                <a href="{{ route('vendors.popularsalon') }}">Popular</a>
+                            </label>
 							<input type="radio" id="latest" name="listing_filter" value="latest">
-							<label for="latest">Latest</label>
+							<label for="latest">
+                                <a href="{{ route('vendors.latestsalon') }}">Latest</a>
+                            </label>
 						</div>
 					</li>
 					<li>
@@ -40,131 +46,40 @@
 			<!-- /container -->
 		</div>
 		<!-- /filters -->
-		
+
 		<div class="collapse" id="collapseMap">
 			<div id="map" class="map"></div>
 		</div>
 		<!-- End Map -->
 
 		<div class="container margin_60_35">
-			<div class="box_list">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure>
-							{{-- <small>Historic</small> --}}
-							<a href="detail-salon"><img src="img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<h3><a href="detail-salon">Azzum Makeup Artist</a></h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no.</p>
-							<span class="price">From <strong>$54</strong> /per person</span>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /box_list -->
-			<div class="box_list">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure>
-							{{-- <small>Churches</small> --}}
-							<a href="detail-salon"><img src="img/tour_2.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<h3><a href="detail-salon">Notredam</a></h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no.</p>
-							<span class="price">From <strong>$124</strong> /per person</span>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /box_list -->
-			<div class="box_list">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure>
-							{{-- <small>Museum</small> --}}
-							<a href="detail-salon"><img src="img/tour_3.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<h3><a href="detail-salon">Pompidue Museum</a></h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no.</p>
-							<span class="price">From <strong>$45</strong> /per person</span>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><div class="score"><span>Good<em>350 Reviews</em></span><strong>7.0</strong></div></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /box_list -->
-			<div class="box_list">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure>
-							{{-- <small>Historic</small> --}}
-							<a href="detail-salon"><img src="img/tour_4.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<h3><a href="detail-salon">Versailles</a></h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no.</p>
-							<span class="price">From <strong>$25</strong> /per person</span>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>9.0</strong></div></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /box_list -->
-			<div class="box_list">
-				<div class="row no-gutters">
-					<div class="col-lg-5">
-						<figure>
-							{{-- <small>Walking</small> --}}
-							<a href="detail-salon"><img src="img/tour_5.jpg" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-						</figure>
-					</div>
-					<div class="col-lg-7">
-						<div class="wrapper">
-							<a href="#0" class="wish_bt"></a>
-							<h3><a href="detail-salon">Tour Eiffel</a></h3>
-							<p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Id usu zril tacimates neglegentur. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no.</p>
-							<span class="price">From <strong>$65</strong> /per person</span>
-						</div>
-						<ul>
-							<li><i class="icon_clock_alt"></i> 1h 30min</li>
-							<li><div class="score"><span>Superb<em>350 Reviews</em></span><strong>9.0</strong></div></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /box_list -->
-			
+            @foreach ($lists as $list)
+                <div class="box_list">
+                    <div class="row no-gutters">
+                        <div class="col-lg-5">
+                            <figure>
+                                {{-- <small>Historic</small> --}}
+                                <a href="{{ url('detail-salon', $list->slug ) }}"><img src="{{ $list->image }}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                            </figure>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="wrapper">
+                                <a href="#0" class="wish_bt"></a>
+                                <h3><a href="{{ url('detail-salon', $list->slug ) }}">{{ $list->name }}</a></h3>
+                                <p>{{ $list->address }}</p>
+                                <span class="price"><strong>{{ $list->phone }}</strong></span>
+                            </div>
+                            <ul>
+                                <li><i class="icon_clock_alt"></i> 1h 30min</li>
+                                <li><div class="score"><span><em>{{ $list->review }} Reviews</em></span><strong>{{ $list->rating }}</strong></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /box_list -->
+            @endforeach
 			<p class="text-center add_top_60"><a href="#0" class="btn_1 rounded">Load more</a></p>
-		
+
 		</div>
 		<!-- /container -->
 		<div class="bg_color_1">
@@ -199,5 +114,5 @@
 		<!-- /bg_color_1 -->
 	</main>
 	<!--/main-->
-	
+
 	@endsection

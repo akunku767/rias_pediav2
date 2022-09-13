@@ -16,20 +16,25 @@ class CreateScrapesTable extends Migration
         Schema::create('scrapes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('rating');
-            $table->string('review');
-            $table->string('address');
+            $table->string('rating', 3);
+            $table->integer('review');
+            $table->text('address');
             $table->string('open');
-            $table->string('web');
+            $table->text('web');
             $table->string('phone');
-            $table->string('image');
-            $table->string('iframeMap');
-            $table->string('slug');
-            $table->string('star5');
-            $table->string('star4');
-            $table->string('star3');
-            $table->string('star2');
-            $table->string('star1');
+            $table->text('image');
+            $table->text('iframeMap');
+            $table->text('slug');
+            $table->string('star5', 15);
+            $table->string('star4', 15);
+            $table->string('star3', 15);
+            $table->string('star2', 15);
+            $table->string('star1', 15);
+            $table->integer('views')->default(0);
+            $table->text('created', 25);
+            $table->text('updated', 25);
+            $table->timestamps();
+
         });
 
     }
