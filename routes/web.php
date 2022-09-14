@@ -70,7 +70,7 @@ Route::post('/save', [TestController::class, 'store'])->name('uploads.store');
 // Route::get('/detail-salon', function () {return view('vendor\detailsalon'); });
 // Route::get('/list-salon', function () {return view('vendor\listsalon'); });
 Route::get('/wishlist', function () {return view('wishlist'); });
-
+Route::get('/about-us', function () {return view('AboutUs');})->name('aboutus'); 
 
 // Route::get('list-salon', function () {return view('listsalon'); });
 /*
