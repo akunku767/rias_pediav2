@@ -61,7 +61,7 @@
     </a>
     <nav id="menu" class="main-menu">
         <ul>
-            <li><span><a href="#0">Home</a></span></li>
+            <li><span><a href="{{ url('/') }}">Home</a></span></li>
             <li><span><a href="#0">About</a></span></li>
             <li><span><a href="#0">Vendor</a></span>
                 <ul>
