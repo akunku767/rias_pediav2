@@ -158,9 +158,9 @@
 			<div class="banner mb-0">
 				<div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">
 					<div>
-						<small>Adventure</small>
-						<h3>Your Perfect<br>Advenure Experience</h3>
-						<p>Activities and accommodations</p>
+						<h3>Make Up</h3>
+						<h3>Your Perfect<br>Make Up Experience</h3>
+						<p>Activities and events</p>
 						<a href="adventure.html" class="btn_1">Read more</a>
 					</div>
 				</div>
