@@ -7,7 +7,7 @@
 		<section class="hero_in tours">
 			<div class="wrapper">
 				<div class="container">
-					<h1 class="fadeInUp"><span></span>Paris tours list</h1>
+					<h1 class="fadeInUp"><span></span>List Make Up Artist</h1>
 				</div>
 			</div>
 		</section>
