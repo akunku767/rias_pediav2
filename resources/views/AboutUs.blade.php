@@ -8,7 +8,7 @@
                 <div class="main_info">
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3"><em>3 Day Trip</em><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></div>
+                        {{-- <div class="d-flex align-items-center justify-content-between mb-3"><em>3 Day Trip</em><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></div> --}}
                         <h1>National Park Mountain Hike</h1>
                         <p>Mudgee, Australia</p>
                     </div>
