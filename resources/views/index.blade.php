@@ -72,11 +72,25 @@
 				</div>
 				<div class="row">
                     @foreach ($popViews as $popView)
-                        <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="col-xl-3">
                             <a href="{{ url('detail-salon', $popView->slug ) }}" class="grid_item">
-                                <figure>
+                                <figure style="background-color:rgba(0, 255, 255, 0)">
                                     <div class="score"><strong>{{ $popView->rating }}</strong></div>
-                                    <img src="{{ $popView->image }}" class="img-fluid" alt="">
+									<table width="100%" style="z-index: 99; ">
+										<tbody>
+											<tr width="100%" align="center">
+												<td>											
+													<div style="z-index: 1; filter: blur(5px); position: absolute">
+														<img src="{{ $popView->image }}" class="img" alt="" style="align-items: center; height: 600px">
+													</div>
+				
+													<div style="z-index: 2; position: relative">
+														<img src="{{ $popView->image }}" class="img" alt="" style="align-items: center">
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
                                     <div class="info">
                                         <div class="cat_star"><i class="icon-eye-1"></i> {{ $popView->views }} View</div>
                                         <h3>{{ $popView->name }}</h3>

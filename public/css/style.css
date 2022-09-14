@@ -3155,8 +3155,8 @@ a.grid_item figure small {
   z-index: 9;
 }
 a.grid_item figure img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 300px;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
