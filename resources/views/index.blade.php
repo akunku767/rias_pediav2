@@ -161,7 +161,7 @@
 						<h3>Make Up</h3>
 						<h3>Your Perfect<br>Make Up Experience</h3>
 						<p>Activities and events</p>
-						<a href="adventure.html" class="btn_1">Read more</a>
+						<a href="{{ route("aboutus") }}" class="btn_1">Read more</a>
 					</div>
 				</div>
 				<!-- /wrapper -->
