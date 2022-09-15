@@ -65,31 +65,31 @@
 
             <div class="row mb-5">
                 <div class="col-lg-4 fixed_title">
-                    <h2>What's included</h2>
+                    <h2>What do you get</h2>
                 </div>
                 <div class="col-lg-8">
                     <div class="pl-lg-4">
                         <ul class="list_feat clearfix">
                             <li>
-                                <figure><img src="img/icon_included_1.svg" alt=""></figure>
-                                <h4>Food</h4>
-                                <p>1 breakfast, 1 dinner, snacks</p>
+                                <figure><i style="font-size:30pt" class="icon-home"></i></figure>
+                                <h4>Vendor</h4>
+                                <p>Find the most complete vendor</p>
                             </li>
                             <li>
                                 <figure><img src="img/icon_included_2.svg" alt=""></figure>
-                                <h4>Drinks</h4>
-                                <p>Water, Beer</p>
+                                <h4>Payment</h4>
+                                <p>Free admin</p>
                             </li>
                             <li>
                                 <figure><img src="img/icon_included_3.svg" alt=""></figure>
-                                <h4>Equipment</h4>
-                                <p>Sports equipment, other</p>
+                                <h4>Service</h4>
+                                <p>Complete services offered</p>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <figure><img src="img/icon_included_4.svg" alt=""></figure>
                                 <h4>Accommodation</h4>
                                 <p>Bed and breakfast</p>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
