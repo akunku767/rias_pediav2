@@ -181,7 +181,6 @@
 				<!-- /wrapper -->
 			</div>
 			<!-- /banner -->
-
 		</div>
 		<!-- /container -->
 
@@ -264,7 +263,7 @@
 						<div class="block-vertical"></div>
 						<div class="box_1">
 							<h3>Enjoy a GREAT make up with us</h3>
-							<p>Ius cu tamquam persequeris, eu veniam apeirian platonem qui, id aliquip voluptatibus pri. Ei mea primis ornatus disputationi. Menandri erroribus cu per, duo solet congue ut. </p>
+							<p>Creativity is your best makeup skill, don't be afraid to experiment. Go beyond the limits and show your skills.</p>
 							<a href="#0" class="btn_1 rounded">Read more</a>
 						</div>
 					</div>
