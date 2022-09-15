@@ -13,6 +13,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\AboutController;
 
 // Testing
 Route::resource('test', TestController::class);
@@ -70,7 +71,7 @@ Route::post('/save', [TestController::class, 'store'])->name('uploads.store');
 // Route::get('/detail-salon', function () {return view('vendor\detailsalon'); });
 // Route::get('/list-salon', function () {return view('vendor\listsalon'); });
 Route::get('/wishlist', function () {return view('wishlist'); });
-Route::get('/about-us', function () {return view('AboutUs');})->name('aboutus'); 
+Route::get('/about-us', [AboutController::class, 'index'])->name('aboutus');
 
 // Route::get('list-salon', function () {return view('listsalon'); });
 /*

@@ -9,17 +9,17 @@
                 <div class="row">
                     <div class="col-lg-4">
                         {{-- <div class="d-flex align-items-center justify-content-between mb-3"><em>3 Day Trip</em><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></div> --}}
-                        <h1>National Park Mountain Hike</h1>
-                        <p>Mudgee, Australia</p>
+                        <h1>Rias Pedia</h1>
+                        <p>Graha Pena Lantai 15 Nomor 1053, Surabaya</p>
                     </div>
                     <div class="col-lg-8">
                         <div class="pl-lg-4">
-                        <h3>Hike among the gorgeous National Park Mountains and sleep at the top</h3>
-                        <ul>
+                        <h3>Find the makeup spot you want</h3>
+                        {{-- <ul>
                             <li><i class="pe-7s-clock"></i>Duration <span>3 days</span></li>
                             <li><i class="pe-7s-graph3"></i>Activity level <span>Medium</span></li>
                             <li><i class="pe-7s-shopbag"></i>Includes <span>Equipment, Drinks, Accommodations, Food</span></li>
-                        </ul>
+                        </ul> --}}
                         </div>
                     </div>
                 </div>
@@ -35,8 +35,8 @@
         <nav class="secondary_nav sticky_horizontal">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between">
-                    <div><h6 class="m-0">From $200 per person</h6></div>
-                    <div><a class="aside-panel-bt btn_1" href="#0">See dates</a></div>
+                    {{-- <div><h6 class="m-0">From $200 per person</h6></div> --}}
+                    {{-- <div><a class="aside-panel-bt btn_1" href="#0">See dates</a></div> --}}
                 </div>
             </div>
         </nav>
@@ -47,16 +47,15 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="pl-lg-4">
-                        <p class="lead">"Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei"</p>
-                        <p>In ridens tamquam argumentum usu, ne ludus intellegebat vix. Eu inani omnes usu, an pri errem mucius qualisque. Eos posse augue fabellas te. Timeam dolores cu sed. His mollis quaestio scribentur te. Nam et purto integre temporibus.</p>
+                        <p class="lead">"you can do the makeup you want, find a comfortable place and fit what you want"</p>
+                        <p>Makeup pedia is the place to find.</p>
                         <p>Suas porro eam et, essent dicunt mollis eu ius, sea assum consectetuer ad. Eu albucius vivendum gloriatur vim, ei mei prima choro admodum, eu iudico aliquando cotidieque vim.</p>
                         <h6>Pictures from our users</h6>
                         <div class="pictures magnific-gallery clearfix">
-                            <figure><a href="img/gallery/large/adventure_1.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/gallery/adventure_1.jpg" alt=""></a></figure>
-                            <figure><a href="img/gallery/large/adventure_2.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/gallery/adventure_2.jpg" alt=""></a></figure>
-                            <figure><a href="img/gallery/large/adventure_3.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/gallery/adventure_3.jpg" alt=""></a></figure>
-                            <figure><a href="img/gallery/large/adventure_4.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="img/gallery/adventure_4.jpg" alt=""></a></figure>
-                            <figure><a href="img/gallery/large/adventure_5.jpg" title="Photo title" data-effect="mfp-zoom-in"><span class="d-flex align-items-center justify-content-center">+10</span><img src="img/gallery/adventure_5.jpg" alt=""></a></figure>
+                            @foreach($photos as $photo)
+                                <figure><a href="{{ $photo->image }}" title="Photo title" data-effect="mfp-zoom-in"><img src="{{ $photo->image }}" alt=""></a></figure>
+   
+                            @endforeach
                         </div>
                         <!-- /pictures -->
                     </div>
