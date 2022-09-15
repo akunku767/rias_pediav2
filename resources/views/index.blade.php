@@ -103,7 +103,7 @@
 				</div>
 				<!-- /row -->
                 {{-- @foreach ($countTable as $countTable) --}}
-			    	<a href="hotels-grid-isotope.html"><strong>View all ({{ $countTable->count() }}) <i class="arrow_carrot-right"></i></strong></a>
+					<a href="{{ route('vendors.popularsalon') }}"><strong> View All ({{ $countTable->count() }}) <i class="arrow_carrot-right"></strong></i></a> 
                 {{-- @endforeach --}}
 			</section>
 			<!-- /section -->
