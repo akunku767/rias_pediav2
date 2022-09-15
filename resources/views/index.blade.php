@@ -72,11 +72,25 @@
 				</div>
 				<div class="row">
                     @foreach ($popViews as $popView)
-                        <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="col-xl-3">
                             <a href="{{ url('detail-salon', $popView->slug ) }}" class="grid_item">
-                                <figure>
+                                <figure style="background-color:rgba(0, 255, 255, 0)">
                                     <div class="score"><strong>{{ $popView->rating }}</strong></div>
-                                    <img src="{{ $popView->image }}" class="img-fluid" alt="">
+									<table width="100%" style="z-index: 99; ">
+										<tbody>
+											<tr width="100%" align="center">
+												<td>											
+													<div style="z-index: 1; filter: blur(5px); position: absolute">
+														<img src="{{ $popView->image }}" class="img" alt="" style="align-items: center; height: 600px">
+													</div>
+				
+													<div style="z-index: 2; position: relative">
+														<img src="{{ $popView->image }}" class="img" alt="" style="align-items: center">
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
                                     <div class="info">
                                         <div class="cat_star"><i class="icon-eye-1"></i> {{ $popView->views }} View</div>
                                         <h3>{{ $popView->name }}</h3>
@@ -167,7 +181,6 @@
 				<!-- /wrapper -->
 			</div>
 			<!-- /banner -->
-
 		</div>
 		<!-- /container -->
 
@@ -250,7 +263,7 @@
 						<div class="block-vertical"></div>
 						<div class="box_1">
 							<h3>Enjoy a GREAT make up with us</h3>
-							<p>Ius cu tamquam persequeris, eu veniam apeirian platonem qui, id aliquip voluptatibus pri. Ei mea primis ornatus disputationi. Menandri erroribus cu per, duo solet congue ut. </p>
+							<p>Creativity is your best makeup skill, don't be afraid to experiment. Go beyond the limits and show your skills.</p>
 							<a href="#0" class="btn_1 rounded">Read more</a>
 						</div>
 					</div>
