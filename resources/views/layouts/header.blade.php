@@ -62,7 +62,7 @@
     <nav id="menu" class="main-menu">
         <ul>
             <li><span><a href="{{ url('/') }}">Home</a></span></li>
-            <li><span><a href="#0">About</a></span></li>
+            <li><span><a href="{{ route("aboutus") }}">About</a></span></li>
             <li><span><a href="#0">Vendor</a></span>
                 <ul>
                     <li><a href="#0">Surabaya</a></li>
