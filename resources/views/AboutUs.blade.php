@@ -224,11 +224,11 @@
                                         <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
                                     </div>
                                     <div class="rev-info">
-                                        Admin – April 03, 2016:
+                                        Jimmy – April 15, 2022:
                                     </div>
                                     <div class="rev-text">
                                         <p>
-                                            Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
+                                        Pelayanan bagus. Parkiran luas.. Sudah ada studio foto sendiri, jadi bisa private tanpa banyak orang lain, apalagi musim covid.. Harga yang di tawarkan flexible sesuai kebutuhan customer..
                                         </p>
                                     </div>
                                 </div>
@@ -242,11 +242,11 @@
                                         <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
                                     </div>
                                     <div class="rev-info">
-                                        Ahsan – April 01, 2016:
+                                        Nidya – September 01, 2021:
                                     </div>
                                     <div class="rev-text">
                                         <p>
-                                            Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
+                                        Owner ramah dan memberikan konsultasi dg baik mengenai event
                                         </p>
                                     </div>
                                 </div>
@@ -260,11 +260,11 @@
                                         <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
                                     </div>
                                     <div class="rev-info">
-                                        Sara – March 31, 2016:
+                                        Elis – March 31, 2022:
                                     </div>
                                     <div class="rev-text">
                                         <p>
-                                            Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
+                                        Service memuaskan hasil make up top banget gak rugi event apapun disini
                                         </p>
                                     </div>
                                 </div>
