@@ -10,7 +10,7 @@
                     <div class="col-lg-4">
                         {{-- <div class="d-flex align-items-center justify-content-between mb-3"><em>3 Day Trip</em><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></div> --}}
                         <h1>Rias Pedia</h1>
-                        <p>Graha Pena Lantai 15 Nomor 1053, Surabaya</p>
+                        <p>Graha Office, Jalan Ahmad Yani, Ketintang, Kota Surabaya, Jawa Timur</p>
                     </div>
                     <div class="col-lg-8">
                         <div class="pl-lg-4">
@@ -98,12 +98,12 @@
 
             <div class="row mb-5">
                 <div class="col-lg-4 fixed_title">
-                    <h2>Your itinerary</h2>
+                    {{-- <h2>Your itinerary</h2> --}}
                 </div>
                 <div class="col-lg-8">
                     <div class="pl-lg-4">
                         <div class="timeline">
-                            <div class="mb-5">
+                            {{-- <div class="mb-5">
                                 <h3>Day one - Trek to the National Park</h3>
                                 <figure><img src="img/itinerary_1.jpg" class="img-fluid" alt=""></figure>
                                 <p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
@@ -132,7 +132,7 @@
                                 </div>
                                 <!-- /content_more -->
                                 <a href="#0" class="show_hide" data-content="toggle-text"><strong>Read More</strong></a>
-                            </div>
+                            </div> --}}
                             
                         </div>
                     </div>
@@ -140,7 +140,10 @@
             </div>
             <!-- /row -->
             <h4>Location</h4>
-            <div id="map" class="map map_single mb-5"></div>
+            <div id="map" class="map map_single mb-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.2963883025977!2d112.72988141472293!3d-7.320566394716773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e48893dffefd%3A0x774941139bb587ac!2sGraha%20Office!5e0!3m2!1sid!2sid!4v1663212760118!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
             <!-- End Map -->
 
             <div class="row">
