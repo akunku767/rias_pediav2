@@ -49,7 +49,7 @@
                     <div class="pl-lg-4">
                         <p class="lead">"you can do the makeup you want, find a comfortable place and fit what you want"</p>
                         <p>Makeup pedia is the place to find.</p>
-                        <p>Suas porro eam et, essent dicunt mollis eu ius, sea assum consectetuer ad. Eu albucius vivendum gloriatur vim, ei mei prima choro admodum, eu iudico aliquando cotidieque vim.</p>
+                        <p>On makeup pedia you can find the most complete vendor with free admin and complete services offered according to what you want and need.</p>
                         <h6>Pictures from our users</h6>
                         <div class="pictures magnific-gallery clearfix">
                             @foreach($photos as $photo)
@@ -76,12 +76,12 @@
                                 <p>Find the most complete vendor</p>
                             </li>
                             <li>
-                                <figure><img src="img/icon_included_2.svg" alt=""></figure>
+                                <figure><i style="font-size:30pt" class="icon-cart shopping"></i></figure>
                                 <h4>Payment</h4>
                                 <p>Free admin</p>
                             </li>
                             <li>
-                                <figure><img src="img/icon_included_3.svg" alt=""></figure>
+                                <figure><i style="font-size:30pt" class="icon-bell concierge"></i></figure>
                                 <h4>Service</h4>
                                 <p>Complete services offered</p>
                             </li>
