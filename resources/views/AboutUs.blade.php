@@ -66,6 +66,7 @@
             <div class="row mb-5">
                 <div class="col-lg-4 fixed_title">
                     <h2>What do you get</h2>
+                    <span id="location"></span>
                 </div>
                 <div class="col-lg-8">
                     <div class="pl-lg-4">
@@ -86,7 +87,7 @@
                                 <p>Complete services offered</p>
                             </li>
                             {{-- <li>
-                                <figure><img src="img/icon_included_4.svg" alt=""></figure>
+                                <figure><img src={{ asset('img/icon_included_4.svg')}} alt=""></figure>
                                 <h4>Accommodation</h4>
                                 <p>Bed and breakfast</p>
                             </li> --}}
@@ -97,15 +98,12 @@
             <!-- /row -->
 
             <div class="row mb-5">
-                <div class="col-lg-4 fixed_title">
-                    {{-- <h2>Your itinerary</h2> --}}
-                </div>
                 <div class="col-lg-8">
                     <div class="pl-lg-4">
                         <div class="timeline">
                             {{-- <div class="mb-5">
                                 <h3>Day one - Trek to the National Park</h3>
-                                <figure><img src="img/itinerary_1.jpg" class="img-fluid" alt=""></figure>
+                                <figure><img src={{ asset('img/itinerary_1.jpg')}} class={{ asset('img-fluid" alt=""></figure>
                                 <p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
                                 <div class="content_more">
                                     <p>Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei. Ut ridens malorum has. Agam everti alterum an cum, utinam perpetua maluisset eu vis. Id mutat omnes eos, porro euripidis ut sed.</p>
@@ -115,7 +113,7 @@
                             </div>
                             <div class="mb-5">
                                 <h3>Day two - Dinner and games with great views</h3>
-                                <figure><img src="img/itinerary_2.jpg" class="img-fluid" alt=""></figure>
+                                <figure><img src={{ asset('img/itinerary_2.jpg')}} class={{ asset('img-fluid" alt=""></figure>
                                 <p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
                                 <div class="content_more">
                                     <p>Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei. Ut ridens malorum has. Agam everti alterum an cum, utinam perpetua maluisset eu vis. Id mutat omnes eos, porro euripidis ut sed.</p>
@@ -125,7 +123,7 @@
                             </div>
                             <div>
                                 <h3>Day three - Hiking down the mountain streams</h3>
-                                <figure><img src="img/itinerary_3.jpg" class="img-fluid" alt=""></figure>
+                                <figure><img src={{ asset('img/itinerary_3.jpg')}} class={{ asset('img-fluid" alt=""></figure>
                                 <p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
                                 <div class="content_more">
                                     <p>Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei. Ut ridens malorum has. Agam everti alterum an cum, utinam perpetua maluisset eu vis. Id mutat omnes eos, porro euripidis ut sed.</p>
@@ -156,16 +154,15 @@
                             <div class="row">
                                 <div class="col-lg-3">
                                     <div id="review_summary">
-                                        <strong>8.5</strong>
-                                        <em>Superb</em>
-                                        <small>Based on 4 reviews</small>
+                                        <strong>4.0</strong>
+                                        <small>Based on 3 reviews</small>
                                     </div>
                                 </div>
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-lg-10 col-9">
                                             <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
@@ -174,7 +171,7 @@
                                     <div class="row">
                                         <div class="col-lg-10 col-9">
                                             <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
@@ -183,7 +180,7 @@
                                     <div class="row">
                                         <div class="col-lg-10 col-9">
                                             <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
@@ -192,7 +189,7 @@
                                     <div class="row">
                                         <div class="col-lg-10 col-9">
                                             <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
@@ -215,56 +212,56 @@
                         <hr>
 
                         <div class="reviews-container">
-
+                            <h3>5 Recent Reviews</h3>
                             <div class="review-box clearfix">
-                                <figure class="rev-thumb"><img src="img/avatar1.jpg" alt="">
+                                <figure class="rev-thumb"><img src="{{ asset('img/avatar3.jpg')}}" alt="">
+                                </figure>
+                                <div class="rev-content">
+                                    <div class="rating">
+                                        <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                                    </div>
+                                    <div class="rev-info">
+                                        Elis – September 31, 2022:
+                                    </div>
+                                    <div class="rev-text">
+                                        <p>
+                                        Service memuaskan hasil make up top banget gak rugi event apapun disini
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /review-box -->
+                            <div class="review-box clearfix">
+                                <figure class="rev-thumb"><img src={{ asset('img/avatar2.jpg')}} alt="">
+                                </figure>
+                                <div class="rev-content">
+                                    <div class="rating">
+                                        <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                                    </div>
+                                    <div class="rev-info">
+                                        Nidya – September 01, 2022:
+                                    </div>
+                                    <div class="rev-text">
+                                        <p>
+                                            Alhamdulillah, rekomend banget buat pemula dari 0 yg cari tempat kursus🌝.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /review-box -->
+                            <div class="review-box clearfix">
+                                <figure class="rev-thumb"><img src={{ asset('img/avatar1.jpg')}} alt="">
                                 </figure>
                                 <div class="rev-content">
                                     <div class="rating">
                                         <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
                                     </div>
                                     <div class="rev-info">
-                                        Jimmy – April 15, 2022:
+                                        Jimmy – Juni 15, 2022:
                                     </div>
                                     <div class="rev-text">
                                         <p>
-                                        Pelayanan bagus. Parkiran luas.. Sudah ada studio foto sendiri, jadi bisa private tanpa banyak orang lain, apalagi musim covid.. Harga yang di tawarkan flexible sesuai kebutuhan customer..
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /review-box -->
-                            <div class="review-box clearfix">
-                                <figure class="rev-thumb"><img src="img/avatar2.jpg" alt="">
-                                </figure>
-                                <div class="rev-content">
-                                    <div class="rating">
-                                        <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                                    </div>
-                                    <div class="rev-info">
-                                        Nidya – September 01, 2021:
-                                    </div>
-                                    <div class="rev-text">
-                                        <p>
-                                        Owner ramah dan memberikan konsultasi dg baik mengenai event
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /review-box -->
-                            <div class="review-box clearfix">
-                                <figure class="rev-thumb"><img src="img/avatar3.jpg" alt="">
-                                </figure>
-                                <div class="rev-content">
-                                    <div class="rating">
-                                        <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-                                    </div>
-                                    <div class="rev-info">
-                                        Elis – March 31, 2022:
-                                    </div>
-                                    <div class="rev-text">
-                                        <p>
-                                        Service memuaskan hasil make up top banget gak rugi event apapun disini
+                                        Pelayanan bagus. Ownernya ramah, Harga yang di tawarkan flexible sesuai kebutuhan customer..
                                         </p>
                                     </div>
                                 </div>
