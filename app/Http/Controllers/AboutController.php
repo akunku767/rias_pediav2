@@ -19,6 +19,7 @@ class AboutController extends Controller
     {
         $photos = DB::table("scrapes")
         ->select("image")
+        ->where("image", "!=", "example")
         ->limit(10)
         ->get();
         return view('AboutUs', compact('photos'));
