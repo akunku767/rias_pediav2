@@ -14,12 +14,15 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="pl-lg-4">
-                        <h3>Find the makeup spot you want</h3>
-                        {{-- <ul>
-                            <li><i class="pe-7s-clock"></i>Duration <span>3 days</span></li>
-                            <li><i class="pe-7s-graph3"></i>Activity level <span>Medium</span></li>
-                            <li><i class="pe-7s-shopbag"></i>Includes <span>Equipment, Drinks, Accommodations, Food</span></li>
-                        </ul> --}}
+                            <h3>Find the makeup spot you want</h3>
+                            <ul>
+                                <li>Follow us</li>
+                                <li><a href="#0"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#0"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#0"><i class="ti-google"></i></a></li>
+                                <li><a href="#0"><i class="ti-pinterest"></i></a></li>
+                                <li><a href="#0"><i class="ti-instagram"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -31,15 +34,7 @@
     </section>
     <!--/hero_in-->
 
-    <div class="bg_color_1">
-        <nav class="secondary_nav sticky_horizontal">
-            <div class="container">
-                <div class="d-flex align-items-center justify-content-between">
-                    {{-- <div><h6 class="m-0">From $200 per person</h6></div> --}}
-                    {{-- <div><a class="aside-panel-bt btn_1" href="#0">See dates</a></div> --}}
-                </div>
-            </div>
-        </nav>
+    <div class="bg_color_1" style="padding-top: 10px">
         <div class="container margin_60_35 adventure_description">
             <div class="row mb-5">
                 <div class="col-lg-4 fixed_title">
@@ -54,7 +49,7 @@
                         <div class="pictures magnific-gallery clearfix">
                             @foreach($photos as $photo)
                                 <figure><a href="{{ $photo->image }}" title="Photo title" data-effect="mfp-zoom-in"><img src="{{ $photo->image }}" alt=""></a></figure>
-   
+
                             @endforeach
                         </div>
                         <!-- /pictures -->
@@ -131,7 +126,7 @@
                                 <!-- /content_more -->
                                 <a href="#0" class="show_hide" data-content="toggle-text"><strong>Read More</strong></a>
                             </div> --}}
-                            
+
                         </div>
                     </div>
                 </div>
@@ -262,6 +257,24 @@
                                     <div class="rev-text">
                                         <p>
                                         Pelayanan bagus. Ownernya ramah, Harga yang di tawarkan flexible sesuai kebutuhan customer..
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /review-box -->
+                            <div class="review-box clearfix">
+                                <figure class="rev-thumb"><img src={{ asset('img/avatar4.jpg')}} alt="">
+                                </figure>
+                                <div class="rev-content">
+                                    <div class="rating">
+                                        <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                                    </div>
+                                    <div class="rev-info">
+                                        Nana – Juni 06, 2022:
+                                    </div>
+                                    <div class="rev-text">
+                                        <p>
+                                           bcxvdfhdsjvsd, .
                                         </p>
                                     </div>
                                 </div>
