@@ -267,6 +267,24 @@
                                 </div>
                             </div>
                             <!-- /review-box -->
+                            <div class="review-box clearfix">
+                                <figure class="rev-thumb"><img src={{ asset('img/avatar4.jpg')}} alt="">
+                                </figure>
+                                <div class="rev-content">
+                                    <div class="rating">
+                                        <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                                    </div>
+                                    <div class="rev-info">
+                                        Nana – Juni 06, 2022:
+                                    </div>
+                                    <div class="rev-text">
+                                        <p>
+                                           bcxvdfhdsjvsd, .
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /review-box -->
                         </div>
                         <!-- /review-container -->
                     </div>
