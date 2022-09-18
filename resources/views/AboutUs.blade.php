@@ -42,9 +42,8 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="pl-lg-4">
-                        <p class="lead">"you can do the makeup you want, find a comfortable place and fit what you want"</p>
-                        <p>Makeup pedia is the place to find.</p>
-                        <p>On makeup pedia you can find the most complete vendor with free admin and complete services offered according to what you want and need.</p>
+                        <p class="lead">"You can do the makeup you want, find a comfortable place and fit what you want"</p> 
+                        <p>RiasPedia is one of the beauty e-commerce in Southeast Asia that provides the best 100% original and recommended make up artist and tools vendors. Complete your beauty needs only at RiasPedia, a safe, fun, and reliable platform for searching via the website so you can enjoy a wide selection of interesting vendors around you.</p>
                         <h6>Pictures from our users</h6>
                         <div class="pictures magnific-gallery clearfix">
                             @foreach($photos as $photo)
@@ -74,7 +73,7 @@
                             <li>
                                 <figure><i style="font-size:30pt" class="icon-cart shopping"></i></figure>
                                 <h4>Payment</h4>
-                                <p>Free admin</p>
+                                <p>Free charges</p>
                             </li>
                             <li>
                                 <figure><i style="font-size:30pt" class="icon-bell concierge"></i></figure>
@@ -149,15 +148,15 @@
                             <div class="row">
                                 <div class="col-lg-3">
                                     <div id="review_summary">
-                                        <strong>4.0</strong>
-                                        <small>Based on 3 reviews</small>
+                                        <strong>4.4</strong>
+                                        <small>Based on 5 reviews</small>
                                     </div>
                                 </div>
                                 <div class="col-lg-9">
                                     <div class="row">
                                         <div class="col-lg-10 col-9">
                                             <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
@@ -166,7 +165,7 @@
                                     <div class="row">
                                         <div class="col-lg-10 col-9">
                                             <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
@@ -267,14 +266,32 @@
                                 </figure>
                                 <div class="rev-content">
                                     <div class="rating">
-                                        <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                                        <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i>
                                     </div>
                                     <div class="rev-info">
                                         Nana – Juni 06, 2022:
                                     </div>
                                     <div class="rev-text">
                                         <p>
-                                           bcxvdfhdsjvsd, .
+                                           Terimakasih, mantap poll.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /review-box -->
+                            <div class="review-box clearfix">
+                                <figure class="rev-thumb"><img src={{ asset('img/avatar5.jpg')}} alt="">
+                                </figure>
+                                <div class="rev-content">
+                                    <div class="rating">
+                                        <i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i>
+                                    </div>
+                                    <div class="rev-info">
+                                        Jennie – April 16, 2022:
+                                    </div>
+                                    <div class="rev-text">
+                                        <p>
+                                           Webnya mantap poll, suka, lopee.
                                         </p>
                                     </div>
                                 </div>
