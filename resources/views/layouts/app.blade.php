@@ -71,16 +71,16 @@
         // swal("Status", "{{ session('statusLogSuccess') }}", "success");
         setTimeout(() => { swal("Status", "{{ session('statusLogSuccess') }}", "success"); }, 3000);
       </script>
-      @php 
-        Illuminate\Support\Facades\Session::forget('statusLogSuccess'); 
+      @php
+        Illuminate\Support\Facades\Session::forget('statusLogSuccess');
       @endphp
 
     @elseif(session('statusLogFail'))
       <script>
         swal("Status", "{{ session('statusLogFail') }}", "error");
       </script>
-      @php 
-        Illuminate\Support\Facades\Session::forget('statusLogFail'); 
+      @php
+        Illuminate\Support\Facades\Session::forget('statusLogFail');
       @endphp
     @endif
 
@@ -98,23 +98,27 @@
 
   <!-- DATEPICKER  -->
   <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+
     $(document).ready(function ($) {
       $('.login').magnificPopup({
         type: 'inline',
-  
+
         // Fixed position will be used
         fixContentPos: true,
-  
+
         // Since disabled, Magnific Popup
         // will not put close button
         // inside content of popup
         closeBtnInside: false,
         preloader: false,
-  
+
         // Delay in milliseconds before
         // popup is removed
         removalDelay: 160,
-  
+
         // Class that is added to
         // popup wrapper and background
         mainClass: 'mfp-fade'
@@ -123,20 +127,20 @@
 
 	  $(function() {
 	    'use strict';
-      $('input[name="dates"]').daterangepicker({
-        autoUpdateInput: false,
-        minDate:new Date(),
-        locale: {
-          cancelLabel: 'Clear'
-        }
+        $('input[name="dates"]').daterangepicker({
+            autoUpdateInput: false,
+            minDate:new Date(),
+            locale: {
+            cancelLabel: 'Clear'
+            }
+        });
+        $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
+            $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
+        });
+        $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
+            $(this).val('');
+        });
       });
-      $('input[name="dates"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM-DD-YY') + ' > ' + picker.endDate.format('MM-DD-YY'));
-      });
-      $('input[name="dates"]').on('cancel.daterangepicker', function(ev, picker) {
-        $(this).val('');
-      });
-    });
   </script>
 
   <!-- INPUT QUANTITY  -->

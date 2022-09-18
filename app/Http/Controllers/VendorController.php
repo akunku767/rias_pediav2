@@ -108,28 +108,36 @@ class VendorController extends Controller
         return view('vendor.detailsalon', compact('scrape'));
     }
 
-    public function list()
+    public function all()
     {
         $lists = Scrape::orderBy('name', 'ASC')->get();
-        return view('vendor.listsalon', compact('lists'));
+        $set = "1";
+        return view('vendor.listsalon', compact('lists', 'set'));
     }
 
     public function search(Request $request)
     {
-        $lists = Scrape::where('name', 'like', '%'.$request->searchMUA.'%')->get();
-        return view('vendor.listsalon', compact('lists'));
+        $lists = DB::table("scrapes")
+        ->where("name", "like", '%'.$request->searchMUA.'%')
+        ->orWhere("address", "like", '%'.$request->searchMUA.'%')
+        ->get();
+        $set = "0";
+        $keyword = $request;
+        return view('vendor.listsalon', compact('lists', 'keyword', 'set'));
     }
 
     public function popular()
     {
         $lists = Scrape::orderBy('review', 'DESC')->get();
-        return view('vendor.listsalon', compact('lists'));
+        $set = "2";
+        return view('vendor.listsalon', compact('lists', 'set'));
     }
 
     public function latest()
     {
         $lists = Scrape::orderBy('id', 'DESC')->get();
-        return view('vendor.listsalon', compact('lists'));
+        $set = "3";
+        return view('vendor.listsalon', compact('lists', 'set'));
     }
 
     /**

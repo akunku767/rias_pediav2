@@ -7,7 +7,29 @@
 		<section class="hero_in tours">
 			<div class="wrapper">
 				<div class="container">
-					<h1 class="fadeInUp"><span></span>List Make Up Artist</h1>
+					<h1 class="fadeInUp" style="margin-bottom: 100px"><span></span>List Make Up Artist</h1>
+
+                    <form method="GET" action="{{ route('vendors.searchsalon') }}">
+                        {{-- @csrf --}}
+						<div class="row no-gutters custom-search-input-2">
+							<div class="col-lg-10">
+								<div class="form-group">
+                                    @if ($set == "0")
+									    <input class="form-control" name="searchMUA" type="text" value="{{ $keyword->searchMUA }}" placeholder="Makeup Artist...">
+                                    @else
+									    <input class="form-control" name="searchMUA" type="text" value="" placeholder="Makeup Artist...">
+                                    @endif
+									<i class="icon_map_alt"></i>
+								</div>
+							</div>
+
+							<div class="col-lg-2">
+								<input type="submit" class="btn_search" value="Search">
+							</div>
+						</div>
+						<!-- /row -->
+					</form>
+
 				</div>
 			</div>
 		</section>
@@ -18,28 +40,32 @@
 				<ul class="clearfix">
 					<li>
 						<div class="switch-field">
-							<input type="radio" id="all" name="listing_filter" value="all">
+                            <input type="radio" id="all" name="listing_filter" value="all">
 							<label for="all">
-                                <a href="{{ route('vendors.listsalon') }}">All</a>
+                                @if ($set == "1")
+                                    <a style="color: #d9a451" href="{{ route('vendors.listsalon') }}">All</a>
+                                @else
+                                    <a style="color: #000000" href="{{ route('vendors.listsalon') }}">All</a>
+                                @endif
                             </label>
 							<input type="radio" id="popular" name="listing_filter" value="popular">
 							<label for="popular">
-                                <a href="{{ route('vendors.popularsalon') }}">Popular</a>
+                                @if ($set == "2")
+                                    <a style="color: #d9a451" href="{{ route('vendors.popularsalon') }}">Popular</a>
+                                @else
+                                    <a style="color: #000000" href="{{ route('vendors.popularsalon') }}">Popular</a>
+                                @endif
+
                             </label>
 							<input type="radio" id="latest" name="listing_filter" value="latest">
 							<label for="latest">
-                                <a href="{{ route('vendors.latestsalon') }}">Latest</a>
+                                @if ($set == "3")
+                                    <a style="color: #d9a451" href="{{ route('vendors.latestsalon') }}">Latest</a>
+                                @else
+                                    <a style="color: #000000" href="{{ route('vendors.latestsalon') }}">Latest</a>
+                                @endif
                             </label>
 						</div>
-					</li>
-					<li>
-						<div class="layout_view">
-							<a href="tours-grid-isotope.html"><i class="icon-th"></i></a>
-							<a href="#0" class="active"><i class="icon-th-list"></i></a>
-						</div>
-					</li>
-					<li>
-						<a class="btn_map" data-toggle="collapse" href="#collapseMap" aria-expanded="false" aria-controls="collapseMap" data-text-swap="Hide map" data-text-original="View on map">View on map</a>
 					</li>
 				</ul>
 			</div>
@@ -47,38 +73,56 @@
 		</div>
 		<!-- /filters -->
 
-		<div class="collapse" id="collapseMap">
+		{{-- <div class="collapse" id="collapseMap">
 			<div id="map" class="map"></div>
 		</div>
-		<!-- End Map -->
+		<!-- End Map --> --}}
 
 		<div class="container margin_60_35">
-            @foreach ($lists as $list)
-                <div class="box_list">
-                    <div class="row no-gutters">
-                        <div class="col-lg-5">
-                            <figure>
-                                {{-- <small>Historic</small> --}}
-                                <a href="{{ url('detail-salon', $list->slug ) }}"><img src="{{ $list->image }}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
-                            </figure>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="wrapper">
-                                <a href="#0" class="wish_bt"></a>
-                                <h3><a href="{{ url('detail-salon', $list->slug ) }}">{{ $list->name }}</a></h3>
-                                <p>{{ $list->address }}</p>
-                                <span class="price"><strong>{{ $list->phone }}</strong></span>
+            @if (($lists->count()) != 0)
+                <div style="margin: 10px 15px;">
+                    <h5>Successful get {{ $lists->count() }} relevant results</h5>
+                </div>
+                @foreach ($lists as $list)
+                    <div class="box_list">
+                        <div class="row no-gutters">
+                            <div class="col-lg-5">
+                                <figure>
+                                    {{-- <small>Historic</small> --}}
+                                    <a href="{{ url('detail-salon', $list->slug ) }}"><img src="{{ $list->image }}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                                </figure>
                             </div>
-                            <ul>
-                                <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                                <li><div class="score"><span><em>{{ $list->review }} Reviews</em></span><strong>{{ $list->rating }}</strong></div></li>
-                            </ul>
+                            <div class="col-lg-7">
+                                <div class="wrapper">
+                                    <a href="#0" class="wish_bt"></a>
+                                    <h3><a href="{{ url('detail-salon', $list->slug ) }}">{{ $list->name }}</a></h3>
+                                    <p>{{ $list->address }}</p>
+                                    <span class="price"><strong>{{ $list->phone }}</strong></span>
+                                </div>
+                                <ul>
+                                    <li><div class="score"><span><em>{{ $list->review }} Reviews</em></span><strong>{{ $list->rating }}</strong></div></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                    <!-- /box_list -->
+                @endforeach
+
+                <div style="margin: 10px 15px;">
+                    <center>
+                        <h5>
+                            You have reached the end of the list.
+                        </h5>
+                    </center>
                 </div>
-                <!-- /box_list -->
-            @endforeach
-			<p class="text-center add_top_60"><a href="#0" class="btn_1 rounded">Load more</a></p>
+
+            @else
+                <div style="margin: 10px 15px;">
+                    <center>
+                        <h5>Sorry, there is no result for <b>"{{ $keyword->searchMUA }}"</b> or please check again your keyword</h5>
+                    </center>
+                </div>
+            @endif
 
 		</div>
 		<!-- /container -->

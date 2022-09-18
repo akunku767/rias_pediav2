@@ -8,8 +8,8 @@
 				<div class="container">
 					<h3>Rias Pedia</h3>
 					<p>Bring your makeup artist in your hands </p>
-					<form method="POST" action="{{ route('vendors.searchsalon') }}">
-                        @csrf
+					<form method="GET" action="{{ route('vendors.searchsalon') }}">
+                        {{-- @csrf --}}
 						<div class="row no-gutters custom-search-input-2">
 							<div class="col-lg-10">
 								<div class="form-group">
@@ -79,11 +79,11 @@
 									<table width="100%" style="z-index: 99; ">
 										<tbody>
 											<tr width="100%" align="center">
-												<td>											
+												<td>
 													<div style="z-index: 1; filter: blur(5px); position: absolute">
 														<img src="{{ $popView->image }}" class="img" alt="" style="align-items: center; height: 600px">
 													</div>
-				
+
 													<div style="z-index: 2; position: relative">
 														<img src="{{ $popView->image }}" class="img" alt="" style="align-items: center">
 													</div>
@@ -102,9 +102,7 @@
                     @endforeach
 				</div>
 				<!-- /row -->
-                {{-- @foreach ($countTable as $countTable) --}}
-					<a href="{{ route('vendors.popularsalon') }}"><strong> View All ({{ $countTable->count() }}) <i class="arrow_carrot-right"></strong></i></a> 
-                {{-- @endforeach --}}
+                <a href="{{ route('vendors.popularsalon') }}"><strong> View All ({{ $countTable->count() }}) <i class="arrow_carrot-right"></strong></i></a>
 			</section>
 			<!-- /section -->
 

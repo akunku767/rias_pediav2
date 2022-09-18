@@ -33,8 +33,9 @@ class IndexController extends Controller
 
                 $lists = Scrape::orderBy('review', 'DESC')->limit(10)->get();
                 $popViews = Scrape::orderBy('views', 'DESC')->limit(4)->get();
-                $count = DB::table("scrapes")->get();
-                return view('index', compact('lists'), compact('popViews'), ['count' => $count]);
+                $countTable = Scrape::all();
+                return view('index', compact('lists', 'popViews', 'countTable'));
+
             }else {
                 return redirect('auth/logout');
             }

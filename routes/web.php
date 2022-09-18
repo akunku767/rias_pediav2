@@ -51,8 +51,8 @@ Route::delete('dashboard/vendors/{id}',[VendorController::class, 'destroy'])->na
 
 // User->Vendors
 Route::get('/detail-salon/{slug}', [VendorController::class, 'detail'])->name('vendors.detailsalon');
-Route::get('/list-salon', [VendorController::class, 'list'])->name('vendors.listsalon');
-Route::post('/list-salon', [VendorController::class, 'search'])->name('vendors.searchsalon');
+Route::get('/list-salon', [VendorController::class, 'all'])->name('vendors.listsalon');
+Route::get('/list-salon/search', [VendorController::class, 'search'])->name('vendors.searchsalon');
 Route::get('/list-salon/popular', [VendorController::class, 'popular'])->name('vendors.popularsalon');
 Route::get('/list-salon/latest', [VendorController::class, 'latest'])->name('vendors.latestsalon');
 
