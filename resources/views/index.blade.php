@@ -41,11 +41,11 @@
                         <div class="box_grid">
                             <figure>
                                 <a href="#0" class="wish_bt"></a>
-                                <a href="{{ url('detail-salon', $list->slug ) }}"><img src="{{ $list->image }}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                                <a href="{{ route('vendors.detailsalon', $list->slug ) }}"><img src="{{ $list->image }}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
                             </figure>
                             <div class="wrapper">
                                 {{-- <h4>{{ $list->slug }}</h4> --}}
-                                <h3><a href="{{ url("/detail-salon", $list->slug ) }}">{{ $list->name }}</a></h3>
+                                <h3><a href="{{ route('vendors.detailsalon', $list->slug ) }}">{{ $list->name }}</a></h3>
                                 <p>{{ $list->address }}</p>
                                 <strong>{{ $list->phone }}</strong>
                             </div>
@@ -73,26 +73,29 @@
 				<div class="row">
                     @foreach ($popViews as $popView)
                         <div class="col-xl-3">
-                            <a href="{{ url('detail-salon', $popView->slug ) }}" class="grid_item">
+                            <a href="{{ route('vendors.detailsalon', $popView->slug ) }}" class="grid_item">
                                 <figure style="background-color:rgba(0, 255, 255, 0)">
                                     <div class="score"><strong>{{ $popView->rating }}</strong></div>
-									<table width="100%" style="z-index: 99; ">
+									<table style="z-index: 99; ">
 										<tbody>
-											<tr width="100%" align="center">
-												<td>
-													<div style="z-index: 1; filter: blur(5px); position: absolute">
-														<img src="{{ $popView->image }}" class="img" alt="" style="align-items: center; height: 600px">
-													</div>
+											<td>
+                                                <div style="z-index: 1;filter: blur(5px);position: absolute;">
+                                                    <img src="{{ $popView->image }}" class="img" alt="" style="height: 600px;">
+                                                </div>
 
-													<div style="z-index: 2; position: relative">
-														<img src="{{ $popView->image }}" class="img" alt="" style="align-items: center">
-													</div>
-												</td>
-											</tr>
+                                                <div style="z-index: 2;position: relative;">
+                                                    <img src="{{ $popView->image }}" class="img" alt="" style="align-items: center; width: 253px; object-fit: scale-down;">
+                                                </div>
+                                            </td>
 										</tbody>
 									</table>
                                     <div class="info">
-                                        <div class="cat_star"><i class="icon-eye-1"></i> {{ $popView->views }} View</div>
+                                        @if ($popView->views >= 2)
+                                            <div style="font-size: 8pt" ><i class="icon-eye-1"></i> {{ $popView->views }} Views</div>
+                                        @else
+                                            <div style="font-size: 8pt" ><i class="icon-eye-1"></i> {{ $popView->views }} View</div>
+                                        @endif
+
                                         <h3>{{ $popView->name }}</h3>
                                     </div>
                                 </figure>

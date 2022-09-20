@@ -110,32 +110,37 @@ class VendorController extends Controller
 
     public function all()
     {
-        $lists = Scrape::orderBy('name', 'ASC')->get();
+        $lists = Scrape::orderBy('name', 'ASC')->paginate(10);
         $set = "1";
         return view('vendor.listsalon', compact('lists', 'set'));
     }
 
     public function search(Request $request)
     {
-        $lists = DB::table("scrapes")
-        ->where("name", "like", '%'.$request->searchMUA.'%')
-        ->orWhere("address", "like", '%'.$request->searchMUA.'%')
-        ->get();
-        $set = "0";
-        $keyword = $request;
-        return view('vendor.listsalon', compact('lists', 'keyword', 'set'));
+        if (($request->searchMUA) != ""){
+            $lists = DB::table("scrapes")
+            ->where("name", "like", '%'.$request->searchMUA.'%')
+            ->orWhere("address", "like", '%'.$request->searchMUA.'%')
+            ->paginate(10);
+            $set = "0";
+            $keyword = $request;
+            return view('vendor.listsalon', compact('lists', 'keyword', 'set'));
+        }else{
+            return redirect()->route('vendors.listsalon');
+        }
+
     }
 
     public function popular()
     {
-        $lists = Scrape::orderBy('review', 'DESC')->get();
+        $lists = Scrape::orderBy('review', 'DESC')->paginate(10);
         $set = "2";
         return view('vendor.listsalon', compact('lists', 'set'));
     }
 
     public function latest()
     {
-        $lists = Scrape::orderBy('id', 'DESC')->get();
+        $lists = Scrape::orderBy('id', 'DESC')->paginate(10);
         $set = "3";
         return view('vendor.listsalon', compact('lists', 'set'));
     }

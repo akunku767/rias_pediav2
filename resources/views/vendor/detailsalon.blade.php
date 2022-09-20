@@ -36,7 +36,11 @@
 						<section id="description">
                             {{-- <h2>{{$scrape->id}}</h2> --}}
                             <h2>{{$scrape->name}}</h2>
-                            <h4>{{$scrape->views}} Views</h4>
+                            @if ($scrape->views >= 2)
+                                <div style="font-size: 12pt" ><i class="icon-eye-1"></i> {{ $scrape->views }} Views</div>
+                            @else
+                                <div style="font-size: 12pt" ><i class="icon-eye-1"></i> {{ $scrape->views }} View</div>
+                            @endif
                             <h4>Last updated on {{$scrape->updated}}</h4>
                             {{-- <h2>{{$scrape->rating}}</h2> --}}
                             {{-- <h2>{{$scrape->review}}</h2> --}}

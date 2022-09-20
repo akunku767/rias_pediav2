@@ -2,6 +2,14 @@
 @section('title', 'Rias Pedia')
 @section('content')
 
+<style type="text/css">
+    .pagination li{
+        float:right;
+        list-style-type: none;
+        margin:5px;
+    }
+</style>
+
 	<main>
 
 		<section class="hero_in tours">
@@ -43,7 +51,7 @@
                             <input type="radio" id="all" name="listing_filter" value="all">
 							<label for="all">
                                 @if ($set == "1")
-                                    <a style="color: #d9a451" href="{{ route('vendors.listsalon') }}">All</a>
+                                    <a style="color: #d9a451" href="javascript:void(0)">All</a>
                                 @else
                                     <a style="color: #000000" href="{{ route('vendors.listsalon') }}">All</a>
                                 @endif
@@ -51,7 +59,7 @@
 							<input type="radio" id="popular" name="listing_filter" value="popular">
 							<label for="popular">
                                 @if ($set == "2")
-                                    <a style="color: #d9a451" href="{{ route('vendors.popularsalon') }}">Popular</a>
+                                    <a style="color: #d9a451" href="javascript:void(0)">Popular</a>
                                 @else
                                     <a style="color: #000000" href="{{ route('vendors.popularsalon') }}">Popular</a>
                                 @endif
@@ -60,7 +68,7 @@
 							<input type="radio" id="latest" name="listing_filter" value="latest">
 							<label for="latest">
                                 @if ($set == "3")
-                                    <a style="color: #d9a451" href="{{ route('vendors.latestsalon') }}">Latest</a>
+                                    <a style="color: #d9a451" href="javascript:void(0)">Latest</a>
                                 @else
                                     <a style="color: #000000" href="{{ route('vendors.latestsalon') }}">Latest</a>
                                 @endif
@@ -79,9 +87,9 @@
 		<!-- End Map --> --}}
 
 		<div class="container margin_60_35">
-            @if (($lists->count()) != 0)
+            @if (($lists->total()) != 0)
                 <div style="margin: 10px 15px;">
-                    <h5>Successful get {{ $lists->count() }} relevant results</h5>
+                    <p style="margin-bottom: 0px;">Showing {{ $lists->firstItem() }} to {{ $lists->lastItem() }} vendors from {{ $lists->total() }} relevant results</p>
                 </div>
                 @foreach ($lists as $list)
                     <div class="box_list">
@@ -89,15 +97,17 @@
                             <div class="col-lg-5">
                                 <figure>
                                     {{-- <small>Historic</small> --}}
-                                    <a href="{{ url('detail-salon', $list->slug ) }}"><img src="{{ $list->image }}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
+                                    <a href="{{ route('vendors.detailsalon', $list->slug ) }}"><img src="{{ $list->image }}" class="img-fluid" alt="" width="800" height="533"><div class="read_more"><span>Read more</span></div></a>
                                 </figure>
                             </div>
                             <div class="col-lg-7">
                                 <div class="wrapper">
                                     <a href="#0" class="wish_bt"></a>
-                                    <h3><a href="{{ url('detail-salon', $list->slug ) }}">{{ $list->name }}</a></h3>
+                                    <h3><a href="{{ route('vendors.detailsalon', $list->slug ) }}">{{ $list->name }}</a></h3>
                                     <p>{{ $list->address }}</p>
-                                    <span class="price"><strong>{{ $list->phone }}</strong></span>
+                                    @if ($list->phone != "")
+                                        <span class="price"><strong><i class="icon-phone"></i>{{ $list->phone }}</strong></span>
+                                    @endif
                                 </div>
                                 <ul>
                                     <li><div class="score"><span><em>{{ $list->review }} Reviews</em></span><strong>{{ $list->rating }}</strong></div></li>
@@ -109,11 +119,7 @@
                 @endforeach
 
                 <div style="margin: 10px 15px;">
-                    <center>
-                        <h5>
-                            You have reached the end of the list.
-                        </h5>
-                    </center>
+                    {{ $lists->links() }}
                 </div>
 
             @else
@@ -123,7 +129,6 @@
                     </center>
                 </div>
             @endif
-
 		</div>
 		<!-- /container -->
 		<div class="bg_color_1">
