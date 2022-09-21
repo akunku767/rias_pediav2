@@ -78,13 +78,13 @@
                                     <div class="score"><strong>{{ $popView->rating }}</strong></div>
 									<table style="z-index: 99; ">
 										<tbody>
-											<td>
+											<td align="center" style="width: 348px">
                                                 <div style="z-index: 1;filter: blur(5px);position: absolute;">
-                                                    <img src="{{ $popView->image }}" class="img" alt="" style="height: 600px;">
+                                                    <img src="{{ $popView->image }}" class="img" alt="" style="width: 180%;">
                                                 </div>
 
                                                 <div style="z-index: 2;position: relative;">
-                                                    <img src="{{ $popView->image }}" class="img" alt="" style="align-items: center; width: 253px; object-fit: scale-down;">
+                                                    <img src="{{ $popView->image }}" class="img" alt="" style="align-items: center; width: 100%; object-fit: scale-down;">
                                                 </div>
                                             </td>
 										</tbody>
