@@ -68,8 +68,6 @@ Route::get('/uploads', [TestController::class, 'index'])->name('uploads');
 Route::post('/save', [TestController::class, 'store'])->name('uploads.store');
 
 //Dummy
-// Route::get('/detail-salon', function () {return view('vendor\detailsalon'); });
-// Route::get('/list-salon', function () {return view('vendor\listsalon'); });
 Route::get('/wishlist', function () {return view('wishlist'); });
 Route::get('/about-us', [AboutController::class, 'index'])->name('aboutus');
 
