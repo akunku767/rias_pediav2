@@ -61,8 +61,8 @@
 			<p class="btn_home_align"><a href="{{ route('vendors.listsalon') }}" class="btn_1 rounded">View all MUA</a></p>
 			<hr class="large">
 		</div>
-		<!-- /container -->
 
+		<!-- /container -->
 		<div class="container container-custom margin_30_95">
 			<section class="add_bottom_45">
 				<div class="main_title_3">
@@ -84,7 +84,7 @@
                                                 </div>
 
                                                 <div style="z-index: 2;position: relative;">
-                                                    <img src="{{ $popView->image }}" class="img" alt="" style="align-items: center; width: 100%; object-fit: scale-down;">
+                                                    <img src="{{ $popView->image }}" class="img" alt="" style="align-items: center; width: 102%; object-fit: scale-down;">
                                                 </div>
                                             </td>
 										</tbody>
@@ -107,69 +107,8 @@
 				<!-- /row -->
                 <a href="{{ route('vendors.popularsalon') }}"><strong> View All ({{ $countTable->count() }}) <i class="arrow_carrot-right"></strong></i></a>
 			</section>
-			<!-- /section -->
 
-			{{-- <section class="add_bottom_45">
-				<div class="main_title_3">
-					<span><em></em></span>
-					<h2>Popular Restaurants</h2>
-					<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-				</div>
-				<div class="row">
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<div class="score"><strong>8.5</strong></div>
-								<img src="img/restaurant_1.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>Da Alfredo</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<div class="score"><strong>7.9</strong></div>
-								<img src="img/restaurant_2.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>Slow Food</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<div class="score"><strong>7.5</strong></div>
-								<img src="img/restaurant_3.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>Bella Napoli</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-					<div class="col-xl-3 col-lg-6 col-md-6">
-						<a href="restaurant-detail.html" class="grid_item">
-							<figure>
-								<div class="score"><strong>9.0</strong></div>
-								<img src="img/restaurant_4.jpg" class="img-fluid" alt="">
-								<div class="info">
-									<h3>Marcus</h3>
-								</div>
-							</figure>
-						</a>
-					</div>
-					<!-- /grid_item -->
-				</div>
-				<!-- /row -->
-				<a href="restaurants-grid-isotope.html"><strong>View all (157) <i class="arrow_carrot-right"></i></strong></a>
-			</section>
-			<!-- /section --> --}}
-
+			{{-- banner & wrapper --}}
 			<div class="banner mb-0">
 				<div class="wrapper d-flex align-items-center opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.3)">
 					<div>
@@ -184,79 +123,7 @@
 			<!-- /banner -->
 		</div>
 		<!-- /container -->
-
-		{{-- <div class="bg_color_1">
-			<div class="container margin_80_55">
-				<div class="main_title_2">
-					<span><em></em></span>
-					<h3>News and Events</h3>
-					<p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
-				</div>
-				<div class="row">
-					<div class="col-lg-6">
-						<a class="box_news" href="#0">
-							<figure><img src="img/news_home_1.jpg" alt="">
-								<figcaption><strong>28</strong>Dec</figcaption>
-							</figure>
-							<ul>
-								<li>Mark Twain</li>
-								<li>20.11.2017</li>
-							</ul>
-							<h4>Pri oportere scribentur eu</h4>
-							<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
-						</a>
-					</div>
-					<!-- /box_news -->
-					<div class="col-lg-6">
-						<a class="box_news" href="#0">
-							<figure><img src="img/news_home_2.jpg" alt="">
-								<figcaption><strong>28</strong>Dec</figcaption>
-							</figure>
-							<ul>
-								<li>Jhon Doe</li>
-								<li>20.11.2017</li>
-							</ul>
-							<h4>Duo eius postea suscipit ad</h4>
-							<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
-						</a>
-					</div>
-					<!-- /box_news -->
-					<div class="col-lg-6">
-						<a class="box_news" href="#0">
-							<figure><img src="img/news_home_3.jpg" alt="">
-								<figcaption><strong>28</strong>Dec</figcaption>
-							</figure>
-							<ul>
-								<li>Luca Robinson</li>
-								<li>20.11.2017</li>
-							</ul>
-							<h4>Elitr mandamus cu has</h4>
-							<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
-						</a>
-					</div>
-					<!-- /box_news -->
-					<div class="col-lg-6">
-						<a class="box_news" href="#0">
-							<figure><img src="img/news_home_4.jpg" alt="">
-								<figcaption><strong>28</strong>Dec</figcaption>
-							</figure>
-							<ul>
-								<li>Paula Rodrigez</li>
-								<li>20.11.2017</li>
-							</ul>
-							<h4>Id est adhuc ignota delenit</h4>
-							<p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
-						</a>
-					</div>
-					<!-- /box_news -->
-				</div>
-				<!-- /row -->
-				<p class="btn_home_align"><a href="blog.html" class="btn_1 rounded">View all news</a></p>
-			</div>
-			<!-- /container -->
-		</div> --}}
-		<!-- /bg_color_1 -->
-
+		
 		<div class="call_section" style="background: url({{ asset('img/bg_call_section.jpg') }}) center center no-repeat fixed;">
 			<div class="container clearfix">
 				<div class="col-lg-5 col-md-6 float-right wow" data-wow-offset="250">
@@ -274,5 +141,6 @@
 		<!--/call_section-->
 	</main>
 	<!-- /main -->
-	<div id="toTop"></div><!-- Back to top button -->
+	<div id="toTop">
+	</div><!-- Back to top button -->
 @endsection
