@@ -50,7 +50,7 @@
                                 <strong>{{ $list->phone }}</strong>
                             </div>
                             <ul>
-                                <li><div class="score"><span><em>{{ $list->review }} Reviews</em></span><strong>{{ $list->rating }}</strong></div></li>
+                                <li><div class="score"><span><em>{{ $list->review }} Reviews</em></span><strong style="background-color: #d9a451">{{ $list->rating }}</strong></div></li>
                             </ul>
                         </div>
                     </div>
@@ -75,12 +75,12 @@
                         <div class="col-xl-3">
                             <a href="{{ route('vendors.detailsalon', $popView->slug ) }}" class="grid_item">
                                 <figure style="background-color:rgba(0, 255, 255, 0)">
-                                    <div class="score"><strong>{{ $popView->rating }}</strong></div>
+                                    <div class="score"><strong style="background-color: #d9a451">{{ $popView->rating }}</strong></div>
 									<table style="z-index: 99; ">
 										<tbody>
 											<td align="center" style="width: 348px;">
                                                 <div style="z-index: 1;filter: blur(5px);position: absolute; left: -5px; top: -5px">
-                                                    <img src="{{ $popView->image }}" class="img" alt="" style="width: 110%; height: auto">
+                                                    <img src="{{ $popView->image }}" class="img" alt="" style="height: 100%; width: 150%">
                                                 </div>
 
                                                 <div style="z-index: 2;position: relative;">
@@ -132,7 +132,6 @@
 						<div class="box_1">
 							<h3>Enjoy a GREAT make up with us</h3>
 							<p>Creativity is your best makeup skill, don't be afraid to experiment. Go beyond the limits and show your skills.</p>
-							<a href="#0" class="btn_1 rounded">Read more</a>
 						</div>
 					</div>
 				</div>
