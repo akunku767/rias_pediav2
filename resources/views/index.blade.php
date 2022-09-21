@@ -78,7 +78,7 @@
                                     <div class="score"><strong>{{ $popView->rating }}</strong></div>
 									<table style="z-index: 99; ">
 										<tbody>
-											<td align="center" style="width: 348px">
+											<td align="center" style="width: 348px; left: -2px; top: -2px">
                                                 <div style="z-index: 1;filter: blur(5px);position: absolute;">
                                                     <img src="{{ $popView->image }}" class="img" alt="" style="width: 180%;">
                                                 </div>
