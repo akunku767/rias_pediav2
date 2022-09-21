@@ -11,9 +11,8 @@
             <img src="{{ asset('img/logo_sticky.png') }}" width="150" height="36" alt="" class="logo_sticky">
         </a>
     </div>
-    <ul id="top_menu">
-        <li><a href="cart-1.html" class="cart-menu-btn" title="Cart"><strong>0</strong></a></li>
-        <li><a href="/wishlist" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+    <ul id="top_menu" style="width: 77px;">
+        <li style="margin-left: 22px;margin-right: -1px;"><a href="/wishlist" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
         <li id="isiProfile" class="isiProfile">
             @if (session('name'))
                 <table>
@@ -45,9 +44,9 @@
             @endif
         </li>
         <li>@if (session('name'))
-                <img id="profile" class="profile_btn" onclick="dropdownprofile()" style="width: 23px; cursor: pointer; border-radius: 30px" src="{{ (Session::has('avatar') ? Session::get('avatar') : '' ) }}" alt="">
+                <img style="right: -10px;top: 7px;" id="profile" class="profile_btn" onclick="dropdownprofile()" style="width: 23px; cursor: pointer; border-radius: 30px" src="{{ (Session::has('avatar') ? Session::get('avatar') : '' ) }}" alt="">
             @else
-                <a href="javascript:void(0)" id="profile" class="profile_btn" onclick="dropdownprofile()" title="Profile"></a>
+                <a style="right: -10px;top: 7px;" href="javascript:void(0)" id="profile" class="profile_btn" onclick="dropdownprofile()" title="Profile"></a>
             @endif
         </li>
     </ul>
@@ -59,69 +58,14 @@
             </div>
         </div>
     </a>
-    <nav id="menu" class="main-menu">
+    <nav id="menu" class="main-menu" style="margin-right: -29px;top: 9px;">
         <ul>
             <li><span><a href="{{ url('/') }}">Home</a></span></li>
             <li><span><a href="{{ route("aboutus") }}">About</a></span></li>
-            <li><span><a href="#0">Vendor</a></span>
-                <ul>
-                    <li><a href="#0">Surabaya</a></li>
-                    <li><a href="#0">Jakarta</a></li>
-                    <li><a href="#0">Bandung</a></li>
-                    <li><a href="#0">Bogor</a></li>
-                    <li><a href="hotels-half-screen-map.html">Hotel Half Screen Map</a></li>
-                    <li><a href="hotel-detail.html">Hotel Detail</a></li>
-                </ul>
-            </li>
-            <li><span><a href="#0">Service</a></span>
-                <ul>
-                    <li><a href="basic make up.html">Basic Make Up</a></li>
-                    <li><a href="hairstyling.html">Hair Styling</a></li>
-                    <li><a href="nail.html">Nail Art</a></li>
-                    <li><a href="class.html">Beauty Class</a></li>
-                    <li><a href="wedding.html">Make Up Wedding</a></li>
-                </ul>
-             </li>
-            <li><span><a href="#0">Review</a></span></li>
+            <li><span><a href="{{ route("vendors.listsalon") }}">Vendor</a></span></li>
             @if (session('role')!="User" && session('role')!="")
-            <li><span><a href="{{ route('dashboard.index') }}">Dashboard</a></span>
+                <li><span><a href="{{ route('dashboard.index') }}">Dashboard</a></span>
             @endif
-            {{-- <li><span><a href="adventure.html">Adventure</a></span></li>
-            <li><span><a href="#0">Pages</a></span>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="media-gallery.html">Media gallery</a></li>
-                    <li><a href="help.html">Help Section</a></li>
-                    <li><a href="faq.html">Faq Section</a></li>
-                    <li><a href="wishlist.html">Wishlist page</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="bootstrap-modal.html">Bootstrap Modal <strong>New!</strong></a></li>
-                    <li><a href="modal-version-2.html">Another Modal <strong>New!</strong></a></li>
-                    <li><a href="pricing-tables-2.html">Pricing Tables 1 <strong>New!</strong></a></li>
-                    <li><a href="pricing-tables-3.html">Pricing Tables 2 <strong>New!</strong></a></li>
-                </ul>
-            </li>
-            <li><span><a href="#0">Extra</a></span>
-                <ul>
-                    <li><a href="menu-options.html">Menu Position Options</a></li>
-                    <li><a href="tour-detail-singlemonth-datepicker.html">Single month Datepicker</a></li>
-                    <li><a href="404.html">404 Error page</a></li>
-                    <li><a href="cart-1.html">Cart page 1</a></li>
-                    <li><a href="cart-2.html">Cart page 2</a></li>
-                    <li><a href="cart-3.html">Cart page 3</a></li>
-                    <li><a href="pricing-tables.html">Responsive pricing tables</a></li>
-                    <li><a href="coming_soon/index.html">Coming soon</a></li>
-                    <li><a href="invoice.html">Invoice</a></li>
-                    <li><a href="icon-pack-1.html">Icon pack 1</a></li>
-                    <li><a href="icon-pack-2.html">Icon pack 2</a></li>
-                    <li><a href="icon-pack-3.html">Icon pack 3</a></li>
-                    <li><a href="icon-pack-4.html">Icon pack 4</a></li>
-                    <li><a href="hamburgers.html">Animated Hamburgers</a></li>
-                </ul>
-            </li> --}}
         </ul>
     </nav>
 </header>
