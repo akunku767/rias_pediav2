@@ -8,6 +8,24 @@
         list-style-type: none;
         margin:5px;
     }
+
+    li.page-item.disabled>span.page-link{
+        color:#d9a451;
+    }
+
+    li.page-item.active>span.page-link{
+        color:#FFFFFF;
+        background-color: #d9a451;
+        border-color: #d9a451;
+    }
+
+    li.page-item>a.page-link:active, li.page-item>a.page-link:focus, li.page-item>a.page-link:checked{
+        box-shadow:0 0 0 .25rem rgba(217,164,81,.5)
+    }
+
+    li.page-item>a.page-link{
+        color:#d9a451!important;
+    }
 </style>
 
 	<main>
@@ -109,9 +127,11 @@
                                         <span class="price"><strong><i class="icon-phone"></i>{{ $list->phone }}</strong></span>
                                     @endif
                                 </div>
-                                <ul>
-                                    <li><div class="score"><span><em>{{ $list->review }} Reviews</em></span><strong>{{ $list->rating }}</strong></div></li>
-                                </ul>
+                                @if($list->review != "0")
+                                    <ul>
+                                        <li><div class="score"><span><em>{{ $list->review }} Reviews</em></span><strong style="background-color:#d9a451">{{ $list->rating }}</strong></div></li>
+                                    </ul>
+                                @endif
                             </div>
                         </div>
                     </div>
