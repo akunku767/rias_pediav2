@@ -30,7 +30,7 @@
 
 <div class="content-wrapper">
 
-  
+
 
   <div class="container-fluid">
     <!-- Breadcrumbs-->
@@ -58,8 +58,9 @@
                 <th width="10%" style="color: #000000">No.</th>
                 <th style="color: #000000">Name</th>
                 <th style="color: #000000">User</th>
+                <th style="color: #000000">Rating</th>
+                <th style="color: #000000">Address</th>
                 <th style="color: #000000">Phone</th>
-                <th style="color: #000000">Geometry</th>
                 <th style="color: #000000">Aksi</th>
               </tr>
             </thead>
@@ -75,8 +76,10 @@
                     @endif
                   @endforeach
                 </td>
+                <td align="left">{{ $vendor->rating }}</td>
+                <td align="left">{{ $vendor->address }}</td>
                 <td align="left">{{ $vendor->phone }}</td>
-                <td align="left">{{ $vendor->geometry }}</td>
+
                 <td style="width: 80px">
                   <a class="btntable" href="#Edit{{ $vendor->id }}" data-toggle="modal"
                     data-target="#Edit{{ $vendor->id }}">
@@ -134,7 +137,7 @@
               </td>
               <td width="60%">
                 <input name="user" list="user_id" placeholder="Choose user" style="width: 100%" required>
-                <datalist id="user_id">  
+                <datalist id="user_id">
                   @foreach ($users as $user)
                     <option data-value="{{ $user->id }}">{{ $user->name }}</option>
                   @endforeach
@@ -178,7 +181,7 @@
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
+    } else {
       x.value = "Geolocation is not supported by this browser.";
     }
   }

@@ -20,13 +20,13 @@ class VendorController extends Controller
     public function index()
     {
         Session::put('url', request()->fullUrl());
-        $updated = DB::table("vendors")
-        ->orderBy("updated_at", "desc")
+        $updated = DB::table("scrapes")
+        ->orderBy("updated", "desc")
         ->first();
 
         $users = User::all();
 
-        $vendors = Vendor::all();
+        $vendors = Scrape::all();
         return view('admin.vendor.index', ['vendors' => $vendors, 'updated' => $updated, 'users' => $users]);
     }
 
