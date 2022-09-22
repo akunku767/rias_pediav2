@@ -8,7 +8,6 @@
                 <div class="main_info">
                 <div class="row">
                     <div class="col-lg-4">
-                        {{-- <div class="d-flex align-items-center justify-content-between mb-3"><em>3 Day Trip</em><div class="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></div> --}}
                         <h1>Rias Pedia</h1>
                         <p>Graha Office, Jalan Ahmad Yani, Ketintang, Kota Surabaya, Jawa Timur</p>
                     </div>
@@ -80,56 +79,12 @@
                                 <h4>Service</h4>
                                 <p>Complete services offered</p>
                             </li>
-                            {{-- <li>
-                                <figure><img src={{ asset('img/icon_included_4.svg')}} alt=""></figure>
-                                <h4>Accommodation</h4>
-                                <p>Bed and breakfast</p>
-                            </li> --}}
                         </ul>
                     </div>
                 </div>
             </div>
-            <!-- /row -->
+            <!-- /row -->            
 
-            <div class="row mb-5">
-                <div class="col-lg-8">
-                    <div class="pl-lg-4">
-                        <div class="timeline">
-                            {{-- <div class="mb-5">
-                                <h3>Day one - Trek to the National Park</h3>
-                                <figure><img src={{ asset('img/itinerary_1.jpg')}} class={{ asset('img-fluid" alt=""></figure>
-                                <p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
-                                <div class="content_more">
-                                    <p>Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei. Ut ridens malorum has. Agam everti alterum an cum, utinam perpetua maluisset eu vis. Id mutat omnes eos, porro euripidis ut sed.</p>
-                                </div>
-                                <!-- /content_more -->
-                                <a href="#0" class="show_hide" data-content="toggle-text"><strong>Read More</strong></a>
-                            </div>
-                            <div class="mb-5">
-                                <h3>Day two - Dinner and games with great views</h3>
-                                <figure><img src={{ asset('img/itinerary_2.jpg')}} class={{ asset('img-fluid" alt=""></figure>
-                                <p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
-                                <div class="content_more">
-                                    <p>Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei. Ut ridens malorum has. Agam everti alterum an cum, utinam perpetua maluisset eu vis. Id mutat omnes eos, porro euripidis ut sed.</p>
-                                </div>
-                                <!-- /content_more -->
-                                <a href="#0" class="show_hide" data-content="toggle-text"><strong>Read More</strong></a>
-                            </div>
-                            <div>
-                                <h3>Day three - Hiking down the mountain streams</h3>
-                                <figure><img src={{ asset('img/itinerary_3.jpg')}} class={{ asset('img-fluid" alt=""></figure>
-                                <p>Legimus voluptaria voluptatibus in sit. An simul nostrud mea, et mei stet partem moderatius, in sea porro equidem principes. Eu mei suas nullam facilis, id iusto mundi scripserit eum. Id per diam magna semper, an qui quidam principes.</p>
-                                <div class="content_more">
-                                    <p>Ad nam commune convenire, eu justo porro posidonium nec, mel natum patrioque at. Harum omittam persequeris cu vim, at justo nemore mei. Ut ridens malorum has. Agam everti alterum an cum, utinam perpetua maluisset eu vis. Id mutat omnes eos, porro euripidis ut sed.</p>
-                                </div>
-                                <!-- /content_more -->
-                                <a href="#0" class="show_hide" data-content="toggle-text"><strong>Read More</strong></a>
-                            </div> --}}
-
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- /row -->
             <h4>Location</h4>
             <div id="map" class="map map_single mb-5">
