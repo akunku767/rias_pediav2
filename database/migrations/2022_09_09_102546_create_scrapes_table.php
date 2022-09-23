@@ -15,7 +15,7 @@ class CreateScrapesTable extends Migration
     {
         Schema::create('scrapes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->default(1);
+            $table->unsignedBigInteger('user_id')->default("1");
             $table->string('name');
             $table->string('rating', 3);
             $table->integer('review');
@@ -34,7 +34,7 @@ class CreateScrapesTable extends Migration
             $table->integer('views')->default(0);
             $table->text('created', 25);
             $table->text('updated', 25);
-            $table->integer('epoch_time');
+            $table->string('epoch_time');
             $table->foreign('user_id')
             ->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
