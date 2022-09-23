@@ -17,7 +17,7 @@
                   <span>Name</span>
                 </td>
                 <td width="60%">
-                  <input type="text" name="name" placeholder="Input name" style="width: 100%" value="{{ $vendor->name }}" required>
+                  <input type="text" name="name" placeholder="Input name" style="width: 100%" value="{{ $vendor->name }}" disabled>
                 </td>
               </tr>
               <tr height="40px" style="font-size: 1.15rem; color: black;">
@@ -51,10 +51,18 @@
               </tr>
               <tr height="40px" style="font-size: 1.15rem; color: black;">
                 <td width="40%">
-                  <span>Geometry</span>
+                  <span>Web</span>
                 </td>
                 <td width="60%">
-                  <input type="text" name="geometry" placeholder="Input geometry" style="width: 100%" value="{{ $vendor->geometry }}" required>
+                  <input type="text" name="web" placeholder="Input Web" style="width: 100%" value="{{ $vendor->web }}" required>
+                </td>
+              </tr>
+              <tr height="40px" style="font-size: 1.15rem; color: black;">
+                <td width="40%">
+                  <span>Address</span>
+                </td>
+                <td width="60%">
+                  <input type="text" name="address" placeholder="Input Address" style="width: 100%" value="{{ $vendor->address }}" required>
                 </td>
               </tr>
             </table>
