@@ -22,7 +22,7 @@
 						<figure>
 							<a href="#0" class="wish_bt liked"></a>
 							<a href="tour-detail.html"><img src="img/tour_1.jpg" class="img-fluid" alt="" width="800" height="533"></a>
-							<small>Historic</small>
+							{{-- <small>Historic</small> --}}
 							<div class="read_more"><span>Read more</span></div>
 						</figure>
 						<div class="wrapper">
@@ -42,7 +42,7 @@
 						<figure>
 							<a href="#0" class="wish_bt liked"></a>
 							<a href="tour-detail.html"><img src="img/tour_2.jpg" class="img-fluid" alt="" width="800" height="533"></a>
-							<small>Churches</small>
+							{{-- <small>Churches</small> --}}
 							<div class="read_more"><span>Read more</span></div>
 						</figure>
 						<div class="wrapper">
@@ -62,7 +62,7 @@
 						<figure>
 							<a href="#0" class="wish_bt liked"></a>
 							<a href="tour-detail.html"><img src="img/tour_3.jpg" class="img-fluid" alt="" width="800" height="533"></a>
-							<small>Historic</small>
+							{{-- <small>Historic</small> --}}
 							<div class="read_more"><span>Read more</span></div>
 						</figure>
 						<div class="wrapper">
@@ -82,7 +82,7 @@
 						<figure>
 							<a href="#0" class="wish_bt liked"></a>
 							<a href="tour-detail.html"><img src="img/tour_4.jpg" class="img-fluid" alt="" width="800" height="533"></a>
-							<small>Museum</small>
+							{{-- <small>Museum</small> --}}
 							<div class="read_more"><span>Read more</span></div>
 						</figure>
 						<div class="wrapper">
@@ -102,7 +102,7 @@
 						<figure>
 							<a href="#0" class="wish_bt liked"></a>
 							<a href="tour-detail.html"><img src="img/tour_5.jpg" class="img-fluid" alt="" width="800" height="533"></a>
-							<small>Walking</small>
+							{{-- <small>Walking</small> --}}
 							<div class="read_more"><span>Read more</span></div>
 						</figure>
 						<div class="wrapper">
@@ -122,7 +122,7 @@
 						<figure>
 							<a href="#0" class="wish_bt liked"></a>
 							<a href="tour-detail.html"><img src="img/tour_6.jpg" class="img-fluid" alt="" width="800" height="533"></a>
-							<small>Museum</small>
+							{{-- <small>Museum</small> --}}
 							<div class="read_more"><span>Read more</span></div>
 						</figure>
 						<div class="wrapper">

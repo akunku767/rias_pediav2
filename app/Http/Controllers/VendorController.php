@@ -171,7 +171,6 @@ class VendorController extends Controller
             'name' => 'required',
             'phone' => 'required',
             'user' => 'required',
-            'web' => 'required',
           ]);
 
         $finduser = User::where('name',$request->user)->first();
@@ -181,27 +180,33 @@ class VendorController extends Controller
         if($request->phone=='+62'){
             return back()->with('fail',"Invalid input phone");
         }elseif(strpos($request->phone, "+620")!=""){
-            $vendor = Vendor::find($id)->update([
+            $vendor = Scrape::find($id)->update([
                 'name' => ucwords($request->name),
                 'phone' => str_replace("+620","+62",$request->phone),
                 'user_id' => $finduser->id,
-                'web' => $request->web,
             ]);
             return back()->with('success',"A new vendor has been added");
         }elseif(strpos($request->phone, "08")=="0"){
-            $vendor = Vendor::find($id)->update([
+
+            // function remove($s, $n){
+            //     return substr($s,0,$n).substr($s,$n+1,strlen($s)-$n);
+            // }
+
+            // echo remove($request->phone, 1)."\n";
+
+            $vendor = Scrape::find($id)->update([
                 'name' => ucwords($request->name),
-                'phone' => str_replace("08","+62",$request->phone),
+                'phone' => str_replace("08","+628",$request->phone),
                 'user_id' => $finduser->id,
-                'web' => $request->web,
             ]);
             return back()->with('success',"A new vendor has been added");
         }else{
-            $vendor = Vendor::find($id)->update([
+            $vendor = Scrape::find($id)->update([
                 'name' => ucwords($request->name),
                 'phone' => $request->phone,
                 'user_id' => $finduser->id,
                 'web' => $request->web,
+                'address' => $request->web,
             ]);
 
             return back()->with('success',"A vendor has been updated");
@@ -216,7 +221,7 @@ class VendorController extends Controller
      */
     public function destroy($id)
     {
-        $vendor = Vendor::find($id);
+        $vendor = Scrape::find($id);
         $vendor->delete();
 
         return back()->with('success',"A vendor has been destroyed");
