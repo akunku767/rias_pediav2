@@ -19,9 +19,9 @@ class DashboardController extends Controller
                 $findrole = Role::where('id',$finduser->role_id)->first();
                 Session::put('role', $findrole->name);
                 $roles = DB::table("roles")->get();
-                $users = DB::table("users")->get(); 
-                $vendors = DB::table("vendors")->get(); 
-                return view('admin.index', ['roles' => $roles, 'users' => $users, 'vendors' => $vendors], ); 
+                $users = DB::table("users")->get();
+                $vendors = DB::table("scrapes")->get();
+                return view('admin.index', ['roles' => $roles, 'users' => $users, 'vendors' => $vendors], );
             }else{
                 return redirect('auth/logout');
             }
@@ -29,6 +29,6 @@ class DashboardController extends Controller
             return redirect('/');
         }
 
-        
+
     }
 }

@@ -17,7 +17,7 @@
                   <span>Name</span>
                 </td>
                 <td width="60%">
-                  <input type="text" name="name" placeholder="Input name" style="width: 100%" value="{{ $vendor->name }}" disabled>
+                  <input type="text" name="name" placeholder="Input name" style="width: 100%" value="{{ $vendor->name }}" readonly required>
                 </td>
               </tr>
               <tr height="40px" style="font-size: 1.15rem; color: black;">
@@ -30,7 +30,7 @@
                       <input name="user" list="user_id" placeholder="Choose user" style="width: 100%" value="{{ $user->name }}" required>
                     @endif
                   @endforeach
-                  <datalist id="user_id"> 
+                  <datalist id="user_id">
                     @foreach ($users as $user)
                       @if(($vendor->user_id) == ($user->id))
                         <option data-value="{{ $user->id }}" selected>{{ $user->name }}</option>

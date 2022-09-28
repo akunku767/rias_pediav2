@@ -60,7 +60,6 @@
                 <th class="col-xs-1" style="color: #000000">User</th>
                 <th class="col-xs-1" style="color: #000000">Rating</th>
                 <th class="col-xs-2" style="color: #000000">Phone</th>
-                <th class="col-xs-2" style="color: #000000">Web</th>
                 <th class="col-xs-2" style="color: #000000">Address</th>
                 <th class="col-xs-1" style="color: #000000">Aksi</th>
               </tr>
@@ -79,7 +78,6 @@
                 </td>
                 <td class="col-xs-1" align="left">{{ $vendor->rating }}</td>
                 <td class="col-xs-2" align="left">{{ $vendor->phone }}</td>
-                <td class="col-xs-2" align="left">{{ $vendor->web }}</td>
                 <td class="col-xs-2" align="left">{{ $vendor->address }}</td>
 
                 <td style="width: 80px">
