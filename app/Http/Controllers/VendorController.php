@@ -142,7 +142,7 @@ class VendorController extends Controller
 
     public function latest()
     {
-        $lists = Scrape::orderBy('id', 'DESC')->paginate(10);
+        $lists = Scrape::orderBy('epoch', 'DESC')->paginate(10);
         $set = "3";
         return view('vendor.listsalon', compact('lists', 'set'));
     }

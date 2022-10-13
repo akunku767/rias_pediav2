@@ -30,8 +30,6 @@
 
 <div class="content-wrapper">
 
-
-
   <div class="container-fluid">
     <!-- Breadcrumbs-->
     <ol class="breadcrumb" style="margin-bottom: 30px">
@@ -70,11 +68,12 @@
                 <td class="col-xs-1">{{ ++$no }}</td>
                 <td class="col-xs-2" align="left">{{ $vendor->name }}</td>
                 <td class="col-xs-1" align="left">
-                  @foreach ($users as $user)
+                  {{-- @foreach ($users as $user)
                     @if(($vendor->user_id) == ($user->id))
                       {{ $user->name }}
                     @endif
-                  @endforeach
+                  @endforeach --}}
+                  {{ $vendor->user->name }}
                 </td>
                 <td class="col-xs-1" align="left">{{ $vendor->rating }}</td>
                 <td class="col-xs-2" align="left">{{ $vendor->phone }}</td>

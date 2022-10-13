@@ -20,14 +20,14 @@ class UserController extends Controller
      */
     public function index()
     {
-        Session::put('url', request()->fullUrl()); 
+        Session::put('url', request()->fullUrl());
         $updated = DB::table("users")
         ->orderBy("updated_at", "desc")
         ->first();
 
-        $roles = Role::all(); 
+        $roles = Role::all();
 
-        $users = User::all(); 
+        $users = User::all();
         return view('admin.user.index', ['users' => $users, 'updated' => $updated, 'roles' => $roles]);
     }
 
@@ -51,25 +51,25 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required', 
+            'email' => 'required',
             'password' => 'required',
             'role' => 'required',
           ]);
 
         //   $input = $request->all();
         //   $user = User::create($input);
-        
+
         $findrole = Role::where('name',$request->role)->first();
         if(!$findrole){
           return back()->with('fail',"Invalid create user");
         }
         $user = User::create([
           'name' => ucwords($request->name),
-          'email' => $request->email, 
+          'email' => $request->email,
           'password' => bcrypt($request->password),
           'role_id' => $findrole->id,
         ]);
-         
+
         return back()->with('success',"A new user has been added");
     }
 
@@ -106,21 +106,21 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required', 
+            'email' => 'required',
             'role' => 'required',
           ]);
-               
-        //  $user = User::find($id)->update($request->all()); 
+
+        //  $user = User::find($id)->update($request->all());
         $findrole = Role::where('name',$request->role)->first();
         if(!$findrole){
           return back()->with('fail',"Invalid update user");
         }
         $user = User::find($id)->update([
             'name' => ucwords($request->name),
-            'email' => $request->email, 
+            'email' => $request->email,
             'role_id' => $findrole->id,
-        ]); 
-                
+        ]);
+
         return back()->with('success',"An user has been updated");
     }
 

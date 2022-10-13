@@ -30,7 +30,7 @@
 
 <div class="content-wrapper">
 
-  
+
 
   <div class="container-fluid">
     <!-- Breadcrumbs-->
@@ -68,11 +68,7 @@
                 <td style="width: 10%">{{ ++$no }}</td>
                 <td align="left">{{ $user->name }}</td>
                 <td align="left">
-                  @foreach ($roles as $role)
-                    @if(($user->role_id) == ($role->id))
-                      {{ $role->name }}
-                    @endif
-                  @endforeach
+                  {{ $user->role->name }}
                 </td>
                 <td align="left">{{ $user->email }}</td>
                 <td style="width: 80px">
@@ -129,7 +125,7 @@
               </td>
               <td width="60%">
                 <input name="role" list="role_id" placeholder="Choose role" style="width: 100%" required>
-                <datalist id="role_id">  
+                <datalist id="role_id">
                   @foreach ($roles as $role)
                     <option data-value="{{ $role->id }}">{{ $role->name }}</option>
                   @endforeach
